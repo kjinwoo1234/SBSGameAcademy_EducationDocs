@@ -98,12 +98,14 @@ Console.WriteLine($"홍길동님의 한국 나이는 {age}세입니다.");
 - % : 나머지 (나눗셈 후 남는 값)
 
 [예제 코드]
+```
 int a = 10;
 int b = 3;
 
 Console.WriteLine(a + b); // 13
 Console.WriteLine(a / b); // 3 (몫)
 Console.WriteLine(a % b); // 1 (나머지)
+```
 
 ---
 
@@ -114,9 +116,11 @@ Console.WriteLine(a % b); // 1 (나머지)
 - -- : 값을 1 감소 (a = a - 1)
 
 [예제 코드]
+```
 int count = 0;
 count++; // 1이 됨
 count--; // 다시 0이 됨
+```
 
 ---
 
@@ -129,10 +133,12 @@ count--; // 다시 0이 됨
 - >= , <= : 크거나 같다, 작거나 같다
 
 [예제 코드]
+```
 int age = 20;
 Console.WriteLine(age == 20); // true
 Console.WriteLine(age != 20); // false
 Console.WriteLine(age > 19);  // true
+```
 
 ---
 
@@ -144,12 +150,14 @@ Console.WriteLine(age > 19);  // true
 - ! (NOT) : 참을 거짓으로, 거짓을 참으로 뒤집음
 
 [예제 코드]
+```
 int score = 85;
 // 점수가 80점 이상 "이고" 90점 미만인지 확인
 bool isBGrade = (score >= 80) && (score < 90); 
 
 bool isHungry = true;
 Console.WriteLine(!isHungry); // false
+```
 
 ---
 
@@ -160,9 +168,11 @@ Console.WriteLine(!isHungry); // false
 - +=, -=, *=, /= : 계산과 대입을 동시에
 
 [예제 코드]
+```
 int money = 1000;
 money += 500; // money = money + 500; 과 같음 (결과: 1500)
 money -= 200; // 결과: 1300
+```
 
 ---
 
@@ -173,10 +183,12 @@ money -= 200; // 결과: 1300
 - ?. : 왼쪽이 null이 아닐 때만 멤버에 접근 (Null 조건부 연산자)
 
 [예제 코드]
+```
 string name = null;
 string displayName = name ?? "홍길동"; // name이 없으므로 "홍길동" 선택
 
 Console.WriteLine(displayName);
+```
 
 # [C# 자습 자료] 02. 제어문 (Control Flow)
 
