@@ -82,6 +82,101 @@ int age = currentYear - birthYear + 1;
 
 Console.WriteLine($"홍길동님의 한국 나이는 {age}세입니다.");
 ```
+# [C# 자습 자료] 01-2. 연산자 (Operators)
+
+데이터를 계산하거나 비교하고, 논리적으로 판단할 때 사용하는 기호들입니다.
+
+---
+
+## 1. 산술 연산자 (사칙연산)
+숫자 데이터를 계산할 때 사용합니다.
+
+- + : 더하기
+- - : 빼기
+- * : 곱하기
+- / : 나누기 (정수끼리 나누면 결과도 정수, 실수로 얻으려면 하나는 실수여야 함)
+- % : 나머지 (나눗셈 후 남는 값)
+
+[예제 코드]
+int a = 10;
+int b = 3;
+
+Console.WriteLine(a + b); // 13
+Console.WriteLine(a / b); // 3 (몫)
+Console.WriteLine(a % b); // 1 (나머지)
+
+---
+
+## 2. 증감 연산자
+값을 1씩 증가시키거나 감소시킵니다.
+
+- ++ : 값을 1 증가 (a = a + 1)
+- -- : 값을 1 감소 (a = a - 1)
+
+[예제 코드]
+int count = 0;
+count++; // 1이 됨
+count--; // 다시 0이 됨
+
+---
+
+## 3. 비교 연산자
+두 값을 비교하여 참(true) 또는 거짓(false)을 결과로 줍니다.
+
+- == : 같다
+- != : 다르다
+- > , < : 크다, 작다
+- >= , <= : 크거나 같다, 작거나 같다
+
+[예제 코드]
+int age = 20;
+Console.WriteLine(age == 20); // true
+Console.WriteLine(age != 20); // false
+Console.WriteLine(age > 19);  // true
+
+---
+
+## 4. 논리 연산자
+여러 조건을 조합할 때 사용합니다.
+
+- && (AND) : 두 조건이 모두 참일 때만 참
+- || (OR) : 두 조건 중 하나만 참이어도 참
+- ! (NOT) : 참을 거짓으로, 거짓을 참으로 뒤집음
+
+[예제 코드]
+int score = 85;
+// 점수가 80점 이상 "이고" 90점 미만인지 확인
+bool isBGrade = (score >= 80) && (score < 90); 
+
+bool isHungry = true;
+Console.WriteLine(!isHungry); // false
+
+---
+
+## 5. 대입 및 복합 대입 연산자
+변수에 값을 넣거나, 계산 후 바로 자기 자신에게 대입할 때 사용합니다.
+
+- = : 값을 대입
+- +=, -=, *=, /= : 계산과 대입을 동시에
+
+[예제 코드]
+int money = 1000;
+money += 500; // money = money + 500; 과 같음 (결과: 1500)
+money -= 200; // 결과: 1300
+
+---
+
+## 6. Null 관련 연산자 (C# 특화)
+데이터가 비어있는 상태(null)를 안전하게 다룰 때 사용합니다.
+
+- ?? : 왼쪽 값이 null이면 오른쪽 값을 사용
+- ?. : 왼쪽이 null이 아닐 때만 멤버에 접근 (Null 조건부 연산자)
+
+[예제 코드]
+string name = null;
+string displayName = name ?? "홍길동"; // name이 없으므로 "홍길동" 선택
+
+Console.WriteLine(displayName);
 
 # [C# 자습 자료] 02. 제어문 (Control Flow)
 
