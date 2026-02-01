@@ -720,13 +720,17 @@ class Program
 class Person
 {
     public string Name { get; set; }
-    public void Eat() => Console.WriteLine($"{Name}님이 식사를 합니다.");
+    public void Eat() {
+        Console.WriteLine($"{Name}님이 식사를 합니다.");
+    }
 }
 
 // Person을 상속받는 Student 클래스
 class Student : Person
 {
-    public void Study() => Console.WriteLine($"{Name}님이 공부를 합니다.");
+    public void Study() {
+        Console.WriteLine($"{Name}님이 공부를 합니다.");
+    }
 }
 
 // 사용 예시
