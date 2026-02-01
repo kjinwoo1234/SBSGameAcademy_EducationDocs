@@ -814,7 +814,10 @@ interface IFlyable
 
 class Robot : IFlyable
 {
-    public void Fly() => Console.WriteLine("홍길동님의 로봇이 하늘을 납니다.");
+    public void Fly()
+    {
+        Console.WriteLine("홍길동님의 로봇이 하늘을 납니다.");
+    }
 }
 ```
 
