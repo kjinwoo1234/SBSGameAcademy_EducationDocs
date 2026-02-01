@@ -528,6 +528,7 @@ class BankAccount
 데이터를 필드에 저장할 때 조건을 검사하거나(set), 데이터를 읽어갈 때 가공해서 줄 수(get) 있습니다.
 
 [예제 코드]
+```
 class Student
 {
     private int age; // 외부에서 직접 만지지 못하게 private으로 숨김
@@ -558,6 +559,7 @@ class Student
 Student s = new Student();
 s.Age = -5; // "나이는 0보다 작을 수 없습니다." 출력됨
 Console.WriteLine($"홍길동의 나이: {s.Age}"); // 결과: 0
+```
 
 ---
 
@@ -565,6 +567,7 @@ Console.WriteLine($"홍길동의 나이: {s.Age}"); // 결과: 0
 특별한 조건 검사가 필요 없을 때 코드를 획기적으로 줄여주는 방식입니다. 실무에서 가장 많이 사용합니다.
 
 [예제 코드]
+```
 class Person
 {
     // 필드를 따로 만들 필요 없이 한 줄로 끝냄
@@ -578,6 +581,7 @@ p.Name = "홍길동";
 p.Address = "서울시";
 
 Console.WriteLine($"{p.Name}은 {p.Address}에 삽니다.");
+```
 
 ---
 
@@ -585,6 +589,7 @@ Console.WriteLine($"{p.Name}은 {p.Address}에 삽니다.");
 값은 생성자에서만 정하고, 밖에서는 읽기만 가능하게 하여 데이터를 안전하게 관리합니다.
 
 [예제 코드]
+```
 class Citizen
 {
     // set을 빼거나 private set으로 만들면 외부에서 수정 불가
@@ -600,6 +605,7 @@ class Citizen
 Citizen c = new Citizen("123456-1234567");
 Console.WriteLine($"홍길동의 주민번호: {c.IdNumber}");
 // c.IdNumber = "000-000"; // 오류 발생: 밖에서는 값을 바꿀 수 없음
+```
 
 ---
 
