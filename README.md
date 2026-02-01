@@ -470,6 +470,7 @@ student1.age = 20;
 
 // 3. 메서드 호출
 student1.Introduce();
+student1?.Introduce(); // 만약 student1 이 null이라면 실행 안하고, null이 아닐때만 Introduce 메서드 실행
 ```
 
 ---
