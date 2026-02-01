@@ -794,7 +794,9 @@ abstract class Animal
 
 class Dog : Animal
 {
-    public override void MakeSound() => Console.WriteLine("홍길동님의 강아지: 멍멍!");
+    public override void MakeSound() {
+        Console.WriteLine("홍길동님의 강아지: 멍멍!");
+    }
 }
 ```
 
