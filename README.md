@@ -523,27 +523,95 @@ class BankAccount
 ---
 
 ## 5. 프로퍼티 (Property)
-private으로 숨긴 데이터를 안전하게 읽거나 쓸 수 있도록 돕는 통로입니다. `get`과 `set`을 사용합니다.
+프로퍼티는 클래스의 내부 데이터(필드)를 안전하게 보호하면서, 외부에서는 마치 변수처럼 편하게 값을 읽고 쓸 수 있게 해주는 통로입니다.
+
+---
+
+## 1. 기본형 프로퍼티 (get, set)
+데이터를 필드에 저장할 때 조건을 검사하거나(set), 데이터를 읽어갈 때 가공해서 줄 수(get) 있습니다.
+
+
 
 [예제 코드]
-```
-class Person
+class Student
 {
-    private string name;
+    private int age; // 외부에서 직접 만지지 못하게 private으로 숨김
 
-    public string Name
+    public int Age
     {
-        get { return name; } // 이름을 읽어갈 때
-        set { name = value; } // 이름을 새로 저장할 때
+        get 
+        { 
+            return age; 
+        }
+        set 
+        { 
+            // 0보다 작은 값이 들어오지 못하게 방어함
+            if (value < 0) 
+            {
+                Console.WriteLine("나이는 0보다 작을 수 없습니다.");
+                age = 0;
+            }
+            else
+            {
+                age = value; 
+            }
+        }
     }
 }
 
-// 더 간단한 표현 (자동 구현 프로퍼티)
+// 사용 예시
+Student s = new Student();
+s.Age = -5; // "나이는 0보다 작을 수 없습니다." 출력됨
+Console.WriteLine($"홍길동의 나이: {s.Age}"); // 결과: 0
+
+---
+
+## 2. 자동 구현 프로퍼티 (Auto-Implemented Property)
+특별한 조건 검사가 필요 없을 때 코드를 획기적으로 줄여주는 방식입니다. 실무에서 가장 많이 사용합니다.
+
+[예제 코드]
 class Person
 {
+    // 필드를 따로 만들 필요 없이 한 줄로 끝냄
     public string Name { get; set; }
+    public string Address { get; set; }
 }
-```
+
+// 사용 예시
+Person p = new Person();
+p.Name = "홍길동";
+p.Address = "서울시";
+
+Console.WriteLine($"{p.Name}은 {p.Address}에 삽니다.");
+
+---
+
+## 3. 읽기 전용 프로퍼티 (Read-Only)
+값은 생성자에서만 정하고, 밖에서는 읽기만 가능하게 하여 데이터를 안전하게 관리합니다.
+
+[예제 코드]
+class Citizen
+{
+    // set을 빼거나 private set으로 만들면 외부에서 수정 불가
+    public string IdNumber { get; private set; }
+
+    public Citizen(string id)
+    {
+        IdNumber = id; // 생성자에서는 값 할당 가능
+    }
+}
+
+// 사용 예시
+Citizen c = new Citizen("123456-1234567");
+Console.WriteLine($"홍길동의 주민번호: {c.IdNumber}");
+// c.IdNumber = "000-000"; // 오류 발생: 밖에서는 값을 바꿀 수 없음
+
+---
+
+## 4. 프로퍼티를 사용하는 이유
+1. **캡슐화**: 내부 데이터를 직접 노출하지 않아 객체의 독립성을 유지합니다.
+2. **유효성 검사**: 잘못된 데이터(예: 음수 나이)가 입력되는 것을 막을 수 있습니다.
+3. **디버깅**: 값을 변경하거나 읽을 때 중단점을 걸어 추적이 쉽습니다.
 
 # [C# 자습 자료] 06. 상속과 다형성 (Inheritance & Polymorphism)
 
