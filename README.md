@@ -176,6 +176,7 @@ while (count <= 3)
 - continue: 현재 차례를 건너뛰고 다음 반복으로 넘어갑니다.
 
 [예제 코드]
+```
 for (int i = 1; i <= 10; i++)
 {
     if (i == 3) continue; // 3번은 건너뛰고 출력함
@@ -183,6 +184,7 @@ for (int i = 1; i <= 10; i++)
     
     Console.WriteLine($"{i}번 홍길동");
 }
+```
 
 # [C# 자습 자료] 03. 배열과 반복문 (Array & foreach)
 
@@ -197,6 +199,7 @@ for (int i = 1; i <= 10; i++)
 - 배열의 크기는 한 번 정하면 바꿀 수 없습니다.
 
 [예제 코드]
+```
 // 1. 크기가 3인 정수 배열 선언
 int[] scores = new int[3];
 scores[0] = 90;
@@ -208,6 +211,7 @@ string[] names = { "홍길동", "이순신", "강감찬" };
 
 // 3. 특정 위치의 값 수정
 names[0] = "홍길동 수정"; 
+```
 
 ---
 
@@ -215,8 +219,10 @@ names[0] = "홍길동 수정";
 배열 안에 상자가 몇 개 있는지 알고 싶을 때는 `Length` 속성을 사용합니다.
 
 [예제 코드]
+```
 string[] names = { "홍길동", "이순신", "강감찬" };
 Console.WriteLine($"등록된 인원수: {names.Length}"); // 출력 결과: 3
+```
 
 ---
 
@@ -224,6 +230,7 @@ Console.WriteLine($"등록된 인원수: {names.Length}"); // 출력 결과: 3
 `for`문은 번호(i)를 직접 지정해야 하지만, `foreach`는 배열 안에 있는 데이터를 처음부터 끝까지 자동으로 하나씩 꺼내줍니다.
 
 [예제 코드]
+```
 string[] names = { "홍길동", "이순신", "강감찬" };
 
 // "names 배열에 있는 문자열(string)을 하나씩 꺼내서 n에 담아라"
@@ -231,6 +238,7 @@ foreach (string n in names)
 {
     Console.WriteLine($"이름: {n}");
 }
+```
 
 ---
 
@@ -238,6 +246,7 @@ foreach (string n in names)
 배열에 저장된 점수들의 합계와 평균을 구하는 예제입니다.
 
 [예제 코드]
+```
 int[] scores = { 80, 90, 100 };
 int sum = 0;
 
@@ -250,6 +259,7 @@ double average = (double)sum / scores.Length;
 
 Console.WriteLine($"홍길동님의 총점: {sum}");
 Console.WriteLine($"홍길동님의 평균: {average}");
+```
 
 ---
 
@@ -262,6 +272,7 @@ Console.WriteLine($"홍길동님의 평균: {average}");
 - **매개변수(Parameter)**: 입력받을 데이터
 
 [예제 코드]
+```
 // 홍길동 이름을 출력하는 메서드 정의
 static void PrintName()
 {
@@ -270,6 +281,7 @@ static void PrintName()
 
 // 메서드 호출
 PrintName();
+```
 
 ---
 
@@ -277,6 +289,7 @@ PrintName();
 메서드 이름 뒤 소괄호 ( ) 안에 데이터를 전달받을 변수를 적습니다.
 
 [예제 코드]
+```
 static void Greet(string name)
 {
     Console.WriteLine($"{name}님, 안녕하세요!");
@@ -284,6 +297,7 @@ static void Greet(string name)
 
 // 호출할 때 데이터를 전달
 Greet("홍길동");
+```
 
 ---
 
@@ -291,6 +305,7 @@ Greet("홍길동");
 계산 결과를 밖으로 돌려줘야 할 때는 `void` 대신 결과값의 자료형을 적고 `return` 키워드를 사용합니다.
 
 [예제 코드]
+```
 static int Add(int a, int b)
 {
     return a + b; // 결과를 밖으로 보냄
@@ -299,6 +314,7 @@ static int Add(int a, int b)
 // 메서드가 돌려준 값을 변수에 저장
 int result = Add(10, 20);
 Console.WriteLine($"홍길동님의 계산 결과: {result}");
+```
 
 # [C# 자습 자료] 05. 클래스와 객체 (Class & Object)
 
@@ -313,6 +329,7 @@ Console.WriteLine($"홍길동님의 계산 결과: {result}");
 - **메서드(Method)**: 객체가 수행하는 동작
 
 [예제 코드]
+```
 class Student
 {
     // 필드 (데이터)
@@ -325,6 +342,7 @@ class Student
         Console.WriteLine($"이름은 {name}이고, 나이는 {age}살입니다.");
     }
 }
+```
 
 ---
 
@@ -332,6 +350,7 @@ class Student
 클래스라는 설계도를 사용해 실제 데이터인 '객체(인스턴스)'를 만듭니다.
 
 [예제 코드]
+```
 // 1. 객체 생성 (설계도대로 제품 만들기)
 Student student1 = new Student();
 
@@ -341,6 +360,7 @@ student1.age = 20;
 
 // 3. 메서드 호출
 student1.Introduce();
+```
 
 ---
 
@@ -349,6 +369,7 @@ student1.Introduce();
 * 클래스 이름과 똑같은 이름을 사용하며, 반환 타입(void 등)을 적지 않습니다.
 
 [예제 코드]
+```
 class Student
 {
     public string name;
@@ -361,6 +382,7 @@ class Student
         age = a;
     }
 }
+```
 
 // 사용 예시
 Student student2 = new Student("홍길동", 20); // 생성과 동시에 데이터 입력
@@ -374,6 +396,7 @@ Student student2 = new Student("홍길동", 20); // 생성과 동시에 데이터 입력
 - **private**: 클래스 내부에서만 접근 가능 (비밀) - *작성하지 않으면 기본값은 private입니다.*
 
 [예제 코드]
+```
 class BankAccount
 {
     private int money; // 외부에서 함부로 수정 못하게 비밀로 설정
@@ -384,6 +407,7 @@ class BankAccount
         Console.WriteLine($"홍길동님의 계좌에 {amount}원이 입금되었습니다.");
     }
 }
+```
 
 ---
 
@@ -391,6 +415,7 @@ class BankAccount
 private으로 숨긴 데이터를 안전하게 읽거나 쓸 수 있도록 돕는 통로입니다. `get`과 `set`을 사용합니다.
 
 [예제 코드]
+```
 class Person
 {
     private string name;
@@ -407,6 +432,7 @@ class Person
 {
     public string Name { get; set; }
 }
+```
 
 # [C# 자습 자료] 06. 상속과 다형성 (Inheritance & Polymorphism)
 
@@ -421,6 +447,7 @@ class Person
 - **자식 클래스 (Child/Derived Class)**: 기능을 물려받는 클래스 (클래스 이름 뒤에 `:` 를 붙임)
 
 [예제 코드]
+```
 class Person
 {
     public string Name { get; set; }
@@ -438,6 +465,7 @@ Student student = new Student();
 student.Name = "홍길동"; // 부모의 속성 사용
 student.Eat();         // 부모의 메서드 사용
 student.Study();       // 자신의 메서드 사용
+```
 
 ---
 
@@ -448,6 +476,7 @@ student.Study();       // 자신의 메서드 사용
 - **override**: 자식 메서드에서 "내가 다시 정의하겠다"고 선언함.
 
 [예제 코드]
+```
 class Person
 {
     public virtual void Work()
@@ -463,6 +492,7 @@ class Developer : Person
         Console.WriteLine("홍길동님이 코딩을 합니다."); // 기능을 자식에 맞게 수정
     }
 }
+```
 
 ---
 
@@ -482,6 +512,7 @@ person2.Work(); // 출력: 홍길동님이 코딩을 합니다. (실제 객체인 Developer의 기능
 직접 객체를 만들 수는 없고, 자식 클래스들이 반드시 구현해야 할 **'표준 규격'**을 정해주는 클래스입니다.
 
 [예제 코드]
+```
 abstract class Animal
 {
     // 자식이 반드시 만들어야 하는 메서드 (내용은 없음)
@@ -492,6 +523,7 @@ class Dog : Animal
 {
     public override void MakeSound() => Console.WriteLine("홍길동님의 강아지: 멍멍!");
 }
+```
 
 ---
 
@@ -499,6 +531,7 @@ class Dog : Animal
 클래스가 가져야 할 최소한의 규칙을 정의합니다. 상속과 비슷하지만 여러 개를 동시에 가질 수 있다는 장점이 있습니다.
 
 [예제 코드]
+```
 interface IFlyable
 {
     void Fly(); // 구현 내용 없이 이름만 정함
@@ -508,6 +541,7 @@ class Robot : IFlyable
 {
     public void Fly() => Console.WriteLine("홍길동님의 로봇이 하늘을 납니다.");
 }
+```
 
 # [C# 자습 자료] 07. 예외 처리와 파일 입출력
 
@@ -523,6 +557,7 @@ class Robot : IFlyable
 - **finally**: 오류 발생 여부와 상관없이 마지막에 무조건 실행합니다.
 
 [예제 코드]
+```
 try
 {
     int[] numbers = { 1, 2, 3 };
@@ -536,6 +571,7 @@ finally
 {
     Console.WriteLine("프로그램을 안전하게 종료합니다.");
 }
+```
 
 ---
 
@@ -543,6 +579,7 @@ finally
 데이터를 텍스트 파일(.txt)로 저장하는 방법입니다. `System.IO` 네임스페이스를 사용합니다.
 
 [예제 코드]
+```
 using System.IO;
 
 string path = "test.txt";
@@ -551,6 +588,7 @@ string content = "이 내용은 홍길동이 작성한 파일 데이터입니다.";
 // 파일이 없으면 새로 만들고, 있으면 덮어씁니다.
 File.WriteAllText(path, content);
 Console.WriteLine("파일 저장이 완료되었습니다.");
+```
 
 ---
 
@@ -558,6 +596,7 @@ Console.WriteLine("파일 저장이 완료되었습니다.");
 저장된 파일의 내용을 불러와서 화면에 출력합니다.
 
 [예제 코드]
+```
 if (File.Exists("test.txt")) // 파일이 있는지 확인
 {
     string readText = File.ReadAllText("test.txt");
@@ -567,6 +606,7 @@ else
 {
     Console.WriteLine("홍길동님, 읽을 파일이 존재하지 않습니다.");
 }
+```
 
 ---
 
@@ -574,6 +614,7 @@ else
 파일 전체를 한 번에 읽지 않고, 한 줄씩 쓰거나 읽을 때 효율적입니다. `using` 문을 사용하면 사용 후 파일을 자동으로 닫아줍니다.
 
 [예제 코드]
+```
 // 한 줄씩 쓰기
 using (StreamWriter sw = new StreamWriter("log.txt"))
 {
@@ -589,6 +630,7 @@ using (StreamReader sr = new StreamReader("log.txt"))
         Console.WriteLine(sr.ReadLine());
     }
 }
+```
 
 ---
 
@@ -603,6 +645,7 @@ using (StreamReader sr = new StreamReader("log.txt"))
 배열과 비슷하지만 크기가 자유롭게 변하는 가장 많이 쓰이는 자료구조입니다. `<T>` 자리에 원하는 자료형을 넣습니다.
 
 [예제 코드]
+```
 // 정수형 리스트
 List<int> numbers = new List<int>();
 numbers.Add(10);
@@ -617,6 +660,7 @@ foreach (string n in names)
 {
     Console.WriteLine($"명단: {n}");
 }
+```
 
 ---
 
@@ -624,6 +668,7 @@ foreach (string n in names)
 메서드 이름 뒤에 `<T>`를 붙여서 어떤 타입이든 받을 수 있게 만듭니다.
 
 [예제 코드]
+```
 static void PrintAnything<T>(T value)
 {
     Console.WriteLine($"홍길동의 데이터: {value}");
@@ -636,6 +681,7 @@ PrintAnything<string>("안녕하세요");
 # [C# 자습 자료] 09. 람다식과 LINQ (데이터 처리의 혁신)
 
 복잡한 반복문을 한 줄로 줄여주고, 데이터를 SQL처럼 쉽고 직관적으로 추출하는 방법을 학습합니다.
+```
 
 ---
 
@@ -643,12 +689,14 @@ PrintAnything<string>("안녕하세요");
 익명 함수(이름이 없는 함수)를 아주 간결하게 표현하는 방식입니다. `=>` 기호를 사용하며 "입력이 전달되면(input) 실행한다(output)"는 의미입니다.
 
 [예제 코드]
+```
 // 원래 방식 (메서드 따로 정의)
 static bool IsEven(int n) => n % 2 == 0;
 
 // 람다식 방식 (필요할 때 즉석에서 정의)
 // n이 입력되면 n % 2 == 0 인지 확인하라
 (n => n % 2 == 0)
+```
 
 ---
 
@@ -662,6 +710,7 @@ static bool IsEven(int n) => n % 2 == 0;
 - **ToList / ToArray**: 결과를 리스트나 배열로 변환하기
 
 [예제 코드]
+```
 using System.Linq;
 
 int[] scores = { 95, 70, 45, 80, 100, 60 };
@@ -675,6 +724,7 @@ foreach (int s in highScores)
 {
     Console.WriteLine($"우수 점수: {s}");
 }
+```
 
 ---
 
@@ -682,6 +732,7 @@ foreach (int s in highScores)
 객체들이 담긴 리스트에서 특정 조건의 데이터만 뽑아내는 실무적인 예제입니다.
 
 [예제 코드]
+```
 class Student { public string Name; public int Age; }
 
 List<Student> students = new List<Student>
@@ -699,6 +750,7 @@ foreach (string name in adultNames)
 {
     Console.WriteLine($"성인 명단: {name}");
 }
+```
 
 ---
 
@@ -719,6 +771,7 @@ foreach (string name in adultNames)
 - **await**: 비동기 작업이 끝날 때까지 기다리되, 그동안 프로그램의 다른 부분은 계속 돌아가게 합니다.
 
 [예제 코드]
+```
 using System.Threading.Tasks;
 
 // 데이터를 다운로드하는 척 하는 비동기 메서드
@@ -735,6 +788,7 @@ static async Task DownloadFileAsync()
 // 메인 실행부에서 호출
 await DownloadFileAsync();
 Console.WriteLine("다른 작업을 수행 중입니다...");
+```
 
 ---
 
@@ -756,8 +810,10 @@ Console.WriteLine("다른 작업을 수행 중입니다...");
 
 
 [예제 코드]
+```
 int a = 10;           // Stack에 10 저장
 string b = "홍길동";   // Stack에는 주소, Heap에는 "홍길동" 저장
+```
 
 ---
 
@@ -770,11 +826,13 @@ C#은 개발자가 직접 메모리를 지울 필요가 없습니다. **가비지 컬렉터**가 주기적으로
 파일, 네트워크 연결, 데이터베이스 접속 등은 GC가 즉시 치우지 못할 때가 많습니다. 이때 `using` 문을 쓰면 작업이 끝나는 즉시 자원을 안전하게 반납합니다.
 
 [예제 코드]
+```
 using (var reader = new StreamReader("test.txt"))
 {
     string content = reader.ReadToEnd();
     Console.WriteLine($"홍길동의 파일 내용: {content}");
 } // 여기서 reader 상자가 자동으로 닫히고 정리됨
+```
 
 ---
 
@@ -786,6 +844,7 @@ using (var reader = new StreamReader("test.txt"))
 '대리자'라는 뜻으로, 메서드 자체를 변수에 담아서 다른 곳으로 전달할 수 있게 해줍니다.
 
 [예제 코드]
+```
 // 1. 델리게이트 정의 (어떤 형태의 함수를 담을지 결정)
 delegate void MyDelegate(string message);
 
@@ -794,6 +853,7 @@ static void ShowMessage(string msg) => Console.WriteLine($"홍길동의 알림: {msg}"
 // 2. 메서드를 변수처럼 담아서 사용
 MyDelegate del = ShowMessage;
 del("안녕하세요!");
+```
 
 ---
 
@@ -803,6 +863,7 @@ del("안녕하세요!");
 - **Func**: 반환값이 있는 메서드용
 
 [예제 코드]
+```
 // Action: 입력은 string, 반환은 없음
 Action<string> sayHello = (name) => Console.WriteLine($"안녕, {name}!");
 sayHello("홍길동");
@@ -810,6 +871,7 @@ sayHello("홍길동");
 // Func: 입력은 int 2개, 반환은 int
 Func<int, int, int> add = (x, y) => x + y;
 int result = add(10, 20);
+```
 
 ---
 
@@ -817,6 +879,7 @@ int result = add(10, 20);
 특정 사건(버튼 클릭, 데이터 도착 등)이 일어났을 때 등록된 함수들에게 알려주는 시스템입니다. 델리게이트를 기반으로 동작하지만 더 안전합니다.
 
 [예제 코드]
+```
 class Alarm
 {
     public event Action OnAlarm; // 알람 이벤트
@@ -832,3 +895,4 @@ class Alarm
 Alarm myAlarm = new Alarm();
 myAlarm.OnAlarm += () => Console.WriteLine("홍길동이 일어났습니다.");
 myAlarm.Start();
+```
