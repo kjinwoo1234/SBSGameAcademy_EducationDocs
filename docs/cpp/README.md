@@ -13,13 +13,6 @@
 10. [클래스](./10-class.md)
 11. [파일 입출력](./11-file-io.md)
 
-## 기존 통합 정리본
-- [입출력 + 변수/자료형](./01-basics.md)
-- [연산자 + 제어문](./02-operators-control-flow.md)
-- [배열 + 문자열 + 함수](./03-array-string-function.md)
-- [포인터 + 동적 메모리 + 클래스](./04-pointer-memory-class.md)
-- [파일 입출력 + 실습 가이드](./05-file-io-practice.md)
-
 ---
 
 [상위 문서로 돌아가기](../../README.md)

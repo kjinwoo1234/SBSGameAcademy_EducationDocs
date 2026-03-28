@@ -22,13 +22,6 @@
 19. [델리게이트](./19-delegate.md)
 20. [이벤트](./20-event.md)
 
-## 기존 통합 정리본
-- [01~02 통합](./01-basics-control-flow.md)
-- [03~04 통합](./02-array-method.md)
-- [05 + static 통합](./03-oop-basics.md)
-- [06~07 통합](./04-oop-advanced.md)
-- [08~12 통합](./05-advanced-features.md)
-
 ---
 
 [상위 문서로 돌아가기](../../README.md)
