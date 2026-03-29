@@ -73,9 +73,9 @@ public class SaveManager : MonoBehaviour
 - 기본값 처리 누락으로 예외가 발생하는 실수
 
 ## 이해 점검 체크리스트
-- [ ] PlayerPrefs와 JSON의 용도를 구분할 수 있는가?
-- [ ] 저장 실패 시 기본값 처리 로직이 있는가?
-- [ ] 저장 키를 상수로 관리하고 있는가?
+- PlayerPrefs와 JSON의 용도를 구분할 수 있는가?
+- 저장 실패 시 기본값 처리 로직이 있는가?
+- 저장 키를 상수로 관리하고 있는가?
 
 ## 다음 학습 추천
 - [빌드와 배포](./10-build-deploy.md)

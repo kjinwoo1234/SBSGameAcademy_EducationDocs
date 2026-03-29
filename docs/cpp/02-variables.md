@@ -55,9 +55,9 @@ double correct = static_cast<double>(a) / b; // 3.5
 3. 정수/실수 나눗셈 결과를 각각 출력해 차이를 비교한다.
 
 ## 이해 점검 체크리스트
-- [ ] `std::string`을 사용하는 이유를 설명할 수 있는가?
-- [ ] `static_cast`를 사용한 형 변환 코드를 작성할 수 있는가?
-- [ ] 자료형 차이로 생기는 계산 결과 차이를 설명할 수 있는가?
+- `std::string`을 사용하는 이유를 설명할 수 있는가?
+- `static_cast`를 사용한 형 변환 코드를 작성할 수 있는가?
+- 자료형 차이로 생기는 계산 결과 차이를 설명할 수 있는가?
 
 ## 4) 연습 문제
 1. 정수 2개를 입력받아 정수 나눗셈/실수 나눗셈을 비교 출력하세요.
@@ -70,10 +70,6 @@ double correct = static_cast<double>(a) / b; // 3.5
 ## 정답
 1. 피연산자 중 하나를 실수형으로 캐스팅(`static_cast<double>`)해야 한다.
 2. 길이/연산 지원이 편하고 메모리 관리가 더 안전하기 때문
-
-## 관련 브릿지 학습
-- [디버깅 워크플로우 기초](../common/01-debugging-workflow.md)
-- [버전 관리와 협업 기초](../common/02-version-control-collaboration.md)
 
 ---
 

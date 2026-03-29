@@ -44,9 +44,9 @@ public class UIController : MonoBehaviour
 - TMP Text 대신 Legacy Text를 혼용해 폰트 깨짐이 발생하는 실수
 
 ## 이해 점검 체크리스트
-- [ ] 버튼 클릭 이벤트가 정상 호출되는가?
-- [ ] 텍스트 참조가 Inspector에서 연결되었는가?
-- [ ] Canvas Scaler가 해상도 대응 모드인가?
+- 버튼 클릭 이벤트가 정상 호출되는가?
+- 텍스트 참조가 Inspector에서 연결되었는가?
+- Canvas Scaler가 해상도 대응 모드인가?
 
 ## 다음 학습 추천
 - [애니메이션 기초 (Animator)](./08-animation-basics.md)

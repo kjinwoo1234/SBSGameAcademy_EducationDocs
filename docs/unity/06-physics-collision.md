@@ -30,9 +30,9 @@ Unity 물리는 `Rigidbody` + `Collider` 조합으로 처리합니다.
 6. `Is Trigger`를 비활성화 후 `OnCollisionEnter`로 동작 차이를 확인합니다.
 
 ## 이해 점검 체크리스트
-- [ ] Trigger/Collision 이벤트를 구분해 사용했는가?
-- [ ] 충돌 대상 중 최소 하나에 Rigidbody가 있는가?
-- [ ] Layer Collision Matrix 설정을 확인했는가?
+- Trigger/Collision 이벤트를 구분해 사용했는가?
+- 충돌 대상 중 최소 하나에 Rigidbody가 있는가?
+- Layer Collision Matrix 설정을 확인했는가?
 
 ## 다음 학습 추천
 - [UI 기초 (Canvas, Text, Button)](./07-ui-basics.md)

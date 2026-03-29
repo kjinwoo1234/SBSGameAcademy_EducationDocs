@@ -50,9 +50,9 @@ public class PlayerAnimationController : MonoBehaviour
 - Transition 조건은 맞지만 `Has Exit Time` 때문에 전이가 지연되는 실수
 
 ## 이해 점검 체크리스트
-- [ ] 상태 전이 조건이 양방향으로 설정되었는가?
-- [ ] 파라미터 이름이 코드와 Animator에서 일치하는가?
-- [ ] Play 모드에서 현재 상태를 Animator 창에서 확인했는가?
+- 상태 전이 조건이 양방향으로 설정되었는가?
+- 파라미터 이름이 코드와 Animator에서 일치하는가?
+- Play 모드에서 현재 상태를 Animator 창에서 확인했는가?
 
 ## 다음 학습 추천
 - [데이터 저장 (PlayerPrefs, JSON)](./09-data-save.md)

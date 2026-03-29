@@ -23,9 +23,9 @@
 - 클릭이 안 될 때 입력 모드(UI Only/Game and UI) 설정을 확인하지 않는다.
 
 ## 이해 점검 체크리스트
-- [ ] Widget Blueprint를 직접 생성했는가?
-- [ ] BeginPlay에서 UI 생성/표시 흐름을 구현했는가?
-- [ ] 버튼 클릭 이벤트가 실제로 호출되는가?
+- Widget Blueprint를 직접 생성했는가?
+- BeginPlay에서 UI 생성/표시 흐름을 구현했는가?
+- 버튼 클릭 이벤트가 실제로 호출되는가?
 
 ## 다음 학습 추천
 - [애니메이션 블루프린트 기초](./07-animation-blueprint.md)

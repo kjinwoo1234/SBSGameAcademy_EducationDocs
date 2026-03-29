@@ -58,9 +58,9 @@ std::getline(std::cin, line);
 3. `std::getline`으로 공백 포함 문장을 입력받아 출력한다.
 
 ## 이해 점검 체크리스트
-- [ ] `std::cin >>`과 `std::getline`의 차이를 설명할 수 있는가?
-- [ ] 공백 포함 입력에서 `std::getline`을 사용할 수 있는가?
-- [ ] 입력 후 출력으로 결과를 검증했는가?
+- `std::cin >>`과 `std::getline`의 차이를 설명할 수 있는가?
+- 공백 포함 입력에서 `std::getline`을 사용할 수 있는가?
+- 입력 후 출력으로 결과를 검증했는가?
 
 ## 4) 연습 문제
 1. 이름/나이를 입력받아 자기소개 문장을 출력하세요.
@@ -73,10 +73,6 @@ std::getline(std::cin, line);
 ## 정답
 1. `std::getline`
 2. 공백 이전까지만 읽어 전체 문장을 받지 못함
-
-## 관련 브릿지 학습
-- [디버깅 워크플로우 기초](../common/01-debugging-workflow.md)
-- [버전 관리와 협업 기초](../common/02-version-control-collaboration.md)
 
 ---
 

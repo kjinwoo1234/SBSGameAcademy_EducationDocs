@@ -33,9 +33,9 @@ transform.Translate(dir * speed * Time.deltaTime);
 6. `deltaTime` 유무에 따른 움직임 차이를 비교합니다.
 
 ## 이해 점검 체크리스트
-- [ ] `deltaTime`를 이동 계산에 사용했는가?
-- [ ] 입력 축 이름이 정확한가?
-- [ ] 이동 방향 벡터가 의도대로 계산되는가?
+- `deltaTime`를 이동 계산에 사용했는가?
+- 입력 축 이름이 정확한가?
+- 이동 방향 벡터가 의도대로 계산되는가?
 
 ## 다음 학습 추천
 - [물리와 충돌 처리](./06-physics-collision.md)
@@ -48,6 +48,10 @@ transform.Translate(dir * speed * Time.deltaTime);
 ## 정답
 1. `Time.deltaTime`
 2. `Horizontal`, `Vertical`
+
+## 확장 과제 (기본/심화)
+- 기본: 대각선 이동 속도 보정(정규화)을 적용한다.
+- 심화: 키보드/패드 입력을 분리해 입력 장치별 민감도 옵션을 추가한다.
 
 ---
 

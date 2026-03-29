@@ -33,9 +33,9 @@ Unity에서 모든 오브젝트는 `GameObject`이며, 기능은 `Component`를 
 - Script 파일명과 클래스명이 달라 부착이 안 되는 실수
 
 ## 이해 점검 체크리스트
-- [ ] GameObject와 Component의 차이를 한 문장으로 설명할 수 있는가?
-- [ ] 모든 GameObject에 `Transform`이 기본 포함된다는 점을 알고 있는가?
-- [ ] `Add Component` 후 Play 모드에서 실제 동작을 확인했는가?
+- GameObject와 Component의 차이를 한 문장으로 설명할 수 있는가?
+- 모든 GameObject에 `Transform`이 기본 포함된다는 점을 알고 있는가?
+- `Add Component` 후 Play 모드에서 실제 동작을 확인했는가?
 
 ## 셀프 퀴즈
 1. GameObject에 기능을 부여하는 단위는 무엇인가?

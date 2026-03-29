@@ -24,9 +24,9 @@
 - 루트 컴포넌트와 자식 컴포넌트 관계를 잘못 설정해 위치가 어긋난다.
 
 ## 이해 점검 체크리스트
-- [ ] Actor와 Component의 책임을 각각 설명할 수 있는가?
-- [ ] 최소 2개 이상의 Component를 Actor에 추가했는가?
-- [ ] 레벨 배치 후 Play 모드에서 객체를 확인했는가?
+- Actor와 Component의 책임을 각각 설명할 수 있는가?
+- 최소 2개 이상의 Component를 Actor에 추가했는가?
+- 레벨 배치 후 Play 모드에서 객체를 확인했는가?
 
 ## 다음 학습 추천
 - [Level과 Blueprint 기초](./03-level-blueprint.md)

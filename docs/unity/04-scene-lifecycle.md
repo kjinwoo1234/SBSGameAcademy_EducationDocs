@@ -30,9 +30,9 @@
 5. 물리 이동 로직을 `Update`와 `FixedUpdate`에 각각 넣어 차이를 비교합니다.
 
 ## 이해 점검 체크리스트
-- [ ] `Awake`와 `Start`를 구분해 사용할 수 있는가?
-- [ ] 씬 전환 실패 시 Build Settings를 먼저 점검하는가?
-- [ ] 물리 관련 코드를 `FixedUpdate`에서 처리했는가?
+- `Awake`와 `Start`를 구분해 사용할 수 있는가?
+- 씬 전환 실패 시 Build Settings를 먼저 점검하는가?
+- 물리 관련 코드를 `FixedUpdate`에서 처리했는가?
 
 ## 다음 학습 추천
 - [입력 처리와 캐릭터 이동](./05-input-movement.md)

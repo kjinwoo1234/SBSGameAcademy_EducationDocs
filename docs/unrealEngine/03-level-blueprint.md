@@ -23,9 +23,9 @@ Blueprint는 언리얼의 비주얼 스크립팅 도구이며, 범위에 따라 
 - 이벤트 노드 실행 연결선이 끊겨도 오류 없이 동작하지 않아 원인 파악이 늦어진다.
 
 ## 이해 점검 체크리스트
-- [ ] Level/Actor Blueprint의 차이를 사례로 설명할 수 있는가?
-- [ ] `BeginPlay` 이벤트 흐름을 직접 구성했는가?
-- [ ] 재사용 로직을 Actor Blueprint로 분리했는가?
+- Level/Actor Blueprint의 차이를 사례로 설명할 수 있는가?
+- `BeginPlay` 이벤트 흐름을 직접 구성했는가?
+- 재사용 로직을 Actor Blueprint로 분리했는가?
 
 ## 다음 학습 추천
 - [입력 처리와 캐릭터 이동](./04-input-movement.md)

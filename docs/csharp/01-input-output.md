@@ -50,9 +50,9 @@ Console.WriteLine($"{name}님의 점수는 {score}점입니다.");
 3. 정수 입력을 받아 변환 후 결과를 출력한다.
 
 ## 이해 점검 체크리스트
-- [ ] `WriteLine`과 `Write` 차이를 설명할 수 있는가?
-- [ ] `ReadLine` 입력을 숫자로 변환할 수 있는가?
-- [ ] 변환 실패 가능성을 고려해 검증 로직을 생각했는가?
+- `WriteLine`과 `Write` 차이를 설명할 수 있는가?
+- `ReadLine` 입력을 숫자로 변환할 수 있는가?
+- 변환 실패 가능성을 고려해 검증 로직을 생각했는가?
 
 ## 4) 연습 문제
 1. 이름/나이를 입력받아 자기소개를 출력하세요.
@@ -65,10 +65,6 @@ Console.WriteLine($"{name}님의 점수는 {score}점입니다.");
 ## 정답
 1. `string`
 2. 숫자가 아닌 입력에서 예외가 발생할 수 있음
-
-## 관련 브릿지 학습
-- [디버깅 워크플로우 기초](../common/01-debugging-workflow.md)
-- [버전 관리와 협업 기초](../common/02-version-control-collaboration.md)
 
 ---
 
