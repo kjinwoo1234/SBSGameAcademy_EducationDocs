@@ -12,11 +12,18 @@
 - `Character Blueprint`: 입력 이벤트를 이동 로직으로 연결
 - `Add Movement Input`: 방향 벡터 기반 이동 처리
 
+## 버전별 입력 시스템 안내
+- **UE5 권장:** Enhanced Input 사용 (`Input Action`, `Input Mapping Context`)
+- **레거시 방식:** Project Settings의 Action/Axis Mapping 사용
+- 실습 전 프로젝트가 어떤 입력 시스템을 쓰는지 먼저 확인한다.
+- 팀 프로젝트에서는 한 방식으로 통일해 혼선을 줄인다.
+
 ## 단계별 실습
-1. 프로젝트 입력 설정에서 이동용 Axis(`MoveForward`, `MoveRight`)를 만든다.
-2. Character Blueprint에 Axis 이벤트를 추가한다.
-3. `Add Movement Input` 노드에 전방/우측 벡터를 연결한다.
-4. 플레이 시 캐릭터가 WASD로 이동하는지 확인한다.
+1. 프로젝트 입력 시스템(Enhanced Input 또는 레거시)을 확인한다.
+2. 이동 입력(`MoveForward`, `MoveRight` 또는 동등한 Input Action)을 만든다.
+3. Character Blueprint에 입력 이벤트를 연결한다.
+4. `Add Movement Input` 노드에 전방/우측 벡터를 연결한다.
+5. 플레이 시 캐릭터가 WASD로 이동하는지 확인한다.
 
 ## 실수 포인트
 - Pawn/Character가 Player Controller에 Possess되지 않아 입력이 들어오지 않는다.

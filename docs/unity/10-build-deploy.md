@@ -47,6 +47,10 @@
 1. 0번
 2. 씬 전환 동작, 입력/해상도 정상 동작
 
+## 관련 브릿지 학습
+- [디버깅 워크플로우 기초](../common/01-debugging-workflow.md)
+- [버전 관리와 협업 기초](../common/02-version-control-collaboration.md)
+
 ---
 
 [상위 문서로 돌아가기](./README.md)

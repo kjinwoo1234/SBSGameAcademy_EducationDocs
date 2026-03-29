@@ -37,6 +37,10 @@ if (File.Exists("test.txt"))
 1. 사용자 입력을 파일에 저장하고 재실행 시 읽기
 2. 날짜/시간 로그를 줄 단위로 누적 저장
 
+## 관련 브릿지 학습
+- [디버깅 워크플로우 기초](../common/01-debugging-workflow.md)
+- [버전 관리와 협업 기초](../common/02-version-control-collaboration.md)
+
 ---
 
 [상위 문서로 돌아가기](./README.md)

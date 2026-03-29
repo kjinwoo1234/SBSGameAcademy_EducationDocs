@@ -34,6 +34,10 @@ in.close();
 1. 이름/점수를 파일에 저장하고 다시 읽어 출력하세요.
 2. 실행 로그를 `app` 모드로 누적 기록하세요.
 
+## 관련 브릿지 학습
+- [디버깅 워크플로우 기초](../common/01-debugging-workflow.md)
+- [버전 관리와 협업 기초](../common/02-version-control-collaboration.md)
+
 ---
 
 [상위 문서로 돌아가기](./README.md)
