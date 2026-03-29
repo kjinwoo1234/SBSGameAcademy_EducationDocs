@@ -38,6 +38,14 @@ Unity 물리는 `Rigidbody` + `Collider` 조합으로 처리합니다.
 - [UI 기초 (Canvas, Text, Button)](./07-ui-basics.md)
 - [데이터 저장 (PlayerPrefs, JSON)](./09-data-save.md)
 
+## 셀프 퀴즈
+1. 물리 반응 없이 충돌 감지만 하고 싶을 때 사용하는 방식은?
+2. Trigger 이벤트가 호출되지 않을 때 필수 점검 항목 하나는?
+
+## 정답
+1. Trigger (`Is Trigger` 활성화)
+2. 충돌 대상 중 최소 하나에 Rigidbody 존재 여부
+
 ---
 
 [상위 문서로 돌아가기](./README.md)

@@ -41,6 +41,14 @@ transform.Translate(dir * speed * Time.deltaTime);
 - [물리와 충돌 처리](./06-physics-collision.md)
 - [애니메이션 기초 (Animator)](./08-animation-basics.md)
 
+## 셀프 퀴즈
+1. 프레임 독립 이동을 위해 곱해야 하는 값은 무엇인가?
+2. 좌우/앞뒤 입력 축 기본 이름은 무엇인가?
+
+## 정답
+1. `Time.deltaTime`
+2. `Horizontal`, `Vertical`
+
 ---
 
 [상위 문서로 돌아가기](./README.md)

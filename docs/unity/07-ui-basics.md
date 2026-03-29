@@ -23,6 +23,22 @@ Unity UI는 Canvas 아래에 배치됩니다.
 3. 버튼 `On Click()`에서 `ChangeText()` 함수를 연결합니다.
 4. 클릭 시 텍스트를 `"Start Clicked"`로 변경합니다.
 
+## 전체 코드 예시 (복붙 실행용)
+```csharp
+using TMPro;
+using UnityEngine;
+
+public class UIController : MonoBehaviour
+{
+    [SerializeField] private TMP_Text label;
+
+    public void ChangeText()
+    {
+        label.text = "Start Clicked";
+    }
+}
+```
+
 ## 실수 포인트
 - 화면 해상도 대응: Canvas Scaler 설정 확인 (`Scale With Screen Size`)
 - TMP Text 대신 Legacy Text를 혼용해 폰트 깨짐이 발생하는 실수
@@ -34,6 +50,14 @@ Unity UI는 Canvas 아래에 배치됩니다.
 
 ## 다음 학습 추천
 - [애니메이션 기초 (Animator)](./08-animation-basics.md)
+
+## 셀프 퀴즈
+1. Unity UI가 기본적으로 배치되는 루트 오브젝트는 무엇인가?
+2. Button 클릭 시 함수를 연결하는 Inspector 항목 이름은 무엇인가?
+
+## 정답
+1. Canvas
+2. `On Click()`
 
 ---
 

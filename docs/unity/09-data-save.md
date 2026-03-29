@@ -20,6 +20,48 @@ PlayerPrefs.Save();
 - 구조화된 데이터 저장에 적합
 - `JsonUtility` + 파일 쓰기/읽기 사용
 
+## 전체 코드 예시 (JSON 저장/로드)
+```csharp
+using System;
+using System.IO;
+using UnityEngine;
+
+[Serializable]
+public class SaveData
+{
+    public string playerName;
+    public int level;
+    public int gold;
+}
+
+public class SaveManager : MonoBehaviour
+{
+    private string SavePath => Path.Combine(Application.persistentDataPath, "save.json");
+
+    public void Save()
+    {
+        SaveData data = new SaveData
+        {
+            playerName = "홍길동",
+            level = 3,
+            gold = 1200
+        };
+
+        string json = JsonUtility.ToJson(data, true);
+        File.WriteAllText(SavePath, json);
+    }
+
+    public SaveData Load()
+    {
+        if (!File.Exists(SavePath))
+            return null;
+
+        string json = File.ReadAllText(SavePath);
+        return JsonUtility.FromJson<SaveData>(json);
+    }
+}
+```
+
 ## 미니 실습 과제
 1. 볼륨 값을 PlayerPrefs로 저장/불러오기 합니다.
 2. 플레이어 이름/레벨/골드를 JSON으로 저장합니다.
@@ -37,6 +79,14 @@ PlayerPrefs.Save();
 
 ## 다음 학습 추천
 - [빌드와 배포](./10-build-deploy.md)
+
+## 셀프 퀴즈
+1. 간단한 옵션값 저장에 적합한 방식은 PlayerPrefs와 JSON 중 무엇인가?
+2. JSON 파일 저장 경로로 Unity에서 자주 사용하는 경로는 무엇인가?
+
+## 정답
+1. PlayerPrefs
+2. `Application.persistentDataPath`
 
 ---
 

@@ -12,6 +12,11 @@
 9. [데이터 저장 (PlayerPrefs, JSON)](./09-data-save.md) - 응용
 10. [빌드와 배포](./10-build-deploy.md) - 응용
 
+## 중급 추천 트랙
+- 성능 최적화: `Profiler`, `GC Alloc`, `Object Pooling`
+- 씬 아키텍처: 매니저 분리, 씬 전환 구조화, 의존성 정리
+- 리소스 관리: `Addressables` 기반 로딩/메모리 전략
+
 ---
 
 [상위 문서로 돌아가기](../../README.md)

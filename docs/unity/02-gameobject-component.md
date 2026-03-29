@@ -42,6 +42,11 @@ Unity에서 모든 오브젝트는 `GameObject`이며, 기능은 `Component`를 
 2. Rigidbody를 추가했는데 낙하하지 않는다면 무엇을 먼저 확인해야 하는가?
 3. 스크립트가 실행되지 않을 때 가장 먼저 확인할 항목 2가지는 무엇인가?
 
+## 정답
+1. Component
+2. `Use Gravity` 및 Rigidbody/Collider 설정
+3. 오브젝트에 스크립트가 부착되었는지, Play 모드인지 여부
+
 ## 다음 학습 추천
 - [Transform과 Prefab](./03-transform-prefab.md)
 - [물리와 충돌 처리](./06-physics-collision.md)

@@ -24,6 +24,27 @@
 4. 이동 스크립트에서 `animator.SetFloat("Speed", moveMagnitude)`를 갱신합니다.
 5. Play 모드에서 이동 입력 시 상태 전환을 확인합니다.
 
+## 전체 코드 예시 (복붙 실행용)
+```csharp
+using UnityEngine;
+
+public class PlayerAnimationController : MonoBehaviour
+{
+    [SerializeField] private Animator animator;
+    [SerializeField] private float speed = 5f;
+
+    private void Update()
+    {
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
+        Vector3 dir = new Vector3(h, 0f, v);
+
+        transform.Translate(dir * speed * Time.deltaTime, Space.World);
+        animator.SetFloat("Speed", dir.magnitude);
+    }
+}
+```
+
 ## 실수 포인트
 - 파라미터 이름 오타로 전이가 동작하지 않는 실수
 - Transition 조건은 맞지만 `Has Exit Time` 때문에 전이가 지연되는 실수
@@ -35,6 +56,14 @@
 
 ## 다음 학습 추천
 - [데이터 저장 (PlayerPrefs, JSON)](./09-data-save.md)
+
+## 셀프 퀴즈
+1. 상태 전환 조건을 코드에서 제어하기 위한 Animator 요소는 무엇인가?
+2. Idle/Run 전환에서 흔히 사용하는 float 파라미터 이름 예시는 무엇인가?
+
+## 정답
+1. Parameter
+2. `Speed`
 
 ---
 

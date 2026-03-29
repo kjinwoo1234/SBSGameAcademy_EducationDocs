@@ -39,6 +39,14 @@
 - [Scene 관리와 생명주기](./04-scene-lifecycle.md)
 - [물리와 충돌 처리](./06-physics-collision.md)
 
+## 셀프 퀴즈
+1. Prefab 인스턴스 변경을 원본에 반영하는 기능은 무엇인가?
+2. Prefab 인스턴스 변경을 취소하는 기능은 무엇인가?
+
+## 정답
+1. Apply
+2. Revert
+
 ---
 
 [상위 문서로 돌아가기](./README.md)
