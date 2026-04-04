@@ -24,6 +24,14 @@
 4. 벽/자기 몸 충돌 검사
 5. 먹이 생성/점수 시스템 추가
 
+핵심 기능 체크:
+| 기능 | 최소 구현 포인트 |
+|---|---|
+| 노드 추가 | 새 노드 생성 + 연결 |
+| 노드 삭제 | 연결 갱신 + 메모리 해제 |
+| 충돌 검사 | 벽/몸통 좌표 비교 |
+| 종료 처리 | 리스트 전체 `free` |
+
 예시 코드(연결 리스트 기본):
 ```c
 #include <stdio.h>
@@ -43,18 +51,41 @@ Node* push_front(Node *head, int x, int y) {
     return new_node;
 }
 
+void free_list(Node *head) {
+    while (head != NULL) {
+        Node *next = head->next;
+        free(head);
+        head = next;
+    }
+}
+
 int main(void) {
     Node *snake = NULL;
     snake = push_front(snake, 5, 5);
     snake = push_front(snake, 6, 5);
     printf("head: (%d, %d)\n", snake->x, snake->y);
+    free_list(snake);
     return 0;
 }
 ```
+- 실습에서도 프로그램 종료 전에 리스트를 순회하며 `free`로 메모리를 해제하는 습관을 반드시 지키세요.
+
+예상 출력:
+```text
+head: (6, 5)
+```
 
 연습문제:
-1. 단일 연결 리스트의 `push_front`, `pop_back` 구현
-2. 좌표 중복 검사 함수(`is_collision`) 구현
+1. 문제 1 - 기본 연결 리스트 구현
+   - 문제: 단일 연결 리스트에 대해 `push_front`, `pop_back`을 구현하세요.
+   - 입력: 좌표 노드 여러 개
+   - 출력: 삽입/삭제 후 리스트 상태
+   - 조건: 삭제 시 메모리 해제 필수
+2. 문제 2 - 충돌 검사 함수
+   - 문제: 머리 좌표와 몸통 리스트를 비교해 충돌 여부를 반환하는 `is_collision` 함수를 작성하세요.
+   - 입력: 머리 좌표, 몸통 리스트
+   - 출력: 충돌 시 1, 아니면 0
+   - 조건: 리스트 전체 순회
 
 정답 포인트:
 - 메모리 할당 후 사용, 사용 후 해제

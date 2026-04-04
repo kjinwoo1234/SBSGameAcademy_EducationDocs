@@ -68,7 +68,6 @@
 
 ## 7) 결과물 저장 위치
 - 기본 결과 문서는 `./.result/ReviewResult-document.md`로 출력한다.
-- 통합 리뷰 수행 시 `./.result/SkillIntegratedReviewResult.md`를 사용한다.
 
 ## 8) 출력 템플릿 (필수)
 아래 템플릿 구조를 반드시 지킨다.
