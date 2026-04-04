@@ -13,17 +13,18 @@
 - 파일 입출력과 메모리 개념을 포함해 C++ 기본 프로젝트를 구성할 수 있다.
 
 ## 권장 학습 순서 (주제별 세분화)
-1. [입출력](./01-input-output.md)
+1. [출력](./01-output.md)
 2. [변수와 자료형](./02-variables.md)
 3. [연산자](./03-operators.md)
-4. [제어문](./04-control-flow.md)
-5. [배열](./05-array.md)
-6. [문자열](./06-string.md)
-7. [함수](./07-function.md)
-8. [포인터](./08-pointer.md)
-9. [동적 메모리](./09-dynamic-memory.md)
-10. [클래스](./10-class.md)
-11. [파일 입출력](./11-file-io.md)
+4. [입력](./04-input.md)
+5. [제어문](./04-control-flow.md)
+6. [배열](./05-array.md)
+7. [문자열](./06-string.md)
+8. [함수](./07-function.md)
+9. [포인터](./08-pointer.md)
+10. [동적 메모리](./09-dynamic-memory.md)
+11. [클래스](./10-class.md)
+12. [파일 입출력](./11-file-io.md)
 
 ## 중급 추천 트랙
 - STL 컨테이너/알고리즘: `vector`, `map`, 반복자 패턴
@@ -40,8 +41,8 @@
 - 파일 입출력을 포함한 미니 예제를 직접 완성했는가?
 
 ## 템플릿 적용 현황
-- 완료: `01-input-output`, `02-variables`
-- 예정: `03-operators` ~ `11-file-io`
+- 완료: `01-output`, `02-variables`, `04-input`
+- 예정: `03-operators`, `04-control-flow` ~ `11-file-io`
 
 ---
 

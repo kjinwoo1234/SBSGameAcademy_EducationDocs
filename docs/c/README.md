@@ -8,35 +8,41 @@
 - 컴퓨터 기본 사용(파일 저장, 실행) 가능
 - 수학/논리 기초(사칙연산, 조건 판단) 이해
 
-## 완주 후 역량
-- C 언어 기본 문법과 함수/배열/포인터를 활용해 콘솔 프로그램을 작성할 수 있다.
-- 파일 입출력과 동적 메모리 기반의 기초 프로그램 구조를 설계할 수 있다.
+## 목차
+### Part 01. C언어 기본
+- [Chapter 01 개론](./01-intro.md)
+- [Chapter 02 프로그램의 기본구성](./02-program-structure.md)
+- [Chapter 03 변수와 연산자](./03-variables-operators.md)
+- [Chapter 04 데이터 표현방식의 이해](./04-data-representation.md)
+- [Chapter 05 상수와 기본 자료형](./05-constants-types.md)
+- [Chapter 06 `printf` 함수와 `scanf` 함수 정리](./06-printf-scanf.md)
+- [Chapter 07 반복문](./07-loops.md)
+- [Chapter 08 조건문과 분기](./08-condition-branch.md)
+- [Chapter 09 함수](./09-functions.md)
+- [Chapter 10 도전! 프로그래밍 1](./10-challenge-1.md)
 
-## 권장 학습 순서 (주제별 세분화)
-1. [입출력](./01-input-output.md)
-2. [변수와 자료형](./02-variables.md)
-3. [연산자](./03-operators.md)
-4. [제어문](./04-control-flow.md)
-5. [배열](./05-array.md)
-6. [문자열](./06-string.md)
-7. [함수](./07-function.md)
-8. [포인터](./08-pointer.md)
-9. [동적 메모리](./09-dynamic-memory.md)
-10. [구조체](./10-struct.md)
-11. [파일 입출력](./11-file-io.md)
+### Part 02. 포인터와 배열의 시작
+- [Chapter 11 1차원 배열](./11-one-dimensional-array.md)
+- [Chapter 12 포인터의 이해](./12-pointer-basics.md)
+- [Chapter 13 포인터와 배열](./13-pointer-array.md)
+- [Chapter 14 포인터와 함수](./14-pointer-function.md)
+- [Chapter 15 도전! 프로그래밍 2](./15-challenge-2.md)
 
-## 시작 전 체크
-- 변수, 조건문, 반복문의 개념을 들어본 적이 있는가?
-- 코드 편집기와 컴파일러 실행 환경을 준비했는가?
+### Part 03. 포인터와 배열의 완성
+- [Chapter 16 다차원 배열](./16-multi-dimensional-array.md)
+- [Chapter 17 포인터의 포인터](./17-pointer-to-pointer.md)
+- [Chapter 18 다차원 배열과 포인터의 관계](./18-array-pointer-relationship.md)
+- [Chapter 19 함수 포인터와 `void` 포인터](./19-function-void-pointer.md)
 
-## 완주 체크
-- 포인터와 배열의 관계를 예제로 설명할 수 있는가?
-- 동적 메모리 할당/해제를 코드로 작성할 수 있는가?
-- 파일 읽기/쓰기 프로그램을 직접 실행해봤는가?
-
-## 템플릿 적용 현황
-- 완료: `01-input-output`, `02-variables`
-- 예정: `03-operators` ~ `11-file-io`
+### Part 04. C언어의 깊은 이해
+- [Chapter 21 문자/문자열 관련 함수](./21-character-string-functions.md)
+- [Chapter 22 구조체와 사용자 정의 자료형 1](./22-struct-user-type-1.md)
+- [Chapter 23 구조체와 사용자 정의 자료형 2](./23-struct-user-type-2.md)
+- [Chapter 20 도전! 프로그래밍 3](./20-challenge-3.md)
+- [Chapter 24 파일 입출력](./24-file-io.md)
+- [Chapter 25 메모리 관리와 동적 할당](./25-memory-dynamic-allocation.md)
+- [Chapter 26 매크로와 전처리기](./26-macro-preprocessor.md)
+- [Chapter 27 파일 분할과 헤더파일 디자인](./27-file-split-header-design.md)
 
 ---
 
