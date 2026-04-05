@@ -46,6 +46,9 @@
 - [Chapter 24 CMake 빌드 기초](./24-cmake-basics.md)
 - [Chapter 25 디버깅과 테스트 기초](./25-debug-test-basics.md)
 
+### Part 07. 콘솔 게임 실전
+- [Chapter 26 콘솔 제어로 뱀/테트리스 만들기](./26-console-game-snake-tetris.md)
+
 ---
 
 [상위 문서로 돌아가기](../../README.md)

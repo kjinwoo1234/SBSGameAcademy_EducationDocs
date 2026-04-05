@@ -44,6 +44,9 @@
 - [Chapter 19 delegate](./19-delegate.md)
 - [Chapter 20 event](./20-event.md)
 
+### Part 06. 콘솔 게임 실전
+- [Chapter 21 콘솔 제어로 뱀/테트리스 만들기](./21-console-game-snake-tetris.md)
+
 ---
 
 [상위 문서로 돌아가기](../../README.md)
