@@ -27,7 +27,7 @@
 - [Chapter 08 프로퍼티](./08-property.md)
 - [Chapter 09 static](./09-static.md)
 - [Chapter 10 상속](./10-inheritance.md)
-- [Chapter 11 다형성](./11-polymorphism.md)
+- [Chapter 11 다형성과 인터페이스](./11-polymorphism.md)
 
 ### Part 03. 실전 문법 확장
 - [Chapter 12 예외 처리](./12-exception-handling.md)
@@ -46,6 +46,12 @@
 
 ### Part 06. 콘솔 게임 실전
 - [Chapter 21 콘솔 제어로 뱀/테트리스 만들기](./21-console-game-snake-tetris.md)
+
+### Part 07. 실무 확장
+- [Chapter 22 컬렉션 심화](./22-collections-advanced.md)
+- [Chapter 23 Null 안전성](./23-null-safety.md)
+- [Chapter 24 테스트/디버깅 기초](./24-test-debug-basics.md)
+- [Chapter 25 비동기 심화](./25-advanced-async.md)
 
 ---
 
