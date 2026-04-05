@@ -8,27 +8,17 @@
 - 파일/폴더 관리와 CLI 기본 사용
 - 기본 프로그래밍 프로젝트 구조 이해
 
-## 완주 후 역량
-- Git 로컬 저장소 생성부터 원격 협업까지 기본 워크플로우를 수행할 수 있다.
-- 브랜치 전략과 Pull Request 기반 리뷰 흐름을 적용할 수 있다.
-- 충돌 발생 시 안전하게 해결하고 재검증할 수 있다.
+## 목차
+### Part 01. 로컬 버전 관리 기초
+- [Chapter 01 Git 기본과 저장소 시작](./01-git-basics.md)
+- [Chapter 02 브랜치와 커밋 워크플로우](./02-branch-commit-workflow.md)
 
-## 권장 학습 순서 (주제별 세분화)
-1. [Git 기본과 저장소 시작](./01-git-basics.md)
-2. [브랜치와 커밋 워크플로우](./02-branch-commit-workflow.md)
-3. [병합 충돌 해결](./03-merge-conflict.md)
-4. [원격 저장소와 협업](./04-remote-collaboration.md)
-5. [Git 미니 프로젝트: 팀 협업 시뮬레이션](./05-mini-project.md)
+### Part 02. 협업과 통합
+- [Chapter 03 병합 충돌 해결](./03-merge-conflict.md)
+- [Chapter 04 원격 저장소와 협업](./04-remote-collaboration.md)
 
-## 시작 전 체크
-- Git 설치 후 `git --version` 확인을 완료했는가?
-- 코드 편집기와 터미널에서 프로젝트 폴더 접근이 가능한가?
-
-## 완주 체크
-- 새 브랜치를 만들어 기능 단위 커밋을 작성할 수 있는가?
-- Pull Request 전 `rebase` 또는 `merge` 동기화를 수행할 수 있는가?
-- 충돌을 직접 해결하고 테스트 후 병합할 수 있는가?
-- 팀 협업 시나리오를 기준으로 브랜치 생성부터 병합까지 재현할 수 있는가?
+### Part 03. 통합 실습
+- [Chapter 05 Git 미니 프로젝트: 팀 협업 시뮬레이션](./05-mini-project.md)
 
 ---
 

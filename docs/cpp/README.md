@@ -8,41 +8,43 @@
 - 변수, 함수, 포인터 등 C 기초 문법
 - 컴파일/실행의 기본 흐름 이해
 
-## 완주 후 역량
-- 클래스 기반 설계와 함수 분리를 통해 중간 규모 콘솔 프로그램을 작성할 수 있다.
-- 파일 입출력과 메모리 개념을 포함해 C++ 기본 프로젝트를 구성할 수 있다.
+## 목차
+### Part 01. C에서 C++로 넘어가기
+- [Chapter 01 출력과 기본 입출력](./01-output.md)
+- [Chapter 02 변수와 자료형](./02-variables.md)
+- [Chapter 03 연산자와 형 변환](./03-operators.md)
+- [Chapter 04 조건문과 반복문](./04-control-flow.md)
 
-## 권장 학습 순서 (주제별 세분화)
-1. [출력](./01-output.md)
-2. [변수와 자료형](./02-variables.md)
-3. [연산자](./03-operators.md)
-4. [입력](./04-input.md)
-5. [제어문](./04-control-flow.md)
-6. [배열](./05-array.md)
-7. [문자열](./06-string.md)
-8. [함수](./07-function.md)
-9. [포인터](./08-pointer.md)
-10. [동적 메모리](./09-dynamic-memory.md)
-11. [클래스](./10-class.md)
-12. [파일 입출력](./11-file-io.md)
+### Part 02. 데이터와 함수
+- [Chapter 05 배열과 벡터](./05-array.md)
+- [Chapter 06 문자열 다루기](./06-string.md)
+- [Chapter 07 함수와 참조](./07-function.md)
+- [Chapter 08 포인터와 참조자](./08-pointer.md)
 
-## 중급 추천 트랙
-- STL 컨테이너/알고리즘: `vector`, `map`, 반복자 패턴
-- 객체지향 심화: 상속/다형성 기반 구조화
-- 빌드 관리: 디버깅, 빌드 설정(Debug/Release) 기초
+### Part 03. 메모리와 객체지향 기초
+- [Chapter 09 동적 메모리와 스마트 포인터](./09-dynamic-memory.md)
+- [Chapter 10 클래스와 객체](./10-class.md)
+- [Chapter 11 파일 입출력](./11-file-io.md)
 
-## 시작 전 체크
-- C 기초 문법(함수, 포인터, 배열)을 복습했는가?
-- C++ 컴파일 환경을 실행해 기본 Hello World를 빌드했는가?
+### Part 04. 객체지향 심화
+- [Chapter 12 상속](./12-inheritance.md)
+- [Chapter 13 다형성](./13-polymorphism.md)
+- [Chapter 14 추상 클래스와 인터페이스 설계](./14-abstract-interface.md)
+- [Chapter 15 도전! OOP 미니 프로젝트](./15-challenge-oop.md)
 
-## 완주 체크
-- 클래스와 객체를 사용해 프로그램을 구조화할 수 있는가?
-- 동적 메모리 사용 시 누수 위험을 설명할 수 있는가?
-- 파일 입출력을 포함한 미니 예제를 직접 완성했는가?
+### Part 05. 현대 C++ 핵심
+- [Chapter 16 템플릿과 제네릭 프로그래밍](./16-template-generic.md)
+- [Chapter 17 STL 컨테이너 심화](./17-stl-container.md)
+- [Chapter 18 STL 알고리즘과 람다](./18-stl-algorithm-lambda.md)
+- [Chapter 19 예외 처리와 RAII](./19-exception-raii.md)
+- [Chapter 20 도전! 콘솔 RPG 구조화](./20-challenge-rpg.md)
 
-## 템플릿 적용 현황
-- 완료: `01-output`, `02-variables`, `04-input`
-- 예정: `03-operators`, `04-control-flow` ~ `11-file-io`
+### Part 06. 실무 준비
+- [Chapter 21 복사/이동 시맨틱](./21-copy-move-semantics.md)
+- [Chapter 22 const 정확성과 API 설계](./22-const-correctness.md)
+- [Chapter 23 네임스페이스와 헤더 설계](./23-namespace-header-design.md)
+- [Chapter 24 CMake 빌드 기초](./24-cmake-basics.md)
+- [Chapter 25 디버깅과 테스트 기초](./25-debug-test-basics.md)
 
 ---
 
