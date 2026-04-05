@@ -1,50 +1,63 @@
-# 물리와 충돌 처리
-
-Unity 물리는 `Rigidbody` + `Collider` 조합으로 처리합니다.
+# Chapter 06 물리와 충돌
 
 ## 학습 목표
-- Collision과 Trigger의 차이를 설명할 수 있다.
-- 충돌 이벤트가 호출되지 않을 때 점검 순서를 수행할 수 있다.
-- Rigidbody/Collider 조합을 올바르게 적용할 수 있다.
+- Rigidbody/Collider 역할을 구분한다.
+- 충돌/트리거 이벤트를 처리할 수 있다.
 
-## 핵심
-- Rigidbody: 물리 시뮬레이션 적용
-- Collider: 충돌 범위
-- Trigger: 물리 반응 없이 이벤트만 발생
+## 세부 주제
+### 06-1 물리 구성 요소
+- Rigidbody, Collider
+### 06-2 충돌 이벤트
+- `OnCollisionEnter`
+### 06-3 트리거 이벤트
+- `OnTriggerEnter`
 
-## 자주 쓰는 이벤트
-- `OnCollisionEnter(Collision col)`
-- `OnTriggerEnter(Collider other)`
+## 실습 체크리스트
+- 벽 충돌과 아이템 트리거를 각각 구현한다.
 
-## 실수 포인트
-- 충돌 이벤트가 안 뜰 때: Collider/Rigidbody 조합 확인
-- Trigger를 켜놓고 Collision 이벤트를 기다리는 실수
-- 레이어 충돌 매트릭스 설정을 확인하지 않는 실수
+## 본문
+### 06-1 물리 구성 요소
+- Rigidbody는 물리 연산 대상, Collider는 충돌 영역을 정의합니다.
+### 06-2 충돌 이벤트
+- 실제 물리 충돌이 일어나면 Collision 이벤트가 호출됩니다.
+### 06-3 트리거 이벤트
+- Trigger는 막지 않고 "겹침 감지"만 수행합니다.
 
-## 단계별 실습
-1. `Player`와 `Item` 오브젝트를 생성합니다.
-2. 두 오브젝트에 Collider를 추가합니다.
-3. `Player`에 Rigidbody를 추가합니다.
-4. `Item` Collider의 `Is Trigger`를 활성화합니다.
-5. `OnTriggerEnter` 로그 코드를 작성하고 충돌을 테스트합니다.
-6. `Is Trigger`를 비활성화 후 `OnCollisionEnter`로 동작 차이를 확인합니다.
+예시 코드:
+```csharp
+using UnityEngine;
 
-## 이해 점검 체크리스트
-- Trigger/Collision 이벤트를 구분해 사용했는가?
-- 충돌 대상 중 최소 하나에 Rigidbody가 있는가?
-- Layer Collision Matrix 설정을 확인했는가?
+public class HitLog : MonoBehaviour
+{
+    void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("충돌: " + collision.gameObject.name);
+    }
+}
+```
 
-## 다음 학습 추천
-- [UI 기초 (Canvas, Text, Button)](./07-ui-basics.md)
-- [데이터 저장 (PlayerPrefs, JSON)](./09-data-save.md)
+예상 결과:
+```text
+충돌 대상 이름 로그 출력
+```
 
-## 셀프 퀴즈
-1. 물리 반응 없이 충돌 감지만 하고 싶을 때 사용하는 방식은?
-2. Trigger 이벤트가 호출되지 않을 때 필수 점검 항목 하나는?
+코드 해석:
+- `OnCollisionEnter`는 물리 충돌이 발생한 순간 호출됩니다.
+- `collision.gameObject.name`으로 충돌 대상 식별이 가능합니다.
 
-## 정답
-1. Trigger (`Is Trigger` 활성화)
-2. 충돌 대상 중 최소 하나에 Rigidbody 존재 여부
+연습문제:
+1. 문제: 플레이어가 코인을 트리거로 먹으면 점수 +1
+   - 입력: 트리거 충돌
+   - 출력: 점수 증가
+   - 조건: 코인 오브젝트 비활성화
+2. 문제: 벽 충돌 시 효과음 재생
+   - 입력: 충돌 이벤트
+   - 출력: 소리 재생
+   - 힌트: `AudioSource.Play()`
+
+정답 포인트:
+- 충돌과 트리거 용도를 분리
+- Collider 설정(Is Trigger) 확인 필수
 
 ---
 

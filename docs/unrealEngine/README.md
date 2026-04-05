@@ -1,39 +1,31 @@
 # Unreal Engine 자습 자료
 
 ## 권장 대상
-- Unity 또는 프로그래밍 기초를 이미 학습했거나, 게임 엔진 입문을 시작하려는 학습자
-- 블루프린트 기반으로 빠르게 프로토타입을 만들고 싶은 초중급 학습자
+- C++ 또는 Blueprint 기반으로 3D 게임 개발을 시작하려는 학습자
+- Unreal 에디터와 Actor 중심 개발 방식을 체계적으로 익히려는 학습자
 
 ## 선수지식
-- 변수/조건문/함수 같은 기본 프로그래밍 개념
-- 게임 오브젝트 배치, 좌표, 충돌 같은 기본 게임 개발 개념
+- C++ 또는 C# 기본 문법(둘 중 하나)
+- 게임 오브젝트/컴포넌트 개념 기초
 
-## 완주 후 역량
-- 블루프린트 중심으로 핵심 게임 플레이를 구현할 수 있다.
-- UI/애니메이션/데이터 저장/패키징까지 단일 프로젝트 파이프라인을 수행할 수 있다.
-- C++와 Blueprint 역할 분리를 이해하고 기본 연동 구조를 설계할 수 있다.
+## 목차
+### Part 01. Unreal 기초와 워크플로우
+- [Chapter 01 Unreal 개요와 프로젝트 시작](./01-unreal-overview.md)
+- [Chapter 02 에디터와 레벨 기본](./02-editor-level.md)
+- [Chapter 03 Actor와 Component](./03-actor-component.md)
+- [Chapter 04 Blueprint 기초](./04-blueprint-basics.md)
 
-## 권장 학습 순서 (주제별 세분화)
-1. [언리얼 에디터와 프로젝트 구조](./01-editor-project.md)
-2. [Actor와 Component](./02-actor-component.md)
-3. [Level과 Blueprint 기초](./03-level-blueprint.md)
-4. [입력 처리와 캐릭터 이동](./04-input-movement.md)
-5. [충돌과 물리](./05-collision-physics.md)
-6. [UMG UI 기초](./06-umg-ui.md)
-7. [애니메이션 블루프린트 기초](./07-animation-blueprint.md)
-8. [데이터 관리 (DataTable, SaveGame)](./08-data-management.md)
-9. [C++와 Blueprint 연동](./09-cpp-blueprint.md)
-10. [패키징과 배포](./10-packaging-deploy.md)
-11. [트랙 종합 미니프로젝트](./11-mini-project.md)
+### Part 02. 플레이어 시스템
+- [Chapter 05 C++ 프로젝트 설정](./05-cpp-project-setup.md)
+- [Chapter 06 입력과 캐릭터 이동](./06-input-character.md)
+- [Chapter 07 물리와 충돌](./07-physics-collision.md)
+- [Chapter 08 UI와 UMG](./08-ui-umg.md)
 
-## 시작 전 체크
-- 변수/조건문/함수 같은 기본 프로그래밍 개념을 이해하고 있는가?
-- Unreal 프로젝트 생성/실행 환경을 준비했는가?
-
-## 완주 체크
-- 블루프린트 기반으로 입력/충돌/UI/애니메이션을 연동할 수 있는가?
-- SaveGame 저장/로드를 적용해 진행 상태를 유지할 수 있는가?
-- 패키징 후 실행 파일 동작을 검증했는가?
+### Part 03. 게임 확장과 통합
+- [Chapter 09 애니메이션 상태머신](./09-animation-state-machine.md)
+- [Chapter 10 AI와 내비게이션](./10-ai-navigation.md)
+- [Chapter 11 데이터 저장/불러오기](./11-data-save-load.md)
+- [Chapter 12 미니 프로젝트](./12-mini-project.md)
 
 ---
 

@@ -35,10 +35,10 @@
 - [Chapter 19 함수 포인터와 `void` 포인터](./19-function-void-pointer.md)
 
 ### Part 04. C언어의 깊은 이해
-- [Chapter 21 문자/문자열 관련 함수](./21-character-string-functions.md)
-- [Chapter 22 구조체와 사용자 정의 자료형 1](./22-struct-user-type-1.md)
-- [Chapter 23 구조체와 사용자 정의 자료형 2](./23-struct-user-type-2.md)
-- [Chapter 20 도전! 프로그래밍 3](./20-challenge-3.md)
+- [Chapter 20 문자/문자열 관련 함수](./20-character-string-functions.md)
+- [Chapter 21 구조체와 사용자 정의 자료형 1](./21-struct-user-type-1.md)
+- [Chapter 22 구조체와 사용자 정의 자료형 2](./22-struct-user-type-2.md)
+- [Chapter 23 도전! 프로그래밍 3](./23-challenge-3.md)
 - [Chapter 24 파일 입출력](./24-file-io.md)
 - [Chapter 25 메모리 관리와 동적 할당](./25-memory-dynamic-allocation.md)
 - [Chapter 26 매크로와 전처리기](./26-macro-preprocessor.md)
