@@ -9,23 +9,89 @@
 - 게임 오브젝트/컴포넌트 개념 기초
 
 ## 목차
-### Part 01. Unreal 기초와 워크플로우
-- [Chapter 01 Unreal 개요와 프로젝트 시작](./01-unreal-overview.md)
-- [Chapter 02 에디터와 레벨 기본](./02-editor-level.md)
-- [Chapter 03 Actor와 Component](./03-actor-component.md)
-- [Chapter 04 Blueprint 기초](./04-blueprint-basics.md)
 
-### Part 02. 플레이어 시스템
-- [Chapter 05 C++ 프로젝트 설정](./05-cpp-project-setup.md)
-- [Chapter 06 입력과 캐릭터 이동](./06-input-character.md)
-- [Chapter 07 물리와 충돌](./07-physics-collision.md)
-- [Chapter 08 UI와 UMG](./08-ui-umg.md)
+### [언리얼 기초 이해](./01-unreal-foundation.md)
+- 언리얼 설치 방법
+- 블루프린트의 이해
+- 레벨이란?
+- 액터란?
 
-### Part 03. 게임 확장과 통합
-- [Chapter 09 애니메이션 상태머신](./09-animation-state-machine.md)
-- [Chapter 10 AI와 내비게이션](./10-ai-navigation.md)
-- [Chapter 11 데이터 저장/불러오기](./11-data-save-load.md)
-- [Chapter 12 미니 프로젝트](./12-mini-project.md)
+### [게임 꾸미기](./02-level-visuals-materials.md)
+- 액터 배치로 게임 맵 꾸미기
+- 라이팅으로 게임 조명 추가
+- 랜드스케이프란?
+- 랜드스케이프로 지형 꾸미기
+- 머티리얼이란?
+- 머티리얼로 색상 표현
+- 머티리얼로 색상 애니메이션 표현
+- 머티리얼로 도형 표현
+- 랜드스케이프 머티리얼로 바닥 질감 추가
+
+### [게임 상호작용 기능 추가](./03-gameplay-interaction.md)
+- 액터 움직이기
+- 키보드·마우스 입력으로 캐릭터 조종하기
+  - 간단한 입력 이벤트 추가해서 코드 실행하기
+  - 축 매핑 후 매핑된 키 이벤트로 코드 실행하기
+- (실습) 장애물 피하기
+  - Overlap 이벤트로 도착 지점 설정하기
+- 피직스 시뮬레이션으로 물리 효과 구현
+- 투사체 스폰시켜 발사하기
+- (실습) 피직스를 이용한 창고 부수기 게임
+  - 두 물체를 하나의 물체로 합쳐서 물리 시뮬레이션을 돌리는 방법
+- (실습) 탐험 게임 만들기
+  - 향상된 입력 시스템
+  - LineTrace로 물체 감지하기
+  - 언리얼 컴포넌트 시스템
+  - PhysicsHandleComponent로 물체 조종하기
+  - 기믹 추가
+  - 씬 이동
+
+### [캐릭터 애니메이션을 통한 복잡한 상호작용](./04-character-animation.md)
+- 애니메이션 블루프린트
+- 애니메이션 몽타주
+- (실습) 몽타주와 노티파이를 이용한 콤보 공격 시스템 구현
+  - 데미지 프레임워크
+
+### [UI 만들기](./05-ui-widgets.md)
+- 위젯 블루프린트
+- 패널이란
+- 앵커와 피벗
+- 체력바 추가하기
+  - 바인딩
+- 버튼 추가하기
+  - 이벤트
+  - 마우스 커서 표시 및 숨기기
+
+### [AI 만들기](./06-ai-behavior.md)
+- 네비게이션 시스템
+- 비헤이비어 트리, 블랙보드, 태스크
+- AI 인지 컴포넌트
+- (실습) 플레이어 추격 AI 만들기
+- (실습) 나만의 AI 만들기
+
+### [멀티플레이](./07-multiplayer.md)
+- 서버-클라이언트 모델
+- 리슨 서버, 데디케이트 서버, 클라이언트 차이점
+- RPC란?
+- Replication이란?
+- (실습) 멀티플레이 FPS 만들기
+
+### [FX](./08-fx-audio-postprocess.md)
+- 나이아가라 파티클 시스템
+- 포스트 프로세싱
+- 사운드 재생
+- 3D 공간음향 재생
+
+### [GAS(Gameplay Ability System)](./09-gas.md)
+- ASC(Ability System Component)
+- 게임플레이 어빌리티
+- 게임플레이 어트리뷰트
+- 게임플레이 이펙트
+- 게임플레이 태그
+- 게임플레이 큐
+
+### [도전과제](./10-challenge-lyra.md)
+- 모범 사례 프로젝트 분석 (LyraStarterGame 분석)
 
 ---
 
