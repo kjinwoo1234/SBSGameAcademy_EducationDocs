@@ -53,6 +53,11 @@
 - UI 전용 **Input Mode UI Only**로 전환하면 게임 조작과 충돌하지 않습니다.
 - **Show Mouse Cursor**를 켜고, 닫을 때 **Game Only**로 되돌립니다.
 
+오류 방지(입력 모드·커서):
+1. **언제**: 메뉴가 떴는데 WASD로 캐릭터가 움직이거나, 반대로 버튼을 눌러도 클릭이 안 될 때.
+2. **왜**: **Set Input Mode**가 **Game and UI** / **UI Only** / **Game Only** 중 어느 쪽이냐에 따라 **위젯**과 **월드 입력** 중 무엇을 받을지가 갈립니다.
+3. **해결**: 메뉴를 연 직후 **Set Input Mode UI Only** + **Show Mouse Cursor**, 메뉴를 닫을 때 **Set Input Mode Game Only** + **Hide Mouse Cursor**로 짝을 맞춥니다.
+
 예시: 메뉴 위젯 띄우기(블루프린트 의사 단계)
 1. **Widget Blueprint**를 만들고 루트에 **Canvas Panel**을 둔다.
 2. 레벨 블루프린트 또는 플레이어 캐릭터에서 **Create Widget**(Class = 위젯) → **Add to Viewport**를 호출한다.

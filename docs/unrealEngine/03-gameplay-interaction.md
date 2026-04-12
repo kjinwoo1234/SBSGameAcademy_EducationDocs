@@ -5,7 +5,12 @@
 - 물리 시뮬레이션, 오버랩, 라인 트레이스, Physics Handle을 목적에 맞게 선택한다.
 
 ## 세부 주제
-- 액터 이동, 입력, Overlap 실습, 피직스, 투사체, 창고 부수기·탐험 실습 포인트
+- 액터 움직이기
+- 키보드·마우스 입력 — 간단한 입력 이벤트, 축 매핑, **Enhanced Input**
+- (실습) 장애물 피하기 — Overlap으로 도착 지점
+- 피직스 시뮬레이션, 투사체 스폰
+- (실습) 창고 부수기 — 물체 합치기·파괴 연출
+- (실습) 탐험 게임 — Enhanced Input, Line Trace, 컴포넌트, Physics Handle, 기믹, 씬 이동
 
 ## 실습 체크리스트
 - 프로젝트 설정에서 Axis/Action 또는 Enhanced Input 액션을 등록하고 Pawn에서 호출한다.
@@ -32,6 +37,15 @@
 
 - **Axis Value**는 보통 -1~1 범위입니다. `Add Movement Input` 등에 연결합니다.
 - 같은 축에 WASD와 게임패드 스틱을 함께 매핑할 수 있습니다.
+
+학습 목표 연결 — 구 방식 입력 vs **Enhanced Input**(향상된 입력):
+
+| 구분 | **Project Settings → Input**(Action/Axis) | **Enhanced Input** |
+|------|-------------------------------------------|---------------------|
+| 설정 위치 | 프로젝트 전역 매핑 테이블 | **Input Action**·**Mapping Context** 자산 |
+| 장점 | 설정이 단순해 보이고 빠르게 테스트하기 쉬움 | 입력을 모듈로 나누어 **리매핑·로컬 멀티·난이도별 프리셋**에 유리한 경우가 많음 |
+| 단점 | 프로젝트가 커지면 매핑이 한곳에 몰리기 쉬움 | 처음에 자산 종류가 많아 보일 수 있음 |
+| 입문자 기준 | 작은 예제·레거튜토리얼과 맞추기 좋음 | 3-7 탐험 실습·신규 템플릿 흐름과 맞추기 좋음 |
 
 ---
 
@@ -74,6 +88,11 @@
 
 - **Enhanced Input**은 **Input Mapping Context**, **Input Action**, **Modifier/Trigger**로 입력을 모듈화합니다.
 - 로컬 멀티·리매핑·난이도별 입력에 유리합니다.
+
+오류 방지(Enhanced Input):
+1. **언제**: Input Action을 만들었는데 키를 눌러도 이벤트가 한 번도 오지 않을 때.
+2. **왜**: **Mapping Context**를 플레이어 **Enhanced Input** 컴포넌트에 **Add Mapping Context**로 등록하지 않았거나, 우선순위·활성화 시점이 맞지 않으면 입력이 전달되지 않습니다.
+3. **해결**: 캐릭터 **Begin Play** 등에서 해당 Context를 추가했는지, **Default Mapping Context** 설정(프로젝트/캐릭터)과 중복·충돌이 없는지 확인합니다.
 
 #### LineTrace로 물체 감지
 
