@@ -87,9 +87,50 @@ int main(void) {
 | 스코프 | 변수를 사용할 수 있는 코드 범위 |
 | 생명주기 | 변수가 생성되고 사라질 때까지의 시간 범위 |
 
+```c
+#include <stdio.h>
+
+void print_local(void) {
+    int count = 1;  // print_local 안에서만 유효
+    printf("local count = %d\n", count);
+}
+
+int main(void) {
+    print_local();
+    // printf("%d\n", count); // 오류: main에서는 count를 모름
+    return 0;
+}
+```
+
 ### 09-3 전역변수 / `static` / `register`
 
 전역변수는 파일 전체에서 접근할 수 있어 편하지만, 남용하면 함수끼리 **의존성**이 커져 디버깅이 어려워질 수 있습니다. `static`은 붙이는 위치에 따라 **접근 범위나 생명주기**를 조절할 때 씁니다. `register`는 예전에는 CPU 레지스터에 넣어 달라는 힌트로 쓰이기도 했으나, 요즘 컴파일러에서는 의미가 제한적인 편입니다.
+
+```c
+#include <stdio.h>
+
+int g_count = 0;  // 전역변수
+
+void increase(void) {
+    static int call_count = 0;  // 함수 호출 사이에 값 유지
+    g_count++;
+    call_count++;
+    printf("g_count=%d, call_count=%d\n", g_count, call_count);
+}
+
+int main(void) {
+    increase();
+    increase();
+    return 0;
+}
+```
+
+**예상 출력**
+
+```text
+g_count=1, call_count=1
+g_count=2, call_count=2
+```
 
 ### 09-4 재귀함수
 
@@ -125,18 +166,30 @@ int main(void) {
 
 ### 연습문제
 
-**문제 1**  
-정수 두 개를 받아 큰 값을 반환하는 함수 `max_value`를 작성하세요.
+**문제 1**
+- 문제: 정수 두 개를 받아 큰 값을 반환하는 함수 `max_value`를 작성하세요.
+- 입력: 정수 2개
+- 출력: 두 수 중 큰 값 1개
+- 조건(힌트): 함수 원형을 먼저 선언하고, `if`를 사용해 큰 값을 반환하세요.
 
-**문제 2**  
-원의 넓이를 계산하는 함수 `circle_area`를 작성하세요.
+**문제 2**
+- 문제: 반지름을 받아 원의 넓이를 계산하는 함수 `circle_area`를 작성하세요.
+- 입력: 반지름 실수 1개
+- 출력: 원의 넓이(소수 둘째 자리까지 출력 권장)
+- 조건(힌트): `const double PI = 3.141592;`를 사용하고, 함수 반환형은 `double`로 작성하세요.
 
-**문제 3**  
-`sum_to_n(n)` 재귀 함수를 작성해 1부터 n까지의 합을 구하세요.
+**문제 3**
+- 문제: `sum_to_n(n)` 재귀 함수를 작성해 1부터 n까지의 합을 구하세요.
+- 입력: 정수 `n` 1개
+- 출력: `1 + 2 + ... + n` 결과값
+- 조건(힌트): 종료 조건(`n <= 1`)을 반드시 넣고, `sum_to_n(n - 1)` 호출을 사용하세요.
 
 ### 정답 포인트
 
-함수 선언은 `반환형 함수명(매개변수);` 형태로 쓰면 됩니다. 재귀 함수에는 반드시 종료 조건이 있어야 하고, `sum_to_n(n)`은 `n + sum_to_n(n - 1)` 같은 식으로 작은 문제로 넘기면 됩니다.
+- 문제 1: `int max_value(int a, int b);` 선언 후, 정의에서 `if (a > b)`로 큰 값을 반환합니다.
+- 문제 2: `double circle_area(double r)` 형태로 만들고 `PI * r * r`를 반환합니다.
+- 문제 3: `if (n <= 1) return n;`을 기저 조건으로 두고 `return n + sum_to_n(n - 1);`로 재귀를 구성합니다.
+- 공통 점검: 함수 선언(원형), 정의, 호출 순서가 맞는지 확인합니다.
 
 ---
 
