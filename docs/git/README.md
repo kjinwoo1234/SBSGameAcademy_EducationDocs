@@ -78,9 +78,11 @@
 
 
 
-- [CHAPTER 15 이슈·마일스톤·프로젝트로 작업 관리하기](./15-github-issues-milestones-projects.md)  
+- [CHAPTER 15 GitHub Issues로 작업을 기록하고 추적하기](./15-github-issues.md)
 
-  - 이슈·라벨·담당자, 마일스톤으로 묶기, Projects 보드에서 이슈 카드 관리
+- [CHAPTER 16 GitHub Milestones로 작업 묶음과 기한 관리하기](./16-github-milestones.md)
+
+- [CHAPTER 17 GitHub Projects로 작업 흐름 시각화하기](./17-github-projects.md)
 
 
 
