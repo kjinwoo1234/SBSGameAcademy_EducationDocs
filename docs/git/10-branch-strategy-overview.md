@@ -52,6 +52,8 @@
 | **GitLab Flow** | GitHub Flow에 가깝게 가되, **스테이징·운영** 같은 **환경**을 브랜치 이름 등으로 드러내는 팀이 많다. | [Chapter 12](./12-gitlab-flow.md) |
 | **Git Flow** | `main`, `develop`, `feature`, `release`, `hotfix`처럼 **역할별 브랜치**를 두고 릴리즈 절차를 나누는 **전통적인 모델**이다. | [Chapter 13](./13-git-flow.md) |
 
+각 패턴의 **흐름 도식**은 위 표의 챕터 본문(11·12·13)에서 해당 설명과 함께 둡니다. 세부 절차·실습도 같은 장에서 이어집니다.
+
 그 밖에도 **팀만의 규칙**(접두어, 보호 브랜치, 릴리즈 담당)을 얹거나, 위 이름을 **섞어 쓰는 하이브리드**가 흔합니다. 여러 전략을 **표로 비교**하고 **Fork·`origin`·`upstream`**까지 묶어 보려면 [Chapter 14](./14-branch-comparison-fork-team-pr.md)로 이어가면 됩니다.
 
 ---
