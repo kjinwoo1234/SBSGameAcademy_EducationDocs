@@ -50,9 +50,7 @@
 
 - [CHAPTER 7 CLI 환경에서 Git 명령어 살펴보기](./07-cli-overview.md)
 
-- [CHAPTER 8 CLI 환경에서 브랜치 생성 및 조작하기](./08-cli-branch.md)  
-
-  - 브랜치 생성·병합·rebase·**태그**
+- [CHAPTER 8 CLI 환경에서 브랜치 생성 및 조작하기](./08-cli-branch.md) 
 
 - [CHAPTER 9 Git 내부 동작 원리](./09-git-internals.md)
 
