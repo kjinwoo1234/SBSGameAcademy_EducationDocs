@@ -26,60 +26,59 @@
 
 ### Part 01. 에디터·씬 기초
 
-- Unity Hub 설치, 에디터·프로젝트 생성, 씬 저장
-- Hierarchy, Scene, Game, Inspector, Project 창 역할
-- GameObject, Transform(위치·회전·스케일), 부모-자식 계층
-- 카메라·조명 기본 배치와 씬 뷰 조작
-
 ### Part 02. C# 스크립팅 입문
-
-- 스크립트 생성·부착, `MonoBehaviour`와 주요 콜백(`Awake`, `Start`, `Update` 등)
-- `public` 필드·`[SerializeField]`, 에디터에서 값 노출
-- `Debug.Log`로 상태 확인, 컴파일 오류 읽기
 
 ### Part 03. 입력·플레이어 이동
 
-- **구형 입력(`Input` 클래스, Input Manager)**과 **새 입력(Input System 패키지)**을 **둘 다** 다룬다. 프로젝트에서 쓰는 쪽은 **Project Settings → Player → Other Settings → Active Input Handling**에서 고른다.
-  - **Input Manager (Old)**: 전통적인 `Input.GetAxis` 등 **구형 `Input` API**만 사용할 때
-  - **Input System Package (New)**: **Input System**만 사용할 때(패키지 설치·입력 액션 자산 설정 전제)
-  - **Both**: 예전 자료·새 코드를 한 프로젝트에서 섞어 쓸 때(입문 단계에서는 혼동을 줄이려면 하나만 쓰는 편이 낫다)
-- 키보드·마우스로 이동·회전·점프 등 기본 플레이어 조작을 **구형 API 예시**와 **Input System 예시**로 각각 익힌다.
-- `Time.deltaTime`과 프레임 독립 이동
-
 ### Part 04. 물리·충돌
-
-- `Rigidbody`, `Collider`, `isKinematic` 개념과 사용 시점
-- 충돌(`OnCollision`) vs 트리거(`OnTrigger`) 차이
-- 레이캐스트(`Physics.Raycast` 등)로 클릭·조준 감지
 
 ### Part 05. 프리팹·레벨 구성
 
-- 프리팹 제작·변경 전파, 씬에 배치
-- `Instantiate`로 런타임 생성, 간단한 오브젝트 풀 개념(필요 시)
-
 ### Part 06. UI(UI Toolkit)
-
-- **UI Toolkit**(구조·스타일을 코드와 분리하는 Unity UI 방식): **UXML**(화면 구조, 마크업)과 **USS**(스타일시트)로 화면 정의
-- 씬의 **`UIDocument`**와 **Panel Settings**로 런타임 패널 연결, **`VisualElement`** 트리(부모-자식 UI 요소 계층) 이해
-- 버튼·슬라이더·라벨 등 컨트롤 배치와 **이벤트**(클릭·값 변경) 처리, C#에서 `rootVisualElement`로 요소 찾기·값 갱신
-- Flex 레이아웃 등으로 해상도·비율 대응 기초(과정에서 **UGUI(Canvas)**는 다루지 않거나 비교만 짧게)
 
 ### Part 07. 애니메이션·오디오
 
-- Animator, Animation Clip, 파라미터로 상태 전환
-- `AudioSource`·`AudioClip` 재생, 2D/3D 사운드 기초
-
 ### Part 08. 씬·데이터·빌드
-
-- `SceneManager`로 씬 전환, 로딩 흐름
-- `PlayerPrefs` 등 간단 저장(범위는 과정에서 조정)
-- Build Settings, 타깃 플랫폼, 빌드 산출물 확인
 
 ### Part 09. 구조·품질(심화·선택)
 
-- 이벤트·인터페이스로 스크립트 결합도 낮추기
-- `ScriptableObject`로 데이터 분리
-- 프로파일링·프레임 드롭 원인 찾기 기초
+## 작성 준비중인 내용
+
+- Part 01 세부 내용 보강
+  - Unity Hub 설치, 에디터·프로젝트 생성, 씬 저장
+  - Hierarchy/Scene/Game/Inspector/Project 창 역할
+  - GameObject, Transform, 부모-자식 계층
+  - 카메라·조명 기본 배치와 씬 뷰 조작
+- Part 02 세부 내용 보강
+  - 스크립트 생성·부착, `MonoBehaviour` 주요 콜백(`Awake`, `Start`, `Update`)
+  - `public` 필드·`[SerializeField]`와 에디터 값 노출
+  - `Debug.Log` 기반 상태 확인과 컴파일 오류 읽기
+- Part 03 세부 내용 보강
+  - 구형 `Input` API와 Input System 비교 및 프로젝트 설정(`Active Input Handling`)
+  - 키보드·마우스 이동/회전/점프 예시
+  - `Time.deltaTime` 기반 프레임 독립 이동
+- Part 04 세부 내용 보강
+  - `Rigidbody`, `Collider`, `isKinematic` 사용 시점
+  - 충돌(`OnCollision`) vs 트리거(`OnTrigger`) 차이
+  - `Physics.Raycast` 기반 감지
+- Part 05 세부 내용 보강
+  - 프리팹 제작·변경 전파
+  - `Instantiate` 생성과 간단 오브젝트 풀
+- Part 06 세부 내용 보강
+  - UI Toolkit: UXML/USS, `UIDocument`, Panel Settings
+  - `VisualElement` 트리와 이벤트 처리
+  - 해상도 대응(Flex 레이아웃)
+- Part 07 세부 내용 보강
+  - Animator/Animation Clip/파라미터 전환
+  - `AudioSource`/`AudioClip`, 2D/3D 오디오
+- Part 08 세부 내용 보강
+  - `SceneManager` 씬 전환
+  - `PlayerPrefs` 기초 저장
+  - Build Settings와 타깃 플랫폼 빌드
+- Part 09 세부 내용 보강
+  - 이벤트·인터페이스로 결합도 낮추기
+  - `ScriptableObject` 데이터 분리
+  - 프로파일링·프레임 드롭 원인 찾기
 
 ---
 
