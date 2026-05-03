@@ -41,7 +41,7 @@ git switch feature/cli-demo
 <a id="ch8-2"></a>
 ### 8-2 브랜치 기본 조작하기
 
-`git branch`로 로컬 브랜치 목록을 보고, `git branch -d feature/foo`처럼 **이미 머지된 브랜치**를 정리할 수 있습니다. 원격에만 있는 브랜치를 받아 작업하려면 `git switch -c feature/foo origin/feature/foo`처럼 **추적 브랜치**를 만들면 됩니다.
+`git branch`로 로컬 브랜치 목록을 보고, `git branch -d feature/foo`처럼 **이미 병합된 브랜치**를 정리할 수 있습니다. 원격에만 있는 브랜치를 받아 작업하려면 `git switch -c feature/foo origin/feature/foo`처럼 **추적 브랜치**를 만들면 됩니다.
 
 ---
 

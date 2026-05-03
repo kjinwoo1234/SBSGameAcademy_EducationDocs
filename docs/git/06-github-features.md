@@ -42,7 +42,7 @@
 <a id="ch6-3"></a>
 ### 6-3 GitHub에서 풀 리퀘스트 되돌리기
 
-- 머지된 PR은 **Revert** 버튼으로 **되돌리는 새 PR**을 만들 수 있습니다(merge commit 기준).
+- 병합된 PR은 **Revert** 버튼으로 **되돌리는 새 PR**을 만들 수 있습니다(merge commit 기준).
 - 로컬에서도 `git revert -m 1 <merge-commit>` 패턴이 쓰이지만, GitHub UI가 입문에 친숙합니다.
 
 ---
@@ -57,7 +57,7 @@ Settings → Branches → Branch protection rules에서 설정합니다.
 
 연습문제:
 1. 문제: 브랜치 보호에서 "Require pull request before merging"을 켜면 팀 워크플로가 어떻게 바뀌는지 설명하세요.
-2. 문제: 머지된 PR을 웹에서 Revert했을 때 저장소 이력에 남는 것은 무엇인가요?
+2. 문제: 병합된 PR을 웹에서 Revert했을 때 저장소 이력에 남는 것은 무엇인가요?
 
 정답 포인트:
 - 프로필 = 특수 저장소 README; PR = 맥락·작게; 보호 규칙 = `main` 사고 방지.
