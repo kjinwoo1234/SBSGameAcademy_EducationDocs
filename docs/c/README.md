@@ -16,13 +16,13 @@
 - [Chapter 04 데이터 표현방식의 이해](./04-data-representation.md)
 - [Chapter 05 상수와 기본 자료형](./05-constants-types.md)
 - [Chapter 06 `printf` 함수와 `scanf` 함수 정리](./06-printf-scanf.md)
-- [Chapter 07 반복문](./07-loops.md)
-- [Chapter 08 조건문과 분기](./08-condition-branch.md)
-- [Chapter 09 함수](./09-functions.md)
-- [Chapter 10 도전! 프로그래밍 1](./10-challenge-1.md)
+- [Chapter 07 조건문과 분기](./07-condition-branch.md)
+- [Chapter 08 반복문](./08-loops.md)
+- [Chapter 09 1차원 배열](./09-one-dimensional-array.md)
+- [Chapter 10 함수](./10-functions.md)
+- [Chapter 11 도전! 프로그래밍 1](./11-challenge-1.md)
 
-### Part 02. 포인터와 배열의 시작
-- [Chapter 11 1차원 배열](./11-one-dimensional-array.md)
+### Part 02. 포인터
 - [Chapter 12 포인터의 이해](./12-pointer-basics.md)
 - [Chapter 13 포인터와 배열](./13-pointer-array.md)
 - [Chapter 14 포인터와 함수](./14-pointer-function.md)
