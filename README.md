@@ -20,5 +20,6 @@
 - [유니티](./docs/unity/README.md)
 - [언리얼 엔진](./docs/unrealEngine/README.md)
 
-포트폴리오 로드맵(커리큘럼?)
-- [포트폴리오](/docs/porfolio/README.md)
+커리큘럼 · 포트폴리오
+- [언리얼 엔진 + C/C++ 커리큘럼 (6개월)](./curriculum.md)
+- [포트폴리오](./docs/porfolio/README.md)
