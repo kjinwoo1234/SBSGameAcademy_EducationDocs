@@ -4,13 +4,6 @@
 - ASC, Ability, Attribute, Effect, Tag, Cue의 역할을 한 줄씩 정의할 수 있다.
 - 스킬·버프·디버프를 GAS 관점에서 설계할 수 있다.
 
-## 세부 주제
-- ASC, 게임플레이 어빌리티, 어트리뷰트, 이펙트, 태그, 큐
-
-## 실습 체크리스트
-- 프로젝트에 **Gameplay Abilities** 플러그인을 활성화하고 **Ability System Component**를 Pawn에 부착한다.
-- 샘플 **Attribute Set**(Health, MaxHealth)과 **Gameplay Effect**로 회복·피해를 적용한다.
-
 ## 본문
 
 ### 9-1 ASC(Ability System Component)

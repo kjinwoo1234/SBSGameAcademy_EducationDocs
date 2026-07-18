@@ -1,0 +1,58 @@
+---
+description: 교육 문서 레이어·공개 목차 계약·변경 체크리스트
+globs: "docs/**/*.md,README.md,.cursor/**/*.{md,mdc}"
+alwaysApply: false
+---
+
+# 스택 공통 규칙 (문서 레이어·계약)
+
+애플리케이션 어댑터/서비스 레이어 없음. 여기는 **문서 경계와 변경 순서**만 다룬다.  
+본문 품질·챕터 패턴은 `skills/docs-review/SKILL.md`.
+
+## 레이어
+
+| 레이어 | 경로 | 역할 | 하지 말 것 |
+|--------|------|------|------------|
+| **학습 진입** | 루트 `README.md` | 과정 목록·권장 순서 | 챕터 본문·연습문제 |
+| **과정 목차** | `docs/<과정>/README.md` | 파트·챕터 링크·선수·완주 역량 | 챕터 전체 본문 복제 |
+| **챕터** | `docs/<과정>/NN-*.md` | 학습 목표·본문·예시·연습 (`### NN-X`만) | `## 세부 주제`·`## 실습 체크리스트`·다른 과정 목차 대체 |
+| **에이전트 규칙** | `.cursor/rules/` | 품질·불변·응답 문체 | 학습자용 본문으로 쓰지 않음 |
+| **내부 스크래치** | `.result/` | `/review` 산출·리뷰 메모(gitignore) | `docs/`에 복사·커밋 |
+
+## 구현 vs 목표
+
+- **구현(공개):** 과정 README에 **링크된** 챕터 파일 + 루트 README 과정 링크
+- **작성 준비중:** README에 `작성 준비중인 내용` 섹션 (TODO 금지). 없는 파일로 링크하지 않음
+
+```bash
+ls docs/*/README.md README.md .cursor/rules .cursor/skills 2>/dev/null
+```
+
+## 변경 체크리스트
+
+| 작업 | 순서 |
+|------|------|
+| 새 챕터 | 파일 작성 → 과정 README 목차 링크 → (필요 시) 루트 README |
+| 챕터 제목·파일명 변경 | 파일 + 과정 README 링크 **동시** |
+| 학습 순서·파트 재배치 | 과정 README + 영향 챕터 상호 링크 |
+| 문서 품질 기준 변경 | `skills/docs-review/SKILL.md` (+ 필요 시 project-domain) |
+| 에이전트 지침 변경 | RULE-05 / 「커서 지침 업데이트」 / **보정 루프** |
+| 사용자 보정(재지적) | 즉시 수정 → 유사 전수 → 지침 write (`instruction-ecosystem`) |
+
+## 의존 방향
+
+```
+루트 README → 과정 README → 챕터
+에이전트 규칙(.cursor) → 문서 작성 시 준수 (학습 문서는 .cursor를 인용하지 않음)
+```
+
+역방향 금지: 챕터가 “아직 없는” README 항목을 전제로 하지 않음. 학습 문서에 `.cursor`·내부 리뷰 경로를 노출하지 않음.
+
+## 설계 검토
+
+- 문서 구조·품질: `skills/docs-review/SKILL.md` (`/review`)
+- 레이어·SRP 관점: `solid-principles.mdc`, `@solid-review` (문서 맥락)
+
+## 금지 (공통)
+
+RULE-01 비밀 · RULE-05 지침 무단 수정 · 학습 문서 외부 URL 삽입(`docs-review` Q3)

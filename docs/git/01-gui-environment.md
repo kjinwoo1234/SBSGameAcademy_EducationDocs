@@ -4,16 +4,6 @@
 - SourceTree와 Visual Studio Code를 설치하고 기본 설정을 마친다.
 - GitHub 웹 UI에서 저장소·이슈·PR 화면의 역할을 구분한다.
 
-## 세부 주제
-- SourceTree 설치와 Git 연동
-- Visual Studio Code 설치와 Git 확장 활용
-- GitHub 저장소 화면 탐색
-
-## 실습 체크리스트
-- SourceTree에서 Git 실행 파일 경로가 인식되는지 확인
-- VS Code에서 폴더를 열고 소스 제어 탭을 연다
-- GitHub에서 임의 공개 저장소의 Code / Issues / Pull requests 탭을 연다
-
 ## 본문
 
 <a id="ch1-1"></a>

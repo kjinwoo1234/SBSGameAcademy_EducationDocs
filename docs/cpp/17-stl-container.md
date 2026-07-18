@@ -4,19 +4,6 @@
 - 주요 STL 컨테이너의 특징과 선택 기준을 이해한다.
 - `vector`, `deque`, `map`, `unordered_map`의 차이를 설명할 수 있다.
 
-## 세부 주제
-### 17-1 순차 컨테이너
-- `vector`, `deque`, `list` 개요
-
-### 17-2 연관 컨테이너
-- `map`, `set`
-
-### 17-3 해시 기반 컨테이너
-- `unordered_map`, `unordered_set`
-
-## 실습 체크리스트
-- 아이템 인벤토리를 `map` 또는 `unordered_map`으로 구현한다.
-
 ## 본문
 
 ### 17-1 순차 컨테이너

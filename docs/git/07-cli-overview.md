@@ -5,16 +5,6 @@
 - Git Bash를 열고 경로 이동·저장소 상태를 확인한다.
 - 기본 명령과 원격 관련 명령을 구분해 사용한다.
 
-## 세부 주제
-- CLI 선택 이유
-- Git Bash 기초
-- status / add / commit / log / diff
-- remote / fetch / pull / push
-
-## 실습 체크리스트
-- Git Bash에서 새 저장소를 만들고 커밋까지 CLI만으로 수행
-- `git remote -v`, `git fetch`, `git push` 순서 설명 가능
-
 ## 본문
 
 <a id="ch7-1"></a>

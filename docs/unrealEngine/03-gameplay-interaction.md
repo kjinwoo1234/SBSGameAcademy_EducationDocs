@@ -4,19 +4,6 @@
 - 입력 매핑과 향상된 입력(Enhanced Input)의 흐름을 구분한다.
 - 물리 시뮬레이션, 오버랩, 라인 트레이스, Physics Handle을 목적에 맞게 선택한다.
 
-## 세부 주제
-- 액터 움직이기
-- 키보드·마우스 입력 — 간단한 입력 이벤트, 축 매핑, **Enhanced Input**
-- (실습) 장애물 피하기 — Overlap으로 도착 지점
-- 피직스 시뮬레이션, 투사체 스폰
-- (실습) 창고 부수기 — 물체 합치기·파괴 연출
-- (실습) 탐험 게임 — Enhanced Input, Line Trace, 컴포넌트, Physics Handle, 기믹, 씬 이동
-
-## 실습 체크리스트
-- 프로젝트 설정에서 Axis/Action 또는 Enhanced Input 액션을 등록하고 Pawn에서 호출한다.
-- `Simulate Physics`가 켜진 메시에 힘(Impulse)을 가해 본다.
-- `LineTraceSingleByChannel`으로 바닥 또는 오브젝트를 검출한다.
-
 ## 본문
 
 ### 3-1 액터 움직이기

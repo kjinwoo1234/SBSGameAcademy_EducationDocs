@@ -4,18 +4,6 @@
 - amend, cherry-pick, reset, revert, stash의 **적용 시점**을 구분한다.
 - 위험한 명령(`reset --hard`, force push)의 영향 범위를 설명한다.
 
-## 세부 주제
-- 실습용 브랜치·백업 습관
-- 커밋 수정(amend)
-- 체리 픽(cherry-pick)
-- 리셋(reset)
-- 리버트(revert)
-- 스태시(stash)
-
-## 실습 체크리스트
-- 별도 연습 저장소에서 위 명령을 각각 1회 이상 실행
-- `reset --hard` 전에 브랜치 백업(`branch backup/foo`) 습관 적용
-
 ## 본문
 
 <a id="ch5-1"></a>

@@ -4,13 +4,6 @@
 - Lyra Starter Game의 모듈 구조와 학습 포인트를 스스로 목록화할 수 있다.
 - 샘플 프로젝트에서 "읽을 것"과 "따라 칠 것"을 구분한다.
 
-## 세부 주제
-- LyraStarterGame 분석 관점
-
-## 실습 체크리스트
-- Epic Launcher 또는 소스에서 **Lyra**를 받아 프로젝트를 연다.
-- **Plugins**, **GameFeature**, **UI**, **GAS** 관련 폴더를 각각 1회 이상 연다.
-
 ## 본문
 
 ### 10-1 모범 사례 프로젝트 분석 (LyraStarterGame)

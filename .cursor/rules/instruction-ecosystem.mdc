@@ -1,0 +1,98 @@
+---
+description: Cursor 지침 생태계 — 공통 규칙·오버레이·스킬·판단 트리
+alwaysApply: true
+---
+
+# Cursor 지침 생태계
+
+**에이전트 지침은 `.cursor/`의 `.mdc` + `skills/*/SKILL.md`만 사용한다.**
+
+## caveman 응답 (강제·매 턴)
+
+**모든 사용자 대면 설명·요약·진행 보고**는 caveman **full** 적용. 사용자 언어 규칙(예: 한국어) 있으면 **그 언어 + caveman**(군더더기·완곡어·인사말 제거, 짧은 문장·조각 OK). 기술 용어·코드·에러 문자열은 정확히.
+
+| 구분 | 규칙 |
+|------|------|
+| 지속 | 매 응답 유지. 해제는 `stop caveman` / `normal mode`만 |
+| 코드·커밋·PR 본문 | 정상 형식 (caveman 아님) |
+| Auto-Clarity | 보안 경고, 되돌릴 수 없는 작업 확인, 순서 모호한 다단계, 압축으로 오해 가능, 사용자 재질문 → 잠깐 일반 문장 후 caveman 복귀 |
+| 형제 스킬 | 커밋 `caveman-commit`, 교육문서 리뷰 `docs-review`(`/review`), 리뷰 반영 `review-improve`(`/review-improve`), 위임 `cavecrew` |
+
+상세·강도: `rules/caveman-mode.mdc`, `skills/caveman/SKILL.md`. 작업 시작 시 `skills/caveman/SKILL.md`를 **읽지 않아도** 이 절을 따른다.
+
+## 레이어 구성
+
+| 레이어 | 경로 | 역할 |
+|--------|------|------|
+| 공통 | `rules/instruction-ecosystem.mdc` | 진입·판단 트리 |
+| 공통 | `rules/invariant-rules.mdc` | 불변 제약 |
+| 공통 | `rules/project-domain.mdc` | 이 repo 도메인·레이아웃 |
+| 공통 | `skills/docs-review/SKILL.md` | `docs/` 교육 문서 따라가기 리뷰·채점 (`/review`) |
+| 공통 | `rules/stack-conventions.mdc` | 문서 레이어·목차 계약 |
+| 공통 | `rules/solid-principles.mdc` | 문서 구조 SOLID 대응 (globs) |
+| 선택 | `rules/stack-*.mdc` | 언어·엔진별 (필요 시만 추가) |
+| 선택 | `rules/env-*.mdc` | 환경 경계 (필요 시만) |
+| 공통 | `rules/communication-style.mdc` | 서브에이전트 위임 |
+| 공통 | `rules/caveman-mode.mdc` | caveman 압축 응답 (항상) |
+| 세션 | `rules/agent-local.mdc` | gitignore |
+| 공정 | `skills/*/SKILL.md` | `@task-start` 등 |
+
+**형식:** 팀 지침은 `.mdc`. `.cursor/`에 `AGENTS.md`·`RULES.md` 등 **에이전트용 `.md` 신규 금지** (스킬 `SKILL.md`만 예외).
+
+## 판단 트리
+
+```
+시스템이 실제로 망가지는가?     → invariant-rules.mdc
+세션마다 바뀌는가?             → agent-local.mdc
+사용자 보정·재지적인가?         → 이 파일 「보정 루프」 + skills/self-update
+작업 타입 전용 공정?           → skills/{name}/SKILL.md
+이 repo·도메인?              → project-domain.mdc
+docs/ 교육 문서 리뷰·채점?     → skills/docs-review/SKILL.md (`/review`)
+문서 레이어·목차 계약?         → stack-conventions.mdc, solid-principles (globs)
+사용자 대면 응답 문체?       → caveman-mode.mdc → skills/caveman/SKILL.md
+```
+
+## 작업 루프
+
+`@task-start` → 구현 → `@task-done` → (필요 시) `@self-update`
+
+| 호출 | 스킬 |
+|------|------|
+| `@task-start` | `skills/task-start/SKILL.md` |
+| `@task-done` | `skills/task-done/SKILL.md` |
+| `@solid-review` | `skills/solid-review/SKILL.md` |
+| `@self-update` | `skills/self-update/SKILL.md` |
+| `/review` | `skills/docs-review/SKILL.md` |
+| `/review-improve` | `skills/review-improve/SKILL.md` |
+
+**지침 일괄 갱신:** 「커서 지침 업데이트」 → `rules/*.mdc`·요청된 `skills/`를 이 repo(교육 문서)에 맞게 반영 (RULE-05 예외).
+
+## 사용자 보정 루프 (강제)
+
+사용자가 **잘못·누락·이미 지시한 내용 재지적**(「없애라고 했는데」, 「왜 남아있니」, 「또」, 「똑같아」 등)하면 `@self-update` 문구가 **없어도** 같은 턴에 아래를 **전부** 한다. 지적 파일만 고치고 끝내지 않는다.
+
+| 단계 | 할 일 | 검증 |
+|------|------|------|
+| 1. 즉시 | 지적된 현상 수정 | 해당 경로에서 재현 안 됨 |
+| 2. 유사 | 같은 패턴을 **범위 전수** (과정·`docs/`·관련 skill/rule). grep 등으로 찾아 **전부** 수정 | 잔여 0건 |
+| 3. 지침 | 재발 막는 문장을 `project-domain`·해당 `skills/*/SKILL.md`·필요 시 RULE에 **같은 턴 write** (`self-update` 공정) | 다음 작업이 지침만 읽어도 같은 실수 안 함 |
+| 4. 보고 | 고친 건수·경로 요약 + 지침 어디 바꿨는지 한 줄 | 사용자 재요청 불필요 |
+
+**금지:** 「알겠어요」만 / 한 파일만 패치 / 지침 미반영 / 「다음에 조심」만.
+
+**트리거 예:** 구조 금지 섹션이 남음, 선행 문법 위반 재발, 목차·파일 불일치 재지적, 스킬과 문서 기준 불일치.
+
+상세 공정: `skills/self-update/SKILL.md` 「보정 루프」.
+
+## 읽기 우선순위
+
+1. `invariant-rules.mdc`
+2. `project-domain.mdc` + 해당 `docs/<과정>/README.md` (목차·파일 실존 확인)
+3. `docs/` 리뷰·품질 판정 시 `skills/docs-review/SKILL.md`
+4. `agent-local.mdc` (있으면)
+5. `caveman-mode.mdc` + `skills/caveman/SKILL.md` (사용자 대면 응답)
+6. `stack-conventions.mdc`, `solid-principles.mdc` (작업 경로 globs)
+
+## 사람용 문서
+
+`README.md`, `docs/`는 학습자용. 에이전트 장기 지침은 `.cursor/rules/*.mdc` 우선. 학습 문서에 지침 파일·외부 URL을 넣지 않는다.

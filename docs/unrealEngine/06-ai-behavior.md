@@ -4,13 +4,6 @@
 - Recast 네비메시와 AI Move 노드의 관계를 설명할 수 있다.
 - 비헤이비어 트리·블랙보드·태스크의 역할을 구분한다.
 
-## 세부 주제
-- 네비게이션, Behavior Tree/Blackboard/Task, AI Perception, 추격·커스텀 AI 실습
-
-## 실습 체크리스트
-- 레벨에 **Nav Mesh Bounds Volume**을 덮어 **P키**로 녹색 메시를 확인한다.
-- **AI Controller**와 **Behavior Tree**를 연결해 목표 지점 이동을 수행한다.
-
 ## 본문
 
 ### 6-1 네비게이션 시스템

@@ -15,43 +15,45 @@
 ## 목차
 
 ### Part 01. C# 문법 기초
-- [Chapter 01 출력과 입력](./01-output.md)
+- [Chapter 01 출력](./01-output.md)
 - [Chapter 02 변수와 자료형](./02-variables.md)
-- [Chapter 03 연산자](./03-operators.md)
-- [Chapter 04 조건문과 반복문](./04-control-flow.md)
-- [Chapter 05 배열](./05-array.md)
-- [Chapter 06 메서드](./06-method.md)
+- [Chapter 03 입력](./03-input.md)
+- [Chapter 04 연산자](./04-operators.md)
+- [Chapter 05 조건문](./05-condition-branch.md)
+- [Chapter 06 반복문](./06-loops.md)
+- [Chapter 07 배열](./07-array.md)
+- [Chapter 08 메서드](./08-method.md)
 
 ### Part 02. 객체지향 기본
-- [Chapter 07 클래스와 객체](./07-class-object.md)
-- [Chapter 08 프로퍼티](./08-property.md)
-- [Chapter 09 static](./09-static.md)
-- [Chapter 10 상속](./10-inheritance.md)
-- [Chapter 11 다형성과 인터페이스](./11-polymorphism.md)
+- [Chapter 09 클래스와 객체](./09-class-object.md)
+- [Chapter 10 프로퍼티](./10-property.md)
+- [Chapter 11 static](./11-static.md)
+- [Chapter 12 상속](./12-inheritance.md)
+- [Chapter 13 다형성과 인터페이스](./13-polymorphism.md)
 
 ### Part 03. 실전 문법 확장
-- [Chapter 12 예외 처리](./12-exception-handling.md)
-- [Chapter 13 파일 입출력](./13-file-io.md)
-- [Chapter 14 제네릭](./14-generics.md)
-- [Chapter 15 람다](./15-lambda.md)
-- [Chapter 16 LINQ](./16-linq.md)
+- [Chapter 14 예외 처리](./14-exception-handling.md)
+- [Chapter 15 파일 입출력](./15-file-io.md)
+- [Chapter 16 제네릭](./16-generics.md)
+- [Chapter 17 람다](./17-lambda.md)
+- [Chapter 18 LINQ](./18-linq.md)
 
 ### Part 04. 비동기와 런타임 이해
-- [Chapter 17 async/await](./17-async-await.md)
-- [Chapter 18 메모리 관리](./18-memory-management.md)
+- [Chapter 19 async/await](./19-async-await.md)
+- [Chapter 20 메모리 관리](./20-memory-management.md)
 
 ### Part 05. 이벤트 기반 프로그래밍
-- [Chapter 19 delegate](./19-delegate.md)
-- [Chapter 20 event](./20-event.md)
+- [Chapter 21 delegate](./21-delegate.md)
+- [Chapter 22 event](./22-event.md)
 
 ### Part 06. 콘솔 게임 실전
-- [Chapter 21 콘솔 제어로 뱀/테트리스 만들기](./21-console-game-snake-tetris.md)
+- [Chapter 23 콘솔 제어로 뱀/테트리스 만들기](./23-console-game-snake-tetris.md)
 
 ### Part 07. 실무 확장
-- [Chapter 22 컬렉션 심화](./22-collections-advanced.md)
-- [Chapter 23 Null 안전성](./23-null-safety.md)
-- [Chapter 24 테스트/디버깅 기초](./24-test-debug-basics.md)
-- [Chapter 25 비동기 심화](./25-advanced-async.md)
+- [Chapter 24 컬렉션 심화](./24-collections-advanced.md)
+- [Chapter 25 Null 안전성](./25-null-safety.md)
+- [Chapter 26 테스트/디버깅 기초](./26-test-debug-basics.md)
+- [Chapter 27 비동기 심화](./27-advanced-async.md)
 
 ---
 

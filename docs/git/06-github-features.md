@@ -5,16 +5,6 @@
 - 리뷰하기 좋은 PR 작성 습관을 적용한다.
 - 브랜치 보호 규칙의 목적을 설명한다.
 
-## 세부 주제
-- 프로필 README(특수 저장소명)
-- PR 품질 체크리스트
-- PR 되돌리기(Revert merge)
-- 브랜치 보호(branch protection)
-
-## 실습 체크리스트
-- `USERNAME/USERNAME` 저장소에 프로필 README 추가
-- 테스트 저장소에서 `main` 보호 규칙(직접 푸시 금지 등) 시험 설정
-
 ## 본문
 
 <a id="ch6-1"></a>
