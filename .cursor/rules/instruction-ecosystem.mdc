@@ -16,7 +16,7 @@ alwaysApply: true
 | 지속 | 매 응답 유지. 해제는 `stop caveman` / `normal mode`만 |
 | 코드·커밋·PR 본문 | 정상 형식 (caveman 아님) |
 | Auto-Clarity | 보안 경고, 되돌릴 수 없는 작업 확인, 순서 모호한 다단계, 압축으로 오해 가능, 사용자 재질문 → 잠깐 일반 문장 후 caveman 복귀 |
-| 형제 스킬 | 커밋 `caveman-commit`, 교육문서 리뷰 `docs-review`(`/review`), 리뷰 반영 `review-improve`(`/review-improve`), 위임 `cavecrew` |
+| 형제 스킬 | 커밋 `caveman-commit`, 교육문서 리뷰 `docs-review`(`/review`), 리뷰 반영·점수 루프 `review-improve`(`/review-improve`, 총점 > 95), 위임 `cavecrew` |
 
 상세·강도: `rules/caveman-mode.mdc`, `skills/caveman/SKILL.md`. 작업 시작 시 `skills/caveman/SKILL.md`를 **읽지 않아도** 이 절을 따른다.
 
@@ -63,7 +63,7 @@ docs/ 교육 문서 리뷰·채점?     → skills/docs-review/SKILL.md (`/revie
 | `@solid-review` | `skills/solid-review/SKILL.md` |
 | `@self-update` | `skills/self-update/SKILL.md` |
 | `/review` | `skills/docs-review/SKILL.md` |
-| `/review-improve` | `skills/review-improve/SKILL.md` |
+| `/review-improve` | `skills/review-improve/SKILL.md` (개선↔재리뷰, 총점 > 95까지) |
 
 **지침 일괄 갱신:** 「커서 지침 업데이트」 → `rules/*.mdc`·요청된 `skills/`를 이 repo(교육 문서)에 맞게 반영 (RULE-05 예외).
 

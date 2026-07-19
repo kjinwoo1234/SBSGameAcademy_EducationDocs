@@ -26,7 +26,7 @@ Modes:
 Skills:
   /caveman-commit       terse Conventional Commits
   /review               education docs followability + score
-  /review-improve       apply .result review fixes to docs
+  /review-improve       apply fixes; loop improve↔review until score > 95
   /caveman-stats        session token savings
 
 Deactivate:

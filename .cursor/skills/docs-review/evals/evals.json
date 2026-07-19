@@ -4,15 +4,17 @@
     {
       "id": 1,
       "prompt": "/review docs/csharp/01-output.md — 학습자가 이 교육 자료를 읽고 쉽게 따라하며 학습할 수 있는지 비판적으로 리뷰해. 예/아니오 채점 기준으로 100점 만점 점수를 매기고, 구체적 문제점과 개선안을 제시해.",
-      "expected_output": "총점 N/100, 채점표(예/아니오 항목 S1–Q3), 문제점, 개선안. 골든 표준 챕터이므로 스킬 적용 시 대개 90+.",
+      "expected_output": "총점 N/100, 범위 대조(앞 장 전부·뒤 장 전부), 채점표(예/아니오 항목 S1–Q3, Q2에 장 범위 커버), 문제점, 개선안. 골든 표준 챕터이므로 스킬 적용 시 대개 90+.",
       "files": [],
       "expectations": [
         "Output includes a total score out of 100",
         "Output includes a scoring table with yes/no (예/아니오) results per criterion IDs",
+        "Output includes 범위 대조 summarizing all prev chapters and all later chapters (not only immediate neighbors) and missing cores (or none)",
         "Output includes concrete 문제점 section with locations",
         "Output includes concrete 개선안 section",
         "Score is >= 85 for this golden-standard chapter when skill is applied",
-        "Does not present a file path to 01-output.md as the quality standard inside the rubric"
+        "Does not present a file path to 01-output.md as the quality standard inside the rubric",
+        "Does not invent required topics from other courses or external curricula"
       ]
     }
   ]

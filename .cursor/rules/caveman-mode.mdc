@@ -26,7 +26,7 @@ alwaysApply: true
 |------|------|
 | 커밋 메시지 | `caveman-commit` |
 | 교육 문서 리뷰·채점 | `docs-review` (`/review`) |
-| 리뷰 개선안 반영 | `review-improve` (`/review-improve`) |
+| 리뷰 개선안 반영 | `review-improve` (`/review-improve`, 총점 > 95까지 루프) |
 | 메모리 .md 압축 | `caveman-compress` |
 | 서브에이전트 위임 | `cavecrew` + `communication-style.mdc` |
 

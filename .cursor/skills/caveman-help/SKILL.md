@@ -28,8 +28,8 @@ Mode stick until changed or session end.
 | Skill | Trigger | What it do |
 |-------|---------|-----------|
 | **caveman-commit** | `/caveman-commit` | Terse commit messages. Conventional Commits. ≤50 char subject. |
-| **docs-review** | `/review` | Education docs followability review + 100-point yes/no score. |
-| **review-improve** | `/review-improve` | Apply `.result` review 개선안 to docs (minimal diff). |
+| **docs-review** | `/review` | Education docs followability + 100-pt score + **full** same-course prev/later chapter coverage (Q2; not adjacent-only). |
+| **review-improve** | `/review-improve` | Apply `.result` 개선안 → re-`/review` until score > 95 (max 5 rounds). |
 | **self-update** | `@self-update` / 보정 재지적 | 지침 write. 보정이면 유사 전수도. |
 | **caveman-compress** | `/caveman-compress <file>` | Compress .md files to caveman prose. Saves ~46% input tokens. |
 | **caveman-help** | `/caveman-help` | This card. |

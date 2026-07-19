@@ -18,7 +18,7 @@ disable-model-invocation: true
 | Universal | (드묾) | 여러 repo·언어 공통 |
 | Domain | `project-domain.mdc` | 레이아웃·공개 목차·why·챕터 구조 금지 |
 | Domain quality | `skills/docs-review/SKILL.md` | docs 챕터/목차 따라가기·채점 |
-| Improve | `skills/review-improve/SKILL.md` | 리뷰 반영 시 구조·선행문법 |
+| Improve | `skills/review-improve/SKILL.md` | 리뷰 반영 + 총점 > 95까지 개선↔재리뷰 |
 | Immutable | `invariant-rules.mdc` | 비밀·목차 계약·지침 |
 | Conventions | `stack-conventions.mdc` | 문서 레이어 |
 | Structure | `solid-principles.mdc` | 문서 SOLID 대응 |
