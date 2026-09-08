@@ -77,7 +77,7 @@ int main(void)
 
 - `sizeof(int) * n` 바이트를 힙에 잡습니다.
 - `arr[i]`로 배열처럼 쓰고, 끝나면 `free`합니다.
-- `arr = NULL`로 dangling 포인터 사용을 줄입니다.
+- `arr = NULL`로 **댕글링 포인터** 사용을 줄입니다. 댕글링 포인터는 `free`한 뒤에도 옛 주소를 가리킨 채 남은 포인터입니다. `NULL`을 넣으면 “이제 여기 쓰지 마”라고 표시하는 습관입니다.
 
 ### 25-3 `calloc`과 `realloc`
 

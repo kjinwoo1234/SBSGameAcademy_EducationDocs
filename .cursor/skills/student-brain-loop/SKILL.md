@@ -1,16 +1,16 @@
 ---
 name: student-brain-loop
 description: >
-  생초보 student-brain 학습과 학습자료 개선을 한 루프로 돌린다. 뇌 로그에서
-  막히면 Stop/need만으로 docs/를 고치고(비대화 시 구조 이관·분리 우선), 직전
-  문서까지의 brain을 유지한 채 수정한 문서부터 다시 읽는다. 지정한 리뷰 범위의
-  모든 학습 자료를 이해한 채 끝까지 완주할 때까지 반복한다. Use whenever the
-  user says /student-brain-loop, "학습 개선 루프", "brain loop", "student-brain
-  루프", "막히면 고치고 다시 읽기", "수정 문서부터 다시 읽기", or wants
-  student-brain plus doc fixes in one closed loop until the full target scope is
-  completed_to_target. Prefer this over plain /student-brain when improvement and
-  re-read must continue without waiting for「계속」each time. Prefer this over
-  /review when the goal is beginner-passable docs via simulation, not a scorecard.
+  생초보 student-brain 학습과 학습자료 개선을 한 루프로 돌린다. 막히면
+  Stop/need로 docs를 고친다. 문단만 쌓지 말고 소제목·챕터 분리·새 장 추가를
+  우선 검토한다(한 소절에 새 개념·문법·함수가 둘 이상이면 분리). 직전 brain
+  유지 후 수정 문서부터 재독. 범위 완주까지 반복. Use whenever the user says
+  /student-brain-loop, "학습 개선 루프", "brain loop", "student-brain 루프",
+  "막히면 고치고 다시 읽기", "수정 문서부터 다시 읽기", or wants student-brain
+  plus doc fixes in one closed loop until completed_to_target. Prefer this over
+  plain /student-brain when improvement and re-read must continue without
+  waiting for「계속」. Prefer this over /review for beginner-passable docs via
+  simulation, not a scorecard.
 ---
 
 # student-brain-loop — 학습→개선→재학습 루프
@@ -25,7 +25,7 @@ description: >
 |---|---|
 | `student-brain` | **읽기 엔진.** 페르소나·읽기 단위·뇌 로그 경로·Stop 규칙을 **그대로** 따른다. 루프마다 SKILL을 열고 실행한다. |
 | `docs-review` / `review-improve` | **기본 루프에 넣지 않는다.** 사용자가 점수 루프를 따로 시키면 그때만. |
-| `project-domain` | 비대화 시 **구조 이관·분리** (`개선 시 비대화 → 구조`). |
+| `project-domain` | 비대화·**한 소절 다개념** 시 **구조 이관·소절/챕터 분리·새 장** (`개선 시 비대화 → 구조`). |
 
 `student-brain`만 호출하면 `docs/`를 고치지 않는다. **이 스킬**이 개선 권한을 연다.
 
@@ -69,11 +69,15 @@ description: >
 
 1. `file` / `location` / `unknown`에 해당하는 `docs/`만 연다.  
 2. 생초보가 그 지점을 지나갈 수 있게 고친다.  
-3. **비대화 검사 (필수):**  
-   - 같은 장에 풀이·예시·실습을 또 얹으면 장이 길어지는가?  
-   - 뒤 장 제목·목표·소절과 **역할이 겹치는가?**  
-   - 겹치거나 늘어지면 **문단 추가보다 이관·챕터 분리·소절 축소**를 한다.  
-4. 목차·파일명·번호가 바뀌면 과정 `README.md`를 함께 맞춘다 (RULE-06).  
+3. **문단만 덧대지 말고 구조를 먼저 검토한다 (필수).** 아래 중 하나라도 해당하면 **소제목 추가·소절 분리·새 챕터 추가·제목 재명명**을 문단 누적보다 우선한다.  
+   | 신호 | 검토할 조치 |
+   |---|---|
+   | 소절(`###`) **하나**에 **서로 다른 새 개념·문법·함수·API가 둘 이상** 한꺼번에 도입됨 | 소절을 쪼개거나, 역할이 크면 **새 챕터**로 분리 |
+   | 설명이 길게 이어져 **읽기 힘들거나 지루한 서술**만 늘어남 | 소제목으로 단계를 나누고, 예제·표·따라하기를 붙임. 같은 말 반복 문단은 줄임 |
+   | 장 제목·학습 목표가 가리키는 역할과 본문이 어긋남 | 제목·목표를 맞추거나, 다른 역할 내용은 **이관·새 장** |
+   | 같은 장에 풀이·예시를 또 얹으면 장이 비대해짐 / 뒤 장과 역할 겹침 | **이관·챕터 분리·소절 축소** (`project-domain` 「개선 시 비대화 → 구조」) |
+   **금지:** “일단 한 문단 더”만으로 막힘을 메우고 구조 검토를 건너뛰기.  
+4. 목차·파일명·번호가 바뀌면 과정 `README.md`를 함께 맞춘다 (RULE-06). 새 챕터·제목 변경 시 `scope_list`도 갱신한다.  
 5. `docs/` 밖(`.cursor/`)은 이 루프의 기본 대상이 아니다. 사용자가 지침 반영을 따로 시키면 그때.
 
 ### 재학습 시작점 (`resume_from`)
@@ -111,6 +115,8 @@ description: >
 3. `## Stop` 막힘 섹션 없음 (또는 “해당 없음”)  
 4. 채팅: 범위 완주 보고 + 뇌 로그 경로 + 이번 루프에서 손댄 `docs/` 요약(파일 목록 수준)
 
+**예외 — 구조 밀도 follow-up:** 치명 막힘 없이 완주했어도, 뇌 로그 **Density notes**나 Reading log `partial`에 **한 소절 다개념·읽기 힘듦**이 명시되어 있으면 STEP 2 구조 표에 따라 **소절 분리·새 장·제목**을 적용한다. 그다음 `resume_from`부터 재학습해, 같은 밀도 신호가 줄었는지 확인한 뒤 STEP 4로 돌아온다. 문단만 늘리는 follow-up은 하지 않는다.
+
 미완주인데 사용자가 중지를 명하면 `status`를 로그에 남기고 중단한다. 종료 조건 달성으로 치지 않는다.
 
 ## 채팅 문체
@@ -128,7 +134,7 @@ description: >
 
 ```
 범위 확정 → student-brain(최초는 맨 앞부터)
-    ├─ 막힘 → Stop 근거로 docs 개선(비대화면 구조)
+    ├─ 막힘 → Stop 근거로 docs 개선(문단만 X → 소제목·챕터 분리·새 장 우선)
     │         → 직전 문서까지 brain 유지
     │         → 수정 문서(resume_from)부터 다시 읽기
     ├─ 정체/과다 사이클 → 사용자 확인
@@ -139,6 +145,7 @@ description: >
 
 - 막힌 용어를 모델 지식으로 정의하고 학습만 진행  
 - 개선 없이 같은 Stop에서 「일단 다음 장」  
+- 막힘을 **문단만 추가**로 메우고, 소제목 분리·새 챕터·제목 수정을 검토하지 않음  
 - 개선 후 **범위 첫 문서부터** 통째로 다시 읽기 (직전 brain 폐기)  
 - 개선 후 고친 소절만 건너뛰고 **다음 장**으로 진행 (수정 문서는 파일 從頭 재독)  
 - `/review` 총점으로 루프 종료  

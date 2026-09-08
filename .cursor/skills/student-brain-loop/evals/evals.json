@@ -21,6 +21,13 @@
       "expected_output": "Does not treat docs-review total score as loop exit. Terminates on student-brain completed_to_target for the scoped chapter. Chat is short polite Korean.",
       "files": [],
       "assertions": []
+    },
+    {
+      "id": 4,
+      "prompt": "/student-brain-loop docs/c/01-intro.md — 막힘이 한 소절에 개념이 몰린 탓이면 문단만 늘리지 말고 소제목 분리나 새 챕터를 검토한 뒤 그 문서부터 재학습.",
+      "expected_output": "On Stop, STEP 2 considers subsection split / new chapter / retitle before paragraph-only patch when one ### introduces multiple new concepts or prose is hard to follow. Updates README if chapter added. Resumes from resume_from. Ends completed_to_target.",
+      "files": [],
+      "assertions": []
     }
   ]
 }
