@@ -1,0 +1,15 @@
+{
+  "eval_id": 1,
+  "eval_name": "first-chapter",
+  "prompt": "/student-brain docs/c/01-intro.md — 완전 생초보 학생처럼 이 문서까지 학습해. 과정은 .result/student-brain.md에 상세히 남겨.",
+  "assertions": [
+    "Creates .result/student-brain(c-to-01-intro).md (or copy under outputs/) — not a bare student-brain.md overwrite",
+    "Log includes status of in_progress, stopped_confused, or completed_to_target",
+    "Reading starts at docs/c/01-intro.md as the first course chapter",
+    "Reading log uses student-voice thoughts (think/understood), not just pasted textbook summary",
+    "If status is stopped_confused, Stop section names unknown item, why_hard in multiple sentences, and location",
+    "Does not produce a /review scorecard or total score out of 100",
+    "Does not edit files under docs/",
+    "Final user-facing message is short clear Korean and cites the scoped output path"
+  ]
+}

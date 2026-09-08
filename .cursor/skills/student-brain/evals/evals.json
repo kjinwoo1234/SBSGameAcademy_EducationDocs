@@ -1,0 +1,37 @@
+{
+  "skill_name": "student-brain",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/student-brain docs/c/01-intro.md — 완전 생초보 학생처럼 이 문서까지 학습해. 과정은 .result/student-brain.md에 상세히 남겨.",
+      "expected_output": ".result/student-brain(c-to-01-intro).md with Reading log from course start. Either completed_to_target or stopped_confused with detailed Stop. Does not use fixed .result/student-brain.md. Chat short clear Korean. No docs/ edits. No review scorecard.",
+      "files": [],
+      "assertions": [
+        "Creates .result/student-brain(c-to-01-intro).md (or copy under outputs/) — not a bare student-brain.md overwrite",
+        "Log includes status of in_progress, stopped_confused, or completed_to_target",
+        "Reading starts at docs/c/01-intro.md as the first course chapter",
+        "Reading log uses student-voice thoughts (think/understood), not just pasted textbook summary",
+        "If status is stopped_confused, Stop section names unknown item, why_hard in multiple sentences, and location",
+        "Does not produce a /review scorecard or total score out of 100",
+        "Does not edit files under docs/",
+        "Final user-facing message is short clear Korean and cites the scoped output path"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "/student-brain docs/c/03-variables-operators.md — 프로그래밍 처음인 학생 시점으로, 해당 과정 첫 챕터부터 03까지 순서대로 읽어가며 학습 로그를 .result/student-brain.md에 남겨. 모르면 즉시 멈춰.",
+      "expected_output": "Starts at docs/c/01-intro.md (not jumping to 03). Log file is .result/student-brain(c-to-03-variables-operators).md. Sequential chapters until stuck or through 03. On confusion: detailed Stop + halt. Short polite chat.",
+      "files": [],
+      "assertions": [
+        "Creates .result/student-brain(c-to-03-variables-operators).md (or scoped copy under outputs/), not bare student-brain.md",
+        "Does not jump straight to chapter 03 without opening chapter 01 (and 02 if not stuck earlier)",
+        "target field or Session notes mention docs/c/03-variables-operators.md",
+        "If stuck before 03, status is stopped_confused with detailed Stop; chapters after the stop point are absent from Reading log",
+        "If completed_to_target, Reading log includes 01, 02, and 03",
+        "Persona does not invent definitions from external knowledge when the doc has not explained a term yet",
+        "No docs/ file modifications",
+        "Chat/final message is brief polite Korean pointing at the scoped log path"
+      ]
+    }
+  ]
+}

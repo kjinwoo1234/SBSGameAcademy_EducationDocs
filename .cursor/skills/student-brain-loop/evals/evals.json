@@ -1,0 +1,26 @@
+{
+  "skill_name": "student-brain-loop",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/student-brain-loop docs/c/01-intro.md — 생초보로 읽고 막히면 문서 고치고 그 문서부터 다시. 이 장 이해하며 끝까지 통과할 때까지 루프.",
+      "expected_output": "Runs student-brain then on Stop edits docs/c/01-intro.md (or restructures if bloated), re-reads from the fixed file (01) without asking 계속. Ends only with completed_to_target for 01-intro and brain log at .result/student-brain(c-to-01-intro).md. No /review scorecard as exit criterion.",
+      "files": [],
+      "assertions": []
+    },
+    {
+      "id": 2,
+      "prompt": "/student-brain-loop docs/c/02-program-structure.md — 01부터 02까지 범위. 02에서 막혀 고치면 01 brain 유지한 채 02부터 재학습. 두 장 모두 이해 완주할 때까지.",
+      "expected_output": "scope_list is 01 then 02. After fix in 02, keeps 01 Learned/Reading log and resumes from 02 file start — does NOT wipe and re-read from 01. Exit only when brain log completed_to_target covers both chapters. Uses scoped brain log filename.",
+      "files": [],
+      "assertions": []
+    },
+    {
+      "id": 3,
+      "prompt": "학습 개선 루프: 리뷰 범위는 docs/c/01-intro.md만. 점수로 끝내지 말고 생초보가 이해한 완주가 종료 조건.",
+      "expected_output": "Does not treat docs-review total score as loop exit. Terminates on student-brain completed_to_target for the scoped chapter. Chat is short polite Korean.",
+      "files": [],
+      "assertions": []
+    }
+  ]
+}

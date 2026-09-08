@@ -9,7 +9,7 @@
 
 ### 02-1 Hello World! 출력해보기
 
-아래 예시를 따라 파일에 적어 보고, Visual Studio에서는 `Ctrl + Shift + B` 또는 `Ctrl + B`로 빌드한 뒤 `Ctrl + F5` 또는 `F5`로 실행해 결과를 확인하면 됩니다. 지금은 이해가 잘 안되더라도 우선 따라서 적은 후 실행해봅시다.
+앞 장에서 Visual Studio와 `cl` 환경을 준비했다고 가정합니다. 아래 예시를 따라 파일에 적어 보고, Visual Studio에서는 `Ctrl + Shift + B` 또는 `Ctrl + B`로 빌드한 뒤 `Ctrl + F5` 또는 `F5`로 실행해 결과를 확인하면 됩니다. 지금은 이해가 잘 안되더라도 우선 따라서 적은 후 실행해봅시다.
 
 ```c
 #include <stdio.h>

@@ -1,70 +1,49 @@
 # Unreal Engine 자습 자료
 
-에디터·블루프린트로 **맵을 만들고 → 상호작용·캐릭터·UI·AI**를 쌓은 뒤, **멀티플레이·FX·GAS**로 확장하고 마지막에 **Lyra**로 실무 구조를 엿보는 순서입니다. 각 챕터는 **학습 목표 → 본문 → 따라 할 수 있는 예시 → 연습문제** 순으로 읽도록 구성했습니다.
+언리얼·C/C++ 과정 **3~6개월** 커리큘럼의 **세부 내용·실습**을 따라가는 학습 자료입니다.  
+C·C++ 기초를 마친 뒤, **언리얼 C++**로 FPS 미니 게임을 만들고 **멀티플레이**까지 이어갑니다.  
+장 번호는 학습 순서용이며, 커리큘럼 **주차 번호와 1:1로 맞출 필요는 없습니다.** 내용은 목차 순서의 본문을 기준으로 합니다.
 
 ## 권장 대상
-- C++ 또는 Blueprint 기반으로 3D 게임 개발을 시작하려는 학습자
-- Unreal 에디터와 Actor 중심 개발 방식을 체계적으로 익히려는 학습자
+
+- C/C++ 기초를 마친 학습자
+- 언리얼에서 C++로 게임플레이를 다루고 싶은 학습자
 
 ## 선수지식
-- C++ 또는 C# 기본 문법(둘 중 하나)
-- 게임 오브젝트/컴포넌트 개념 기초
 
-에디터 메뉴 이름·플러그인 구성은 **엔진 메이저 버전**(예: UE5.x)에 따라 다를 수 있습니다. 용어·메뉴 경로·설정 이름이 본 문서와 다르면 **Epic Games 공식 문서**에서 자신이 쓰는 엔진 버전으로 검색해 확인하세요. (본 과정 문서에는 외부 사이트 링크를 싣지 않습니다. 강사·저자는 문서를 쓰기 **전에** 공식 문서·출판 서적 등으로 내용을 대조합니다.)
+- C 변수·함수·포인터, C++ 클래스·상속 기초
+- 콘솔에서 빌드·실행해 본 경험
+
+에디터 메뉴 이름·플러그인 구성은 **엔진 메이저 버전**에 따라 다를 수 있습니다. 용어·경로가 다르면 자신이 쓰는 엔진 버전의 Epic 공식 문서로 확인하세요. 본 과정 문서에는 외부 사이트 링크를 넣지 않습니다.
+
+본문에 `![…](./img/….png)` 형태가 있으면 **아직 파일이 없는 자리표시**입니다. 캡처를 `docs/unrealEngine/img/`에 같은 파일명으로 넣으면 됩니다.
 
 ## 목차
 
-### [언리얼 기초 이해](./01-unreal-foundation.md)
+### Part 01. 언리얼 입문 · FPS 기초 (커리 3개월)
 
-### [게임 꾸미기](./02-level-visuals-materials.md)
+- [Chapter 01 에디터·언리얼 C++](./01-editor-unreal-cpp.md)
+- [Chapter 02 컨테이너·FPS 기초](./02-containers-fps-basics.md)
+- [Chapter 03 전투·애니메이션](./03-combat-animation.md)
+- [Chapter 04 데미지·UI](./04-damage-ui.md)
 
-### [게임 상호작용 기능 추가](./03-gameplay-interaction.md)
+### Part 02. 기획 · AI · 시스템 통합 (커리 4개월)
 
-### [캐릭터 애니메이션을 통한 복잡한 상호작용](./04-character-animation.md)
+- [Chapter 05 게임 기획·구현](./05-game-design-impl.md)
+- [Chapter 06 비헤이비어 트리](./06-behavior-tree.md)
+- [Chapter 07 내비게이션](./07-navigation.md)
+- [Chapter 08 FPS 시스템 통합](./08-fps-system-integration.md)
 
-### [UI 만들기](./05-ui-widgets.md)
+### Part 03. 네트워킹 (커리 5~6개월)
 
-### [AI 만들기](./06-ai-behavior.md)
-
-### [멀티플레이](./07-multiplayer.md)
-
-### [FX·오디오·포스트 프로세싱](./08-fx-audio-postprocess.md)
-
-### [GAS(Gameplay Ability System)](./09-gas.md)
-
-### [도전과제](./10-challenge-lyra.md)
-
-## 작성 준비중인 내용
-
-- 언리얼 기초 이해 보강
-  - 언리얼 설치, 블루프린트 기초
-  - 노드·그래프(실행 핀/데이터 핀, 이벤트/흐름 제어, 컴파일 오류 확인)
-  - 레벨/액터 개념
-- 게임 꾸미기 보강
-  - 액터 배치, 라이팅, 랜드스케이프
-  - 머티리얼 기초 및 응용(색상/애니메이션/도형/랜드스케이프 머티리얼)
-- 게임 상호작용 보강
-  - 입력 이벤트, 축 매핑, 캐릭터 조작
-  - Overlap, 피직스, 투사체
-  - 향상된 입력, LineTrace, 컴포넌트, PhysicsHandle, 씬 이동
-- 캐릭터 애니메이션 보강
-  - 애니메이션 블루프린트, 몽타주, 노티파이
-  - 콤보 공격 및 데미지 프레임워크 실습
-- UI 보강
-  - 위젯 블루프린트, 패널, 앵커/피벗
-  - 체력바 바인딩, 버튼 이벤트, 커서 표시/숨기기
-- AI 보강
-  - 네비게이션, 비헤이비어 트리/블랙보드/태스크, AI 인지
-  - 플레이어 추격 및 커스텀 AI 실습
-- 멀티플레이 보강
-  - 서버-클라이언트 모델, 리슨/데디케이트 서버
-  - RPC, Replication, 멀티 FPS 실습
-- FX·오디오·포스트 프로세싱 보강
-  - 나이아가라, 포스트 프로세싱, 3D 공간 음향
-- GAS 보강
-  - ASC, Ability, Attribute, Effect, Tag, Cue
-- 도전과제 보강
-  - LyraStarterGame 분석
+- [Chapter 09 멀티플레이 기초](./09-multiplayer-basics.md)
+- [Chapter 10 네트워크 세션](./10-network-session.md)
+- [Chapter 11 체력 리플리케이션](./11-health-replication.md)
+- [Chapter 12 전투 리플리케이션](./12-combat-replication.md)
+- [Chapter 13 네트워크 역할·권한](./13-network-roles.md)
+- [Chapter 14 캐릭터·이동 리플리케이션](./14-character-movement-replication.md)
+- [Chapter 15 네트워크 UI·점수](./15-network-ui-score.md)
+- [Chapter 16 서버 모델·게임 플로우](./16-server-model-gameflow.md)
 
 ---
 

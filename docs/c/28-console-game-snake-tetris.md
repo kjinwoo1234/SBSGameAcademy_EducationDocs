@@ -20,12 +20,14 @@
 
 **게임 루프(game loop)**는 입력 처리, 상태 갱신, 화면 출력을 한 바퀴 도는 구조를 말합니다. **틱(tick)**은 그 루프가 한 번 돌아가는 단위 시간으로 이해하면 됩니다.
 
+코드에 나오는 Windows 이름은 다음처럼 읽으면 됩니다. `#include <windows.h>`는 이 API 선언을 가져옵니다. **`COORD`**는 커서 좌표용 구조체이고, 멤버 `X`·`Y`에 칸 위치를 넣습니다. **`SHORT`**·**`WORD`**는 Windows가 쓰는 정수 타입 이름입니다. **`GetStdHandle(STD_OUTPUT_HANDLE)`**은 “지금 프로그램의 **표준 출력(콘솔 창)**을 다루는 손잡이(핸들)”를 돌려 줍니다. 커서 이동·색 변경 함수는 이 손잡이에다 “어디로 / 무슨 색으로”를 요청하는 형태입니다. (같은 패턴은 **Chapter 15**에서도 연습했습니다.)
+
 ```c
 #include <windows.h>
 #include <stdlib.h>
 
 void gotoxy(int x, int y) {
-    COORD p = {(SHORT)x, (SHORT)y};
+    COORD p = {(SHORT)x, (SHORT)y}; /* X=x, Y=y 좌표 */
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), p);
 }
 

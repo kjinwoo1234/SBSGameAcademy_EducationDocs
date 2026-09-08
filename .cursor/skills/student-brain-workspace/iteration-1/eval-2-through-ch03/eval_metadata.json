@@ -1,0 +1,15 @@
+{
+  "eval_id": 2,
+  "eval_name": "through-ch03",
+  "prompt": "/student-brain docs/c/03-variables-operators.md — 프로그래밍 처음인 학생 시점으로, 해당 과정 첫 챕터부터 03까지 순서대로 읽어가며 학습 로그를 .result/student-brain.md에 남겨. 모르면 즉시 멈춰.",
+  "assertions": [
+    "Creates .result/student-brain(c-to-03-variables-operators).md (or scoped copy under outputs/), not bare student-brain.md",
+    "Does not jump straight to chapter 03 without opening chapter 01 (and 02 if not stuck earlier)",
+    "target field or Session notes mention docs/c/03-variables-operators.md",
+    "If stuck before 03, status is stopped_confused with detailed Stop; chapters after the stop point are absent from Reading log",
+    "If completed_to_target, Reading log includes 01, 02, and 03",
+    "Persona does not invent definitions from external knowledge when the doc has not explained a term yet",
+    "No docs/ file modifications",
+    "Chat/final message is brief polite Korean pointing at the scoped log path"
+  ]
+}
