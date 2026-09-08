@@ -1,94 +1,183 @@
 # Chapter 23 도전! 프로그래밍 3
 
 ## 학습 목표
-- 자료구조 구현과 게임 로직 결합을 경험한다.
-- 포인터 중심 설계를 실제 프로젝트에 적용한다.
+
+- Chapter 01~22에서 배운 배열·포인터·문자열·구조체·`typedef`·`enum`을 문제에 적용한다.
+- 여러 필드를 구조체로 묶고, 배열·함수로 조회·갱신·집계한다.
+- 입력·출력 형식을 먼저 정한 뒤 작은 함수로 나누어 구현한다.
 
 ## 본문
 
-### 23-1 LinkedList 구현하고 뱀 게임 만들기
+### 23-1 이 장의 역할
 
-뱀의 몸은 앞뒤가 계속 바뀌는 데이터라 **연결 리스트(LinkedList)**와 잘 맞습니다. 구현할 때는 `노드 추가`, `노드 삭제`, `머리 이동`, `충돌 검사`를 각각 함수로 쪼개 두면 디버깅과 확장이 쉬워집니다.
+이 장은 새 문법을 거의 늘리지 않습니다. **Chapter 01~22**까지 도구를 조합해 짧은 프로그램을 완성하는 연습장입니다. 쓸 수 있는 범위는 구조체, 구조체 배열, `typedef`, 중첩 구조체, `enum`, `union`, 포인터로 구조체 넘기기까지입니다.
 
-| 용어 | 의미 |
+**이 장에서 쓰지 않는 것:** 파일 입출력, `malloc`/`free` 동적 할당, 헤더 분할 빌드. 그것들은 다음 장 이후입니다. 길이가 변하는 목록이 필요하면 **고정 크기 구조체 배열**과 사용 개수 변수로 표현합니다.
+
+| 단계 | 할 일 |
 |---|---|
-| LinkedList(연결 리스트) | 노드들이 포인터로 다음 노드를 가리키며 이어진 자료구조 |
-| 노드(node) | 데이터와 다음 노드 주소(`next`)를 담는 한 칸 |
+| 1 | 입력·출력 형식 확정 |
+| 2 | 한 건 데이터를 `struct`/`typedef`로 정의 |
+| 3 | 배열 + 개수로 목록 관리 |
+| 4 | 조회·갱신은 함수로 분리. 필요 시 포인터 인자 |
+| 5 | 기본 입력 + 경계값 테스트 |
 
-배열로도 뱀을 표현할 수 있지만, 리스트는 **앞에 노드를 붙이거나 뒤를 뗄 때** 기존 원소를 통째로 옮기지 않고도 연결만 바꿀 수 있는 경우가 많습니다. 몸 길이가 자주 변하는 상황에 유연합니다.
+### 23-2 구조체 배열로 목록 다루기
 
-권장 구현 순서는 다음과 같습니다. 먼저 노드 구조체(`x`, `y`, `next` 등)를 정의하고, 머리 삽입·꼬리 삭제 함수를 만든 뒤 입력 방향 처리, 벽·자기 몸 충돌 검사, 먹이·점수를 순서대로 얹으면 됩니다.
+학생·아이템·맵 칸처럼 **같은 모양의 여러 건**은 구조체 배열이 기본입니다. `Student list[100];`과 `int count;`를 두면 `0`부터 `count - 1`까지가 유효 구간입니다. 추가할 때는 `list[count] = ...;` 후 `count++` 패턴이 흔합니다. 용량을 넘지 않는지 먼저 검사합니다.
 
-노드를 `Node n;`처럼 지역 변수로만 두면, 함수가 끝나는 순간 칸이 사라질 수 있습니다. 몸 길이가 늘어날 때마다 **실행 중에 새 칸을 빌려 쓰는** 방법이 필요한데, 그때 쓰는 함수가 **`malloc`(memory allocate, 메모리 할당)**입니다. `malloc(sizeof(Node))`는 `Node` 하나 크기만큼 자리를 빌려 주고, 그 **시작 주소**를 돌려줍니다. `(Node*)`는 그 주소를 “`Node`를 가리키는 포인터”로 해석하겠다는 표시입니다. 다 쓴 칸은 **`free`(해제)**로 돌려줍니다. `NULL`이 나오면 빌리기에 실패한 것이라, 아래처럼 `if (!new_node)`로 막을 수 있습니다. (`malloc`/`free`의 더 깊은 이야기·주의점은 **Chapter 25**에서 이어서 다룹니다. 지금은 “새 노드 자리 빌리기 / 다 쓰면 돌려주기”만 잡으면 됩니다.) `#include <stdlib.h>`에 `malloc`과 `free`가 들어 있습니다.
+원본을 바꾸는 함수는 `Student *p` 또는 배열 시작 주소와 인덱스를 함께 받습니다. 읽기만 하면 `const Student *p`를 쓸 수 있습니다. 상태 코드는 `enum`으로 이름을 붙이면 `switch`가 읽기 쉽습니다.
 
-| 기능 | 최소 구현 포인트 |
-|---|---|
-| 노드 추가 | 새 노드 생성(`malloc`) + 연결 |
-| 노드 삭제 | 연결 갱신 + 메모리 해제(`free`) |
-| 충돌 검사 | 벽/몸통 좌표 비교 |
-| 종료 처리 | 리스트 전체 `free` |
-
+아래는 연습 전에 흐름만 확인하는 짧은 뼈대입니다. 학생 배열에서 최고 점수를 찾습니다.
 ```c
 #include <stdio.h>
-#include <stdlib.h>
 
-typedef struct Node {
-    int x, y;
-    struct Node *next;
-} Node;
+typedef struct
+{
+    int id;
+    int score;
+} Student;
 
-Node* push_front(Node *head, int x, int y) {
-    Node *new_node = (Node*)malloc(sizeof(Node));
-    if (!new_node) return head;
-    new_node->x = x;
-    new_node->y = y;
-    new_node->next = head;
-    return new_node;
-}
+int find_best_index(const Student *list, int n)
+{
+    int i;
+    int best = 0;
 
-void free_list(Node *head) {
-    while (head != NULL) {
-        Node *next = head->next;
-        free(head);
-        head = next;
+    for (i = 1; i < n; i++)
+    {
+        if (list[i].score > list[best].score)
+        {
+            best = i;
+        }
     }
+    return best;
 }
 
-int main(void) {
-    Node *snake = NULL;
-    snake = push_front(snake, 5, 5);
-    snake = push_front(snake, 6, 5);
-    printf("head: (%d, %d)\n", snake->x, snake->y);
-    free_list(snake);
+int main(void)
+{
+    Student list[3] = {
+        {1, 70},
+        {2, 95},
+        {3, 88}
+    };
+    int idx;
+
+    idx = find_best_index(list, 3);
+    printf("%d %d\n", list[idx].id, list[idx].score);
     return 0;
 }
 ```
 
-실습에서도 프로그램이 끝나기 전에 리스트를 순회하며 `free`로 메모리를 돌려 주는 습관을 지키는 것이 중요합니다.
+**예상 출력**
+
+```text
+2 95
+```
+
+**코드 해석**
+
+- `Student` 별칭으로 한 명 데이터를 묶습니다.
+- `find_best_index`는 읽기만 하므로 `const Student *`를 받습니다.
+- 최고 점수 인덱스를 돌려 `main`에서 `id`와 `score`를 출력합니다.
+
+### 23-3 중첩 구조체와 좌표
+
+게임·맵 연습에서는 **좌표**를 `Point`로 빼고, 캐릭터에 `Point pos`를 중첩하는 패턴이 자주 나옵니다. 이동 함수는 `void move(Point *p, int dx, int dy)`처럼 포인터로 위치를 바꿉니다. 충돌은 두 `Point`의 `x`, `y`가 같은지로 검사할 수 있습니다.
+
+몸통이 여러 칸이면 `Point body[MAX];`와 `int length;`로 표현합니다. 연결 리스트와 `malloc`은 이 장 범위 밖입니다. 고정 배열로도 “머리 이동 + 꼬리 따라가기” 연습은 가능합니다.
+
+아래는 머리 좌표를 한 칸 옮기고 벽 밖으로 나가는지 검사하는 최소 예입니다.
+
+```c
+#include <stdio.h>
+
+typedef struct
+{
+    int x;
+    int y;
+} Point;
+
+int is_out(Point p, int size)
+{
+    if (p.x < 0 || p.x >= size || p.y < 0 || p.y >= size)
+    {
+        return 1;
+    }
+    return 0;
+}
+
+int main(void)
+{
+    Point head = {9, 5};
+    int size = 10;
+
+    head.x = head.x + 1;
+    if (is_out(head, size))
+    {
+        printf("hit wall\n");
+    }
+    else
+    {
+        printf("%d %d\n", head.x, head.y);
+    }
+    return 0;
+}
+```
 
 **예상 출력**
 
 ```text
-head: (6, 5)
+hit wall
 ```
+
+**코드 해석**
+
+- `head`를 오른쪽으로 한 칸 옮기면 `x`가 `10`이 됩니다.
+- `size`가 `10`이면 유효 범위는 `0..9`이므로 벽입니다.
+- `is_out`이 `1`을 돌려 `hit wall`을 출력합니다.
 
 ### 연습문제
 
 **문제 1**
-- 문제: 단일 연결 리스트에 대해 `push_front`와 `pop_back`을 구현하세요.
-- 입력: 삽입할 정수 데이터 여러 개
-- 출력: 삽입/삭제 후 리스트 상태
-- 조건(힌트): 삭제 시에는 반드시 `free`로 메모리를 해제하세요.
+- 문제: `Book`을 `typedef` 구조체로 두고, 책 3권 배열에서 가격이 가장 비싼 책의 제목과 가격을 출력하세요.
+- 입력: 없음. 예: `{"A", 1000}`, `{"B", 3000}`, `{"C", 2000}`
+- 출력: `B 3000`
+- 조건: 구조체 배열 + 반복. 최고 가격 비교 함수 분리 권장
 
 **문제 2**
-- 문제: 머리 좌표와 몸통 리스트를 받아 충돌이면 1, 아니면 0을 반환하는 `is_collision` 함수를 작성하세요.
-- 입력: 머리 좌표, 몸통 노드 리스트
-- 출력: 충돌 여부(1 또는 0)
-- 조건(힌트): 리스트 전체를 순회하며 좌표 일치 여부를 확인하세요.
+- 문제: `enum Grade { FAIL, PASS, EXCELLENT };`를 두고, 점수 `0..100`을 입력받아 `60` 미만 `FAIL`, `60` 이상 `90` 미만 `PASS`, `90` 이상 `EXCELLENT`로 판정한 뒤 이름을 출력하세요.
+- 입력: 정수 점수 1개. 예: `92`
+- 출력: `EXCELLENT`
+- 조건: 판정 결과를 `enum`에 담고 `switch`로 문자열 출력
+
+**문제 3**
+- 문제: `Point`와 `Player { Point pos; int hp; }`를 두고, 플레이어 배열 2명의 체력 합과 첫 번째 위치를 출력하세요.
+- 입력: 없음. 예: `(1,2) hp=30`, `(3,4) hp=40`
+- 출력:
+  ```text
+  70
+  1 2
+  ```
+- 조건: 중첩 구조체 사용. 합 계산은 함수로
+
+**문제 4**
+- 문제: `Point body[5]`와 `length`로 뱀 몸통을 표현하세요. 초기 길이 `3`, 좌표 `(2,2) (1,2) (0,2)`일 때, 머리를 오른쪽 `(3,2)`로 옮기고 몸을 한 칸씩 따라가게 한 뒤 모든 칸을 출력하세요. 꼬리 칸은 버려 길이는 `3` 유지.
+- 입력: 없음
+- 출력:
+  ```text
+  3 2
+  2 2
+  1 2
+  ```
+- 조건: 동적 할당 금지. 뒤에서 앞으로 복사한 뒤 `body[0]`에 새 머리 대입하는 방식 허용
 
 ### 정답 포인트
 
-`malloc`으로 만든 노드는 사용이 끝나면 `free`로 짝을 맞추고, 연결이 끊기지 않았는지 출력으로 확인하면 디버깅이 수월합니다.
+- 문제 1: 최고 가격 인덱스를 찾아 `title`, `price` 출력
+- 문제 2: 점수 구간 → `enum` → `switch`에서 `FAIL`/`PASS`/`EXCELLENT` 문자열
+- 문제 3: `sum_hp`는 `const Player *`와 개수. 위치는 `players[0].pos.x` 등
+- 문제 4: `for (i = length - 1; i > 0; i--) body[i] = body[i - 1];` 후 `body[0] = new_head;`
+- 공통: 이 장은 구조체까지. `malloc`·파일 I/O 없이 배열·포인터·`enum`으로 해결
 
 ---
 

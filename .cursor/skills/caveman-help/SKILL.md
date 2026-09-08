@@ -28,10 +28,12 @@ Mode stick until changed or session end.
 | Skill | Trigger | What it do |
 |-------|---------|-----------|
 | **caveman-commit** | `/caveman-commit` | Terse commit messages. Conventional Commits. ≤50 char subject. |
-| **docs-review** | `/review` | Education docs followability + 100-pt score + **full** same-course prev/later chapter coverage (Q2; not adjacent-only). |
-| **review-improve** | `/review-improve` | Apply `.result` 개선안 → re-`/review` until score > 95 (max 5 rounds). |
-| **self-update** | `@self-update` / 보정 재지적 | 지침 write. 보정이면 유사 전수도. |
-| **caveman-compress** | `/caveman-compress <file>` | Compress .md files to caveman prose. Saves ~46% input tokens. |
+| **docs-review** | `/review` | 품질 SSOT. 100점 + 앞·뒤 장 **전부** 대조 (Q2). |
+| **review-improve** | `/review-improve` | `.result` 개선안 → re-`/review` until **100** (max 5). |
+| **self-update** | `@self-update` / 보정 재지적 | 지침 write. 보정이면 유사 전수. |
+| **cavecrew** | delegate / 압축 위임 | Task `explore`/`generalPurpose` + 압축 계약. 유령 타입 없음. |
+| **suggesting-cursor-rules** | 같은 보정 2회+ | 기존 지침 보강 우선. 새 `.mdc`는 예외. |
+| **caveman-compress** | `/caveman-compress <file>` | Compress .md memory files. |
 | **caveman-help** | `/caveman-help` | This card. |
 
 ## Correction loop

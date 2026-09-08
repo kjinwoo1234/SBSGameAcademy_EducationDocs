@@ -1,0 +1,23 @@
+{
+  "skill_name": "review-skill-feedback",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/review-skill-feedback\n대상: docs/git/00-quickstart.md\n공정: review-improve\n문제: .result 리뷰는 총점 100인데 연습문제 항목에 입력/출력/조건이 빠져 있다. P2를 예로 준 게 잘못이다. docs-review 기준을 고쳐라. 문서는 아직 건드리지 말고 스킬만.",
+      "expected_output": "docs-review SKILL.md에 P2/연습 형식 실패 예가 보강되고, .result/feedback-review-skill-*.md 기록이 생기며, docs/git/00-quickstart.md는 수정하지 않음. 채팅에 패치 요약과 재리뷰 제안.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "리뷰 평가할게. docs/c/09-one-dimensional-array.md 리뷰에서 Q2를 예로 줬는데 범위 대조를 직전 장만 보고 적은 티가 난다. 장 범위 전부 대조 규칙을 스킬에 더 세게 박아줘. /calibrate-review",
+      "expected_output": "docs-review의 Q2/STEP 1b 관련 문장이 강화됨. review-improve에는 채점 본문 복제 없이 포인터/가드만 필요 시. feedback 기록 존재.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "/review-improve 돌렸더니 리뷰 개선안에 없는 섹션 제목까지 바꿔 버렸다. 점수는 100. 개선 과잉이다. review-improve 스킬에 가드를 넣고, 같은 문서 다시 improve 할지 물어봐.",
+      "expected_output": "review-improve에 ‘리뷰에 없는 리팩터 금지’ 가드 보강. docs-review 불필요 대청소 없음. 재실행은 제안만(동의 전 미실행).",
+      "files": []
+    }
+  ]
+}

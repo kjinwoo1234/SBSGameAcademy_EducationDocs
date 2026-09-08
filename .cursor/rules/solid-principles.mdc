@@ -1,6 +1,10 @@
 ---
 description: SOLID를 교육 문서 구조에 대응 (챕터·목차·지침 경계)
-globs: "docs/**/*.md,README.md,.cursor/**/*.{md,mdc}"
+globs:
+  - docs/**/*.md
+  - README.md
+  - .cursor/**/*.md
+  - .cursor/**/*.mdc
 alwaysApply: false
 ---
 
@@ -16,8 +20,9 @@ alwaysApply: false
 | 루트 README | 과정 목록·추천 순서 | 문법 본문 |
 | 과정 README | 목차·선수·완주 역량 | 챕터 전체 복제·세부 불릿 과다 |
 | 챕터 | 해당 단원 학습만 | 다른 단원 전부·커리큘럼 정책 장황 서술 |
-| docs-review | 품질·따라가기 채점 기준 | 특정 과목 본문 |
-| project-domain | repo 지도 | 챕터 서술 복제 |
+| docs-review | 품질 SSOT·채점·언어 공통 입문 순서 | 엔진 경로 정책 |
+| project-domain | repo 지도·최소 구조 | 품질 본문 복제 |
+| stack-* | 엔진·경로 등 과정 특이점 | 조건/반복·뼈대 안내를 과정별로 복제 |
 
 한 챕터에 개념 과다 → 분리 검토 (`docs-review` 범위·밀도 패턴).
 

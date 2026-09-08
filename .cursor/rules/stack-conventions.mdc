@@ -1,6 +1,10 @@
 ---
 description: 교육 문서 레이어·공개 목차 계약·변경 체크리스트
-globs: "docs/**/*.md,README.md,.cursor/**/*.{md,mdc}"
+globs:
+  - docs/**/*.md
+  - README.md
+  - .cursor/**/*.md
+  - .cursor/**/*.mdc
 alwaysApply: false
 ---
 
@@ -35,7 +39,8 @@ ls docs/*/README.md README.md .cursor/rules .cursor/skills 2>/dev/null
 | 새 챕터 | 파일 작성 → 과정 README 목차 링크 → (필요 시) 루트 README |
 | 챕터 제목·파일명 변경 | 파일 + 과정 README 링크 **동시** |
 | 학습 순서·파트 재배치 | 과정 README + 영향 챕터 상호 링크 |
-| 문서 품질 기준 변경 | `skills/docs-review/SKILL.md` (+ 필요 시 project-domain) |
+| 문서 품질 기준 변경 | `skills/docs-review/SKILL.md` (SSOT; `project-domain`에 본문 복제 금지) |
+| 과정 특이 오버레이 | `rules/stack-*.mdc` (문법 입문·조건/반복 순서는 여기 두지 않음 — `docs-review`) |
 | 에이전트 지침 변경 | RULE-05 / 「커서 지침 업데이트」 / **보정 루프** |
 | 사용자 보정(재지적) | 즉시 수정 → 유사 전수 → 지침 write (`instruction-ecosystem`) |
 

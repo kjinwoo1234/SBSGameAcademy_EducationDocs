@@ -23,7 +23,7 @@ ls docs/*/README.md README.md .cursor/rules .cursor/skills 2>/dev/null
 ```
 
 `project-domain.mdc` **구현 상태** 표와 대조.  
-`docs/` 작업이면 해당 과정 `README.md` 목차·파일 실존 확인. 품질 기준: `skills/docs-review/SKILL.md` (**선행 문법만** 포함).
+`docs/` 작업이면 해당 과정 `README.md` 목차·파일 실존 확인. 품질 SSOT: `skills/docs-review/SKILL.md`(조건/반복 입문 등 언어 공통 포함).
 
 ## STEP 3 — Scope declaration
 
@@ -46,5 +46,5 @@ ls docs/*/README.md README.md .cursor/rules .cursor/skills 2>/dev/null
 
 한 문장 후 **STEP 3 범위 안에서만** 작업.  
 챕터형이면 `docs-review` 구조·예시·연습문제 패턴을 염두.  
-구조 금지: `## 세부 주제`·`## 실습 체크리스트` (`project-domain`).  
+구조 금지: `## 세부 주제`·`## 실습 체크리스트` (`docs-review` S3 / `project-domain` 최소표).  
 사용자 보정·재지적이면 범위 선언 후 **보정 루프** (`instruction-ecosystem`).

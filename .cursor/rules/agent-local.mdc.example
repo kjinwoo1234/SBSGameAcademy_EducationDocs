@@ -1,0 +1,14 @@
+---
+description: 세션 전용 메모 예시 — 복사해 agent-local.mdc로 사용 (gitignore)
+alwaysApply: false
+---
+
+# agent-local 예시
+
+이 파일을 `.cursor/rules/agent-local.mdc`로 복사해 쓴다. `agent-local.mdc`는 gitignore.
+
+```text
+## 이번 세션
+- 초점:
+- 열지 말 것:
+```

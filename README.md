@@ -4,8 +4,9 @@
 ## 처음 시작하는 사람 추천 순서
 1. 프로그래밍이 처음이면 `C -> C++ -> C#` 순서로 기초 문법을 학습
 2. `Git` 학습으로 여럿이서 개발하는 방법 습득
-3. 게임 엔진 입문은 `Unity` 또는 `Unreal Engine` 중 1개를 먼저 선택
-4. 엔진 1개 완주 후 나머지 엔진을 비교 학습
+3. Windows에서 창·메시지가 어떻게 돌아가는지 보고 싶으면 `Win32 API`로 원리만 짧게 익힌다
+4. 게임 엔진 입문은 `Unity` 또는 `Unreal Engine` 중 1개를 먼저 선택
+5. 엔진 1개 완주 후 나머지 엔진을 비교 학습
 
 ## 학습자료
 프로그래밍 언어
@@ -15,6 +16,9 @@
 
 버전관리툴
 - [Git](./docs/git/README.md)
+
+Windows 프로그래밍
+- [Win32 API](./docs/windowsApi/README.md)
 
 게임 엔진
 - [유니티](./docs/unity/README.md)

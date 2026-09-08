@@ -16,14 +16,17 @@ disable-model-invocation: true
 | Layer | Path | 내용 |
 |-------|------|------|
 | Universal | (드묾) | 여러 repo·언어 공통 |
-| Domain | `project-domain.mdc` | 레이아웃·공개 목차·why·챕터 구조 금지 |
-| Domain quality | `skills/docs-review/SKILL.md` | docs 챕터/목차 따라가기·채점 |
-| Improve | `skills/review-improve/SKILL.md` | 리뷰 반영 + 총점 > 95까지 개선↔재리뷰 |
+| Domain | `project-domain.mdc` | 레이아웃·공개 목차·최소 구조 (품질 본문 복제 금지) |
+| Domain quality | `skills/docs-review/SKILL.md` | **품질 SSOT** — 따라가기·채점 |
+| Course overlay | `rules/stack-*.mdc` | 엔진·경로 등 특이점만 (입문 교수법 금지 — docs-review) |
+| Improve | `skills/review-improve/SKILL.md` | 리뷰 반영 + 총점 100 (패턴은 docs-review 참조) |
+| Review calibrate | `skills/review-skill-feedback/SKILL.md` | 사람 평가로 docs-review/review-improve 보강 |
 | Immutable | `invariant-rules.mdc` | 비밀·목차 계약·지침 |
 | Conventions | `stack-conventions.mdc` | 문서 레이어 |
 | Structure | `solid-principles.mdc` | 문서 SOLID 대응 |
-| Ephemeral | `agent-local.mdc` | 세션 (gitignore) |
+| Ephemeral | `agent-local.mdc` | 세션 (gitignore·없으면 무시) |
 | Process | `instruction-ecosystem.mdc` | 생태계·**보정 루프** |
+| Suggest rule | `skills/suggesting-cursor-rules` | 반복 보정 → 기존 보강 우선·새 .mdc는 예외 |
 
 스타일·문장만 → invariant 금지. `AGENTS.md` 루트 중복 금지.
 
@@ -51,7 +54,7 @@ disable-model-invocation: true
 
 1. **즉시 수정** — 지적된 파일/현상.
 2. **유사 전수** — 같은 패턴 grep (과정·`docs/`·`.cursor`). 전부 수정. 잔여 0 확인.
-3. **지침 write** — 재발 방지 문장을 최소 1곳 이상 (`project-domain` 및/또는 해당 skill). 문서 품질 이슈면 `docs-review`·`review-improve`도 동기화.
+3. **지침 write** — 재발 방지 문장을 최소 1곳. 품질 → **`docs-review` 먼저**(SSOT). 과정 전용 → `stack-*`. repo 지도만 → `project-domain`. 개선 공정 → `review-improve`는 체크 포인터만.
 4. **보고** — 고친 건수 + 지침 경로. 「다음에 조심」만 금지.
 
 목표: 사용자가 **같은 요청을 다시 하지 않아도** 되게.
