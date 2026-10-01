@@ -44,8 +44,8 @@
 - [Chapter 26 매크로와 전처리기](./26-macro-preprocessor.md)
 - [Chapter 27 파일 분할과 헤더파일 디자인](./27-file-split-header-design.md)
 
-### Part 05. 콘솔 게임 실전
-- [Chapter 28 콘솔 제어로 뱀/테트리스 만들기](./28-console-game-snake-tetris.md)
+### Part 05. 콘솔 프로젝트 실전
+- [Chapter 28 콘솔 텍스트 RPG 만들기](./28-console-text-rpg.md)
 
 ---
 
