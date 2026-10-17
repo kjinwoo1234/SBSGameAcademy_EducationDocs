@@ -20,6 +20,8 @@
 | `FILE *` | 열린 스트림을 가리키는 포인터 |
 | 파일 위치 지시자 | 지금 읽거나 쓸 위치 |
 
+Visual Studio 프로젝트에서는 `fopen`과 `fscanf`도 `C4996` 오류를 냅니다. Chapter 03에서 한 것처럼 파일 맨 첫 줄에 `#define _CRT_SECURE_NO_WARNINGS`를 넣습니다. Visual Studio에서 실행하면 파일은 프로젝트 폴더에 만들어집니다.
+
 아래를 실행한 뒤 같은 폴더에 `score.txt`가 생기고 내용이 `Kim 95`인지 확인해 보세요.
 
 ```c

@@ -154,6 +154,8 @@ compare: -1
 | `strcat` | 문자열 이어붙이기 | 대상 남은 칸 확인 |
 | 오버플로우 | 저장 공간을 넘어 데이터가 넘침 | 길이·용량을 함께 계산 |
 
+Visual Studio 프로젝트에서는 `strcpy`와 `strcat`도 `scanf`와 같은 `C4996` 오류를 냅니다. Chapter 03에서 한 것처럼 파일 맨 첫 줄에 `#define _CRT_SECURE_NO_WARNINGS`를 넣습니다.
+
 아래를 실행해 복사와 연결 결과를 확인해 보세요.
 
 ```c

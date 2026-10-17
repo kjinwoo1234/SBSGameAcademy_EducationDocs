@@ -17,7 +17,7 @@ SourceTree에서 **Add**와 **Clone**은 목적이 다릅니다. 이미 `git ini
 아래 순서로 연습 저장소를 SourceTree에 불러와 보세요.
 
 1. SourceTree를 연 뒤 **Add** 또는 **Local**에서 폴더 추가를 선택합니다.
-2. Chapter 0에서 만든 `my-first-repo`처럼 이미 `git init`한 경로를 지정합니다.
+2. Chapter 0에서 `git init`을 실행한 본인 프로젝트 폴더를 지정합니다.
 3. 왼쪽 또는 상단에 브랜치 이름과 파일 상태가 보이는지 확인합니다.
 4. 원격이 비어 있으면 **Repository settings → Remotes**에서 나중에 `origin` URL을 추가할 수 있음을 확인만 합니다.
 

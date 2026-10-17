@@ -1,49 +1,77 @@
 # Unreal Engine 자습 자료
 
-언리얼·C/C++ 과정 **3~6개월** 커리큘럼의 **세부 내용·실습**을 따라가는 학습 자료입니다.  
-C·C++ 기초를 마친 뒤, **언리얼 C++**로 FPS 미니 게임을 만들고 **멀티플레이**까지 이어갑니다.  
-장 번호는 학습 순서용이며, 커리큘럼 **주차 번호와 1:1로 맞출 필요는 없습니다.** 내용은 목차 순서의 본문을 기준으로 합니다.
+언리얼 엔진 수업의 강의 순서를 따라가는 학습 자료입니다.  
+블루프린트와 에디터로 레벨을 꾸미는 것에서 시작해, **언리얼 C++**로 전투·AI·UI를 만들고 **멀티플레이**까지 이어갑니다.  
+장 번호는 학습 순서입니다. 앞 장에서 만든 프로젝트와 코드를 뒤 장에서 이어서 쓰므로 순서대로 진행합니다.
 
 ## 권장 대상
 
-- C/C++ 기초를 마친 학습자
-- 언리얼에서 C++로 게임플레이를 다루고 싶은 학습자
+- 언리얼 엔진을 처음 다루는 학습자
+- 블루프린트로 시작해 C++ 게임플레이까지 익히고 싶은 학습자
 
 ## 선수지식
 
-- C 변수·함수·포인터, C++ 클래스·상속 기초
-- 콘솔에서 빌드·실행해 본 경험
+- Part 01은 프로그래밍 지식 없이 따라갈 수 있습니다.
+- Part 02부터는 C 변수·함수·포인터와 C++ 클래스·상속 기초가 필요합니다. [C](../c/README.md)와 [C++](../cpp/README.md) 과정을 먼저 마치기를 권합니다.
 
-에디터 메뉴 이름·플러그인 구성은 **엔진 메이저 버전**에 따라 다를 수 있습니다. 용어·경로가 다르면 자신이 쓰는 엔진 버전의 Epic 공식 문서로 확인하세요. 본 과정 문서에는 외부 사이트 링크를 넣지 않습니다.
+## 읽기 전에
 
-본문에 `![…](./img/….png)` 형태가 있으면 **아직 파일이 없는 자리표시**입니다. 캡처를 `docs/unrealEngine/img/`에 같은 파일명으로 넣으면 됩니다.
+- 에디터 메뉴와 패널 이름은 **한글 에디터** 기준으로 적었습니다. 블루프린트 노드와 C++ 이름은 영문 그대로 적었습니다.
+- 메뉴 이름과 템플릿 구성은 **엔진 버전**에 따라 다를 수 있습니다. 본문과 다르면 같은 역할을 하는 항목을 찾아 진행하세요.
+- 본 과정 문서에는 설치용 공식 주소 외의 외부 사이트 링크를 넣지 않습니다.
+- 본문의 `![…](./img/….png)`는 **아직 파일이 없는 자리표시**입니다. 캡처를 `docs/unrealEngine/img/`에 같은 파일명으로 넣으면 됩니다.
+- Part 02 이후의 C++ 예제는 프로젝트 이름을 `Practice`로, 템플릿 캐릭터 클래스를 `AMyCharacter`로 적습니다. 자신의 프로젝트 이름과 클래스 이름으로 바꿔 읽으세요.
 
 ## 목차
 
-### Part 01. 언리얼 입문 · FPS 기초 (커리 3개월)
+### Part 01. 블루프린트·에디터 입문
 
-- [Chapter 01 에디터·언리얼 C++](./01-editor-unreal-cpp.md)
-- [Chapter 02 컨테이너·FPS 기초](./02-containers-fps-basics.md)
-- [Chapter 03 전투·애니메이션](./03-combat-animation.md)
-- [Chapter 04 데미지·UI](./04-damage-ui.md)
+- [Chapter 01 언리얼 시작하기](./01-unreal-first-steps.md)
+- [Chapter 02 레벨 디자인](./02-level-design.md)
+- [Chapter 03 랜드스케이프](./03-landscape.md)
+- [Chapter 04 머티리얼 첫걸음과 랜드스케이프 페인트](./04-material-landscape-paint.md)
+- [Chapter 05 머티리얼 — 수와 색](./05-material-number-color.md)
+- [Chapter 06 머티리얼 — 시간과 그레이디언트](./06-material-time-gradient.md)
+- [Chapter 07 머티리얼 — 도형과 합성](./07-material-shapes-composition.md)
+- [Chapter 08 머티리얼 — 선형 보간](./08-material-lerp.md)
+- [Chapter 09 블루프린트 첫 액터](./09-blueprint-first-actor.md)
+- [Chapter 10 라이팅 기초](./10-lighting-basics.md)
+- [Chapter 11 워터 시스템](./11-water-system.md)
+- [Chapter 12 블루프린트 인터랙션 기초](./12-blueprint-interaction.md)
 
-### Part 02. 기획 · AI · 시스템 통합 (커리 4개월)
+### Part 02. 언리얼 C++ 게임플레이
 
-- [Chapter 05 게임 기획·구현](./05-game-design-impl.md)
-- [Chapter 06 비헤이비어 트리](./06-behavior-tree.md)
-- [Chapter 07 내비게이션](./07-navigation.md)
-- [Chapter 08 FPS 시스템 통합](./08-fps-system-integration.md)
+- [Chapter 13 언리얼 C++ 첫걸음 — 부유하는 큐브](./13-cpp-floating-actor.md)
+- [Chapter 14 리플렉션·이름 규칙·컨테이너·어서트](./14-reflection-containers-assert.md)
+- [Chapter 15 액터와 컴포넌트](./15-actor-component.md)
+- [Chapter 16 로깅과 게임모드](./16-logging-gamemode.md)
+- [Chapter 17 3인칭 템플릿 분석](./17-third-person-template.md)
+- [Chapter 18 애니메이션 블루프린트와 스테이트 머신](./18-anim-blueprint-state-machine.md)
+- [Chapter 19 Mixamo와 애니메이션 리타기팅](./19-mixamo-retargeting.md)
+- [Chapter 20 애니메이션 몽타주·델리게이트·노티파이](./20-anim-montage-notify.md)
+- [Chapter 21 충돌 설정과 공격 판정](./21-collision-damage-trace.md)
+- [Chapter 22 데미지와 게임 규칙](./22-damage-playerstate-gamemode.md)
+- [Chapter 23 비헤이비어 트리](./23-behavior-tree.md)
+- [Chapter 24 내비게이션](./24-navigation.md)
+- [Chapter 25 UMG로 UI 만들기](./25-umg-widget-ui.md)
+- [Chapter 26 실습 — 창고 부수기 게임](./26-practice-warehouse-wrecker.md)
 
-### Part 03. 네트워킹 (커리 5~6개월)
+### Part 03. FPS 미니 게임 완성
 
-- [Chapter 09 멀티플레이 기초](./09-multiplayer-basics.md)
-- [Chapter 10 네트워크 세션](./10-network-session.md)
-- [Chapter 11 체력 리플리케이션](./11-health-replication.md)
-- [Chapter 12 전투 리플리케이션](./12-combat-replication.md)
-- [Chapter 13 네트워크 역할·권한](./13-network-roles.md)
-- [Chapter 14 캐릭터·이동 리플리케이션](./14-character-movement-replication.md)
-- [Chapter 15 네트워크 UI·점수](./15-network-ui-score.md)
-- [Chapter 16 서버 모델·게임 플로우](./16-server-model-gameflow.md)
+- [Chapter 27 발사체와 히트스캔](./27-projectile-hitscan.md)
+- [Chapter 28 게임 기획과 구현](./28-game-design-impl.md)
+- [Chapter 29 FPS 시스템 통합](./29-fps-system-integration.md)
+
+### Part 04. 네트워킹
+
+- [Chapter 30 멀티플레이 기초](./30-multiplayer-basics.md)
+- [Chapter 31 온라인 서브시스템과 세션](./31-online-subsystem-session.md)
+- [Chapter 32 체력 리플리케이션](./32-health-replication.md)
+- [Chapter 33 전투 리플리케이션](./33-combat-replication.md)
+- [Chapter 34 네트워크 역할·권한](./34-network-roles.md)
+- [Chapter 35 캐릭터·이동 리플리케이션](./35-character-movement-replication.md)
+- [Chapter 36 네트워크 UI·점수](./36-network-ui-score.md)
+- [Chapter 37 서버 모델·게임 플로우](./37-server-model-gameflow.md)
 
 ---
 

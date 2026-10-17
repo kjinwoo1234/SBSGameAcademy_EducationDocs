@@ -1,84 +1,99 @@
 # Unity 자습 자료
 
-에디터에서 **씬을 구성하고 → C# 스크립트로 상호작용·물리·UI**를 쌓은 뒤, **애니메이션·오디오·빌드**까지 이어 가는 순서를 권장합니다. 개별 챕터 문서가 추가되면 각 항목은 **학습 목표 → 본문 → 따라 할 수 있는 예시 → 연습문제** 형태로 읽도록 맞출 수 있습니다.
+Unity를 처음 여는 사람이 **2D 횡스크롤 액션 게임 한 편**을 처음부터 끝까지 만들며 엔진을 배우는 자료입니다.
+완성할 게임은 저주받은 성채에 들어간 기사가 해골 병사와 마법사를 물리치고 타락한 수호자(보스)를 쓰러뜨리는 **Bastion**입니다.
+장 번호는 만드는 순서입니다. 앞 장에서 만든 씬과 스크립트를 뒤 장에서 이어서 고치므로 순서대로 진행합니다.
+
+![완성한 게임 Bastion의 플레이 화면: 기사가 해골 병사와 싸우는 장면과 체력바](./img/00-bastion-gameplay.png)
 
 ## 권장 대상
 
-- C# 기초 문법을 바탕으로 게임 제작을 시작하려는 학습자
-- Unity 에디터와 컴포넌트 기반 개발 흐름을 체계적으로 익히려는 학습자
+- Unity를 처음 다루는 학습자
+- C# 문법은 배웠지만 게임으로 만들어 본 적이 없는 학습자
 
 ## 선수지식
 
-- C# 변수/조건문/반복문/클래스 기초
-- Git 기본 사용(선택)
+- C# 변수, 조건문, 반복문, 메서드, 클래스, 상속, 인터페이스, 델리게이트와 이벤트. [C#](../csharp/README.md) 과정 Chapter 01~22를 먼저 마치기를 권합니다.
+- 컴퓨터에 프로그램을 설치하고 압축 파일을 풀 수 있으면 됩니다. 그 밖의 Unity 지식은 필요 없습니다.
 
-## 완주 후 역량(목표)
+## 완주 후 역량
 
-- Unity 에디터에서 씬·프리팹·에셋을 구성하고 재사용할 수 있다.
-- `MonoBehaviour` 생명주기와 컴포넌트 조합으로 플레이어 입력·충돌·**UI Toolkit** 기반 UI를 구현할 수 있다.
-- 물리·애니메이션·오디오를 게임플레이에 연결하고, 한 플랫폼 기준으로 빌드 흐름을 따라 할 수 있다.
+- Unity 에디터에서 씬, 게임 오브젝트, 컴포넌트, 프리팹, 에셋을 다룰 수 있다.
+- 입력, 물리, 타일맵, 카메라, 애니메이션, 파티클, UI, 사운드를 조합해 2D 액션 게임을 만들 수 있다.
+- 상태 머신, ScriptableObject, 인터페이스, 이벤트로 기능을 나눠 고치기 쉬운 코드를 짤 수 있다.
+- 게임을 Windows용으로 빌드하고 포트폴리오로 정리할 수 있다.
 
-메뉴 이름·패키지 구성은 **Unity 에디터 버전**(LTS 권장)에 따라 다를 수 있습니다. 본문과 다르면 **Unity 매뉴얼(공식 문서)**에서 자신이 쓰는 버전 기준으로 용어·메뉴 경로를 확인하세요. (본 과정 학습 문서에는 외부 사이트 링크를 싣지 않습니다. 강사·저자는 문서를 쓰기 **전에** 공식 문서·출판 서적 등으로 내용을 대조합니다.)
+## 읽기 전에
+
+- **에디터 버전**: 본문과 스크린샷은 Unity 6(6000.6)의 영어 에디터 기준입니다. 메뉴와 창 이름은 화면에 보이는 영어 그대로 적고, 처음 나올 때 뜻을 함께 적었습니다. 다른 Unity 6 버전이면 메뉴 위치가 조금 다를 수 있으니 같은 이름을 찾아 진행하세요.
+- **완성본**: 완성된 게임 프로젝트(Bastion)는 강사가 따로 나눠 줍니다. 막히면 완성본에서 같은 이름의 파일을 열어 비교하세요. 본문의 폴더와 파일 이름은 완성본과 같게 맞췄습니다.
+- **그림과 소리**: 무료 에셋을 씁니다. 받는 방법과 사용 조건은 Chapter 05에서 다룹니다.
+- 본 과정 문서에는 설치용 공식 주소 외의 외부 사이트 링크를 넣지 않습니다.
+- 본문의 `![…](./img/….png)` 가운데 Unity Hub처럼 에디터 밖의 화면 일부는 아직 파일이 없는 자리표시입니다. 목록은 [이미지 목록](./img/README.md)에 있습니다.
 
 ## 목차
 
-챕터별 `.md` 파일이 준비되면 아래 블록에 링크를 붙이고, **파일명·번호·README 목차**를 한꺼번에 맞추면 됩니다.
+### Part 01. 유니티 시작하기
 
-### Part 01. 에디터·씬 기초
+- [Chapter 01 유니티 설치와 첫 프로젝트](./01-install-first-project.md)
+- [Chapter 02 씬과 게임 오브젝트](./02-scene-gameobject.md)
+- [Chapter 03 컴포넌트와 첫 스크립트](./03-component-first-script.md)
+- [Chapter 04 스크립트로 움직이기](./04-move-with-script.md)
 
-### Part 02. C# 스크립팅 입문
+### Part 02. 플레이어 만들기
 
-### Part 03. 입력·플레이어 이동
+- [Chapter 05 에셋 가져오기와 스프라이트](./05-import-assets-sprite.md)
+- [Chapter 06 입력 시스템](./06-input-system.md)
+- [Chapter 07 물리와 충돌](./07-physics-collision.md)
+- [Chapter 08 점프와 바닥 판정](./08-jump-ground-check.md)
+- [Chapter 09 손맛 있는 점프](./09-jump-feel.md)
+- [Chapter 10 ScriptableObject로 수치 나누기](./10-scriptable-object.md)
 
-### Part 04. 물리·충돌
+### Part 03. 레벨 만들기
 
-### Part 05. 프리팹·레벨 구성
+- [Chapter 11 타일맵과 타일 팔레트](./11-tilemap-palette.md)
+- [Chapter 12 그리기 순서와 레벨 꾸미기](./12-sorting-decoration.md)
+- [Chapter 13 타일맵 충돌](./13-tilemap-collision.md)
+- [Chapter 14 카메라](./14-camera.md)
 
-### Part 06. UI(UI Toolkit)
+### Part 04. 애니메이션과 상태
 
-### Part 07. 애니메이션·오디오
+- [Chapter 15 스프라이트 애니메이션](./15-sprite-animation.md)
+- [Chapter 16 애니메이터 컨트롤러](./16-animator-controller.md)
+- [Chapter 17 상태 머신과 구르기](./17-state-machine-roll.md)
 
-### Part 08. 씬·데이터·빌드
+### Part 05. 전투
 
-### Part 09. 구조·품질(심화·선택)
+- [Chapter 18 공격 판정과 콤보](./18-attack-combo.md)
+- [Chapter 19 체력과 피해](./19-health-damage.md)
+- [Chapter 20 타격감](./20-hit-feedback.md)
 
-## 작성 준비중인 내용
+### Part 06. 적과 보스
 
-- Part 01 세부 내용 보강
-  - Unity Hub 설치, 에디터·프로젝트 생성, 씬 저장
-  - Hierarchy/Scene/Game/Inspector/Project 창 역할
-  - GameObject, Transform, 부모-자식 계층
-  - 카메라·조명 기본 배치와 씬 뷰 조작
-- Part 02 세부 내용 보강
-  - 스크립트 생성·부착, `MonoBehaviour` 주요 콜백(`Awake`, `Start`, `Update`)
-  - `public` 필드·`[SerializeField]`와 에디터 값 노출
-  - `Debug.Log` 기반 상태 확인과 컴파일 오류 읽기
-- Part 03 세부 내용 보강
-  - 구형 `Input` API와 Input System 비교 및 프로젝트 설정(`Active Input Handling`)
-  - 키보드·마우스 이동/회전/점프 예시
-  - `Time.deltaTime` 기반 프레임 독립 이동
-- Part 04 세부 내용 보강
-  - `Rigidbody`, `Collider`, `isKinematic` 사용 시점
-  - 충돌(`OnCollision`) vs 트리거(`OnTrigger`) 차이
-  - `Physics.Raycast` 기반 감지
-- Part 05 세부 내용 보강
-  - 프리팹 제작·변경 전파
-  - `Instantiate` 생성과 간단 오브젝트 풀
-- Part 06 세부 내용 보강
-  - UI Toolkit: UXML/USS, `UIDocument`, Panel Settings
-  - `VisualElement` 트리와 이벤트 처리
-  - 해상도 대응(Flex 레이아웃)
-- Part 07 세부 내용 보강
-  - Animator/Animation Clip/파라미터 전환
-  - `AudioSource`/`AudioClip`, 2D/3D 오디오
-- Part 08 세부 내용 보강
-  - `SceneManager` 씬 전환
-  - `PlayerPrefs` 기초 저장
-  - Build Settings와 타깃 플랫폼 빌드
-- Part 09 세부 내용 보강
-  - 이벤트·인터페이스로 결합도 낮추기
-  - `ScriptableObject` 데이터 분리
-  - 프로파일링·프레임 드롭 원인 찾기
+- [Chapter 21 프리팹과 첫 번째 적](./21-prefab-first-enemy.md)
+- [Chapter 22 적 AI 상태](./22-enemy-ai.md)
+- [Chapter 23 원거리 적과 투사체](./23-ranged-projectile.md)
+- [Chapter 24 파티클로 공격 예고](./24-particle-telegraph.md)
+- [Chapter 25 보스](./25-boss.md)
+
+### Part 07. 레벨 오브젝트
+
+- [Chapter 26 함정과 체크포인트](./26-trap-checkpoint.md)
+- [Chapter 27 회복 아이템](./27-health-pickup.md)
+
+### Part 08. UI와 게임 흐름
+
+- [Chapter 28 UI 기초와 체력바](./28-ui-health-bar.md)
+- [Chapter 29 한글 폰트와 게임 흐름](./29-font-game-flow.md)
+- [Chapter 30 NPC 대화](./30-npc-dialogue.md)
+- [Chapter 31 타이틀 화면과 씬 전환](./31-title-scene.md)
+
+### Part 09. 사운드와 마무리
+
+- [Chapter 32 사운드](./32-sound.md)
+- [Chapter 33 일시정지와 설정 저장](./33-pause-settings.md)
+- [Chapter 34 테스트로 기능 지키기](./34-playmode-test.md)
+- [Chapter 35 빌드와 포트폴리오](./35-build-portfolio.md)
 
 ---
 
