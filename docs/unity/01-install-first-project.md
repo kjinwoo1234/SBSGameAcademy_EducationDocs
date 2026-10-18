@@ -32,17 +32,19 @@ Unity는 두 개의 프로그램으로 나뉩니다.
 2. Hub를 실행하고 Unity 계정으로 로그인한다. 계정이 없으면 같은 화면에서 만든다.
 3. 라이선스를 고르라는 창이 나오면 **Personal**(개인용 무료)을 고른다.
 
-![Unity Hub 첫 화면: 왼쪽 메뉴에 Projects, Installs, Learn이 있고 오른쪽 위에 계정 아이콘이 있는 화면](./img/01-hub-home.png)
+Hub는 컴퓨터 언어에 따라 한국어로 보이기도 합니다. 이 장의 스크린샷은 한국어 Hub이고, 본문에는 한국어 이름과 영어 이름을 함께 적었습니다.
+
+![Unity Hub 첫 화면: 1 왼쪽 메뉴의 프로젝트(Projects), 템플릿, 설치(Installs), 2 새 프로젝트(New project) 버튼, 3 계정 아이콘](./img/01-hub-home.png)
 
 ### 01-3 에디터 설치
 
 이어서 에디터를 설치합니다.
 
-1. Hub 왼쪽에서 **Installs**를 누르고 오른쪽 위 **Install Editor**를 누른다.
-2. 목록에서 Unity 6 버전(이 자료는 6000.6 기준)을 골라 **Install**을 누른다.
+1. Hub 왼쪽에서 **설치**(Installs)를 누르고 오른쪽 위 **에디터 설치**(Install Editor)를 누른다.
+2. **정식 릴리스**(Official releases) 탭에서 Unity 6 버전(이 자료는 6000.6 기준)을 골라 **설치**(Install)를 누른다.
 3. 추가 기능(모듈)을 고르는 화면에서 **Microsoft Visual Studio Community**와 **Windows Build Support**가 체크되어 있는지 확인하고 설치한다.
 
-![Hub의 Installs 화면에서 Install Editor를 눌러 Unity 6 버전 목록이 나온 화면](./img/01-hub-install-editor.png)
+![Unity 에디터 설치 창: 1 정식 릴리스 탭, 2 Unity 6.6 버전, 3 설치 버튼](./img/01-hub-install-editor.png)
 
 **모듈**은 에디터에 덧붙여 설치하는 기능입니다. Visual Studio는 C# 코드를 편집하는 프로그램이고, Windows Build Support는 완성한 게임을 Windows용 실행 파일로 만드는 기능입니다. 설치에는 시간이 꽤 걸리므로 기다립니다.
 
@@ -50,13 +52,13 @@ Unity는 두 개의 프로그램으로 나뉩니다.
 
 **프로젝트**는 게임 하나를 만드는 데 필요한 그림, 소리, 코드, 설정을 모두 담은 폴더입니다. Hub는 이 폴더를 만들어 주고 에디터로 열어 줍니다.
 
-1. Hub 왼쪽에서 **Projects**를 누르고 오른쪽 위 **New project**를 누른다.
+1. Hub 왼쪽에서 **프로젝트**(Projects)를 누르고 오른쪽 위 **새 프로젝트**(New project)를 누른다.
 2. 템플릿 목록에서 **Universal 2D**를 고른다.
-3. 오른쪽의 **Project name**에 `MyBastion`을 적는다.
-4. **Location**에서 프로젝트 폴더를 둘 위치를 고른다. 경로에 한글이 없는 곳이 안전하다.
-5. **Create project**를 누른다.
+3. 오른쪽의 **프로젝트 이름**(Project name)에 `MyBastion`을 적는다. 아래로 목록이 펼쳐지면 **새 로컬 프로젝트 생성**을 고른다.
+4. **위치**(Location)에서 프로젝트 폴더를 둘 위치를 고른다. 경로에 한글이 없는 곳이 안전하다. 위치 칸이 빨갛게 되며 "허용하지 않습니다"라고 나오면 없는 드라이브나 쓸 수 없는 폴더이므로 다른 위치를 고른다.
+5. **프로젝트 생성**(Create project)을 누른다.
 
-![New project 화면에서 Universal 2D 템플릿을 고르고 Project name에 MyBastion을 적은 화면](./img/01-hub-new-project.png)
+![새 프로젝트 화면: 1 Universal 2D 템플릿, 2 프로젝트 이름 MyBastion, 3 위치, 4 프로젝트 생성 버튼](./img/01-hub-new-project.png)
 
 **템플릿**은 미리 설정을 맞춰 둔 빈 프로젝트입니다. Universal 2D는 2D 게임용 렌더링(화면 그리기) 설정과 2D 기능이 처음부터 들어 있는 템플릿입니다. 잠시 뒤 에디터가 열립니다. 튜토리얼 안내 창이 뜨면 닫아도 됩니다.
 

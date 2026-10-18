@@ -1,24 +1,14 @@
 # 이미지 목록
 
-Unity 자습 자료 본문에 쓰인 그림입니다. 스크린샷은 Unity 6(6000.6) 영어 에디터와 완성본 Bastion 프로젝트에서 찍었습니다. 빨간 상자와 번호는 본문의 설명 순서와 같습니다.
-
-## 자리표시 (아직 파일 없음)
-
-Unity Hub처럼 에디터 밖의 화면이라 아직 찍지 못한 그림입니다. 같은 이름의 PNG를 이 폴더에 넣으면 본문에 바로 보입니다.
-
-| 파일 | 쓰인 곳 | 담을 화면 |
-|---|---|---|
-| 01-hub-home.png | [01-install-first-project.md](../01-install-first-project.md) | Unity Hub 첫 화면: 왼쪽 메뉴에 Projects, Installs, Learn이 있고 오른쪽 위에 계정 아이콘이 있는 화면 |
-| 01-hub-install-editor.png | [01-install-first-project.md](../01-install-first-project.md) | Hub의 Installs 화면에서 Install Editor를 눌러 Unity 6 버전 목록이 나온 화면 |
-| 01-hub-new-project.png | [01-install-first-project.md](../01-install-first-project.md) | New project 화면에서 Universal 2D 템플릿을 고르고 Project name에 MyBastion을 적은 화면 |
-| 02-new-scene-dialog.png | [02-scene-gameobject.md](../02-scene-gameobject.md) | New Scene 창에서 Lit 2D (URP) 템플릿을 고른 화면 |
-| 14-package-manager.png | [14-camera.md](../14-camera.md) | Package Manager의 Unity Registry에서 Cinemachine을 고르고 Install 버튼이 보이는 화면 |
-
-## 있는 그림
+Unity 자습 자료 본문에 쓰인 그림입니다. 에디터 스크린샷은 Unity 6(6000.6) 영어 에디터와 완성본 Bastion 프로젝트에서, Unity Hub 스크린샷은 한국어 Hub 3.22에서 찍었습니다. 빨간 상자와 번호는 본문의 설명 순서와 같습니다. 개인 정보(계정, 다른 프로젝트)는 가렸습니다.
 
 | 파일 | 쓰인 곳 | 내용 |
 |---|---|---|
+| 01-hub-home.png | [01-install-first-project.md](../01-install-first-project.md) | Unity Hub 첫 화면: 1 왼쪽 메뉴의 프로젝트(Projects), 템플릿, 설치(Installs), 2 새 프로젝트(New project) 버튼, 3 계정 아이콘 |
+| 01-hub-install-editor.png | [01-install-first-project.md](../01-install-first-project.md) | Unity 에디터 설치 창: 1 정식 릴리스 탭, 2 Unity 6.6 버전, 3 설치 버튼 |
+| 01-hub-new-project.png | [01-install-first-project.md](../01-install-first-project.md) | 새 프로젝트 화면: 1 Universal 2D 템플릿, 2 프로젝트 이름 MyBastion, 3 위치, 4 프로젝트 생성 버튼 |
 | 01-editor-layout.png | [01-install-first-project.md](../01-install-first-project.md) | 에디터 전체 화면에 번호를 붙인 그림: 1 Hierarchy, 2 Scene/Game, 3 Inspector, 4 Project/Console, 5 Play 버튼 |
+| 02-new-scene-dialog.png | [02-scene-gameobject.md](../02-scene-gameobject.md) | New Scene 창: 1 Lit 2D (URP) 템플릿, 2 고른 템플릿의 설명(카메라와 Global Light 2D), 3 Create 버튼 |
 | 02-scene-tools.png | [02-scene-gameobject.md](../02-scene-gameobject.md) | Scene 뷰 왼쪽 도구 모음: 위에서부터 View, Move, Rotate, Scale, Rect, Transform 도구 |
 | 02-sandbox-scene.png | [02-scene-gameobject.md](../02-scene-gameobject.md) | Sandbox 씬: 1 Hierarchy에서 Player 아래 Visual이 들어간 모습, 2 Scene 뷰의 바닥과 노란 사각형, 3 Player의 Transform, 4 Project 창의 _Bastion 폴더 |
 | 02-visual-inspector.png | [02-scene-gameobject.md](../02-scene-gameobject.md) | Visual의 Inspector: 1 Transform의 Position Y가 0.5, 2 Sprite Renderer의 Sprite와 Color |
@@ -50,6 +40,7 @@ Unity Hub처럼 에디터 밖의 화면이라 아직 찍지 못한 그림입니�
 | 12-layers-all.png | [12-sorting-decoration.md](../12-sorting-decoration.md) | 완성본 Stage1에 오브젝트까지 모두 놓인 모습: 체크포인트 촛대, 안내 천사, 해골 병사, 함정 |
 | 13-collision-tilemap.png | [13-tilemap-collision.md](../13-tilemap-collision.md) | 완성본의 Collision 타일맵: 1 Hierarchy의 Collision, 2 바닥 윗면 그림 안쪽에 있는 충돌 테두리(흰 선), 3 Rigidbody 2D Static, 4 Tilemap Collider 2D의 Composite Operation Merge, 5 Composite Collider 2D |
 | 13-ramp-polygon.png | [13-tilemap-collision.md](../13-tilemap-collision.md) | 계단 위에 그린 Ramp의 경사 삼각형 충돌(흰 선) |
+| 14-package-manager.png | [14-camera.md](../14-camera.md) | 설치를 마친 Package Manager: 1 패키지를 찾는 Unity Registry, 2 프로젝트에 들어온 Cinemachine(체크 표시), 3 패키지 이름과 버전 |
 | 14-cinemachine-camera.png | [14-camera.md](../14-camera.md) | CM PlayerCamera의 Inspector: 1 Lens(Orthographic Size), 2 Tracking Target이 Player, 3 Dead Zone, 4 Target Offset·Damping·Lookahead, 5 Confiner 2D |
 | 14-camera-bounds.png | [14-camera.md](../14-camera.md) | 완성본 레벨 전체 모습: 흰 테두리 안이 카메라가 움직일 수 있는 범위 |
 | 14-pixel-perfect.png | [14-camera.md](../14-camera.md) | Main Camera의 Inspector: 1 Pixel Perfect Camera가 Size를 대신 정한다는 안내, 2 PPU 16과 기준 해상도 384×216, 3 Cinemachine Brain |

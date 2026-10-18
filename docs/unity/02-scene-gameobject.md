@@ -22,7 +22,7 @@
 2. 템플릿 목록에서 **Lit 2D (URP)**를 고르고 **Create**를 누른다.
 3. **File > Save** (단축키 `Ctrl + S`)를 누르고 `Assets/_Bastion/Scenes` 폴더에 `Sandbox`라는 이름으로 저장한다.
 
-![New Scene 창에서 Lit 2D (URP) 템플릿을 고른 화면](./img/02-new-scene-dialog.png)
+![New Scene 창: 1 Lit 2D (URP) 템플릿, 2 고른 템플릿의 설명(카메라와 Global Light 2D), 3 Create 버튼](./img/02-new-scene-dialog.png)
 
 새 씬에는 카메라(`Main Camera`)와 2D 조명(`Global Light 2D`)이 미리 들어 있습니다. Hierarchy 맨 위에 씬 이름 `Sandbox`가 보이면 성공입니다. 씬을 고친 뒤 저장하지 않으면 씬 이름 옆에 `*` 표시가 붙습니다. 작업 중에는 `Ctrl + S`를 자주 누르는 습관을 들입니다.
 

@@ -23,7 +23,9 @@
 2. 왼쪽에서 **Unity Registry**를 고르고 검색창에 `Cinemachine`을 입력한다.
 3. **Cinemachine**을 고르고 **Install**을 누른다.
 
-![Package Manager의 Unity Registry에서 Cinemachine을 고르고 Install 버튼이 보이는 화면](./img/14-package-manager.png)
+설치가 끝나면 Install 버튼이 사라지고, 왼쪽 위 **Project** 목록에 Cinemachine이 체크 표시와 함께 나타납니다.
+
+![설치를 마친 Package Manager: 1 패키지를 찾는 Unity Registry, 2 프로젝트에 들어온 Cinemachine(체크 표시), 3 패키지 이름과 버전](./img/14-package-manager.png)
 
 ### 14-3 Orthographic과 Perspective
 
