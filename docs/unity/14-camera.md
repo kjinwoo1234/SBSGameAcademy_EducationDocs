@@ -48,7 +48,7 @@ Cinemachine은 실제 카메라(`Main Camera`)를 직접 움직이지 않습니�
 
 **Position Composer**는 대상을 화면의 정해진 자리에 두도록 카메라 위치를 맞추는 부품입니다. 완성본은 아래처럼 설정했습니다.
 
-![CM PlayerCamera의 Inspector: 1 Lens(Orthographic Size), 2 Tracking Target이 Player, 3 Dead Zone, 4 Target Offset·Damping·Lookahead, 5 Confiner 2D](./img/14-cinemachine-camera.png)
+![CM PlayerCamera의 Inspector: 1 Lens(Orthographic Size)와 Tracking Target이 Player, 2 Position Control이 Position Composer, 3 Dead Zone, 4 Target Offset·Damping·Lookahead, 5 Confiner 2D](./img/14-cinemachine-camera.png)
 
 | 설정 | 값 | 뜻 |
 |---|---|---|

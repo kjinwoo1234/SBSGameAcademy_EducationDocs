@@ -38,6 +38,8 @@ Unity에서는 "어느 시간에 어떤 그림을 보여 줄지"를 기록한 �
 
 ![Animation 창: 1 지금 편집 중인 클립, 2 바꾸는 값(Visual의 Sprite), 3 프레임마다 찍힌 키프레임, 4 재생과 녹화 버튼](./img/15-animation-window.png)
 
+> 그림은 완성본의 `Player_Run` 클립이라 줄 이름이 `Visual : Run_0`처럼 보이고 키프레임도 11개입니다. 지금 만드는 `Player_Idle`은 `Visual : Sprite` 줄에 마름모 열 개가 생깁니다.
+
 마름모 하나를 **키프레임**(Keyframe)이라고 합니다. "이 시간에 이 값으로 바꿔라"라는 표시입니다. 그림을 `Player`가 아니라 `Visual`에서 바꾸는 이유는 Sprite Renderer가 자식인 `Visual`에 붙어 있기 때문입니다. Animator는 부모(`Player`)에 붙어 있지만 자식의 값도 바꿀 수 있고, 클립에는 `Visual`이라는 자식 이름(경로)이 함께 기록됩니다. 그래서 `Visual`의 이름을 바꾸면 애니메이션이 끊기니 주의합니다.
 
 Animation 창 위쪽의 ▶ 버튼을 누르면 Scene 뷰에서 미리 볼 수 있습니다.

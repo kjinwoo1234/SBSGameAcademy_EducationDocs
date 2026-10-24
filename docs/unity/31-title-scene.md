@@ -181,7 +181,7 @@ Chapter 32, 33을 하기 전이라면 `SoundManager` 두 줄, `settingsPanel`이
 
 `Canvas`에 `TitleMenu`를 붙이고 칸을 채웁니다.
 
-![Canvas의 TitleMenu: 1 컴포넌트, 2 첫 스테이지 씬 이름 Stage1과 버튼 세 개, 설정 창, 확인 효과음](./img/31-title-menu.png)
+![Canvas의 TitleMenu: 1 첫 스테이지 씬 이름 Stage1, 2 설정 버튼, 종료 버튼, 설정 창. 그 밖에 Start Button과 Confirm Sound 칸도 채운다](./img/31-title-menu.png)
 
 ### 31-7 클리어 후 타이틀로
 

@@ -42,10 +42,10 @@ Company Name을 바꾸면 PlayerPrefs 저장 위치가 바뀌어 이전에 저�
 
 ![Build Profiles: 1 Windows 플랫폼(Active), 2 Player Settings 버튼, 3 Build 버튼, 4 씬 목록](./img/35-build-profiles.png)
 
-1. 왼쪽 Platforms에서 **Windows**가 Active인지 확인한다. 다른 플랫폼이면 고르고 **Switch Platform**을 누른다.
-2. **Scene List**에 `Title`(0), `Stage1`(1)이 체크되어 있는지 확인한다. 연습용 `Sandbox` 씬은 넣지 않는다.
-3. **Development Build**는 끈다. 켜면 화면 구석에 개발용 정보가 보이고 조금 느려진다. 빌드에서만 생기는 문제를 찾을 때만 켠다.
-4. 오른쪽 아래 **Build**를 누르고 저장할 폴더를 고른다. 프로젝트 폴더 안의 `Builds/Windows`를 새로 만들어 고른다.
+1. 왼쪽 Platforms에서 **Windows**가 Active인지 확인한다(그림 1). 다른 플랫폼이면 고르고 **Switch Platform**을 누른다.
+2. **Scene List**에 `Title`(0), `Stage1`(1)이 체크되어 있는지 확인한다(그림 4). 연습용 `Sandbox` 씬은 넣지 않는다.
+3. 아래쪽 Platform Settings의 **Development Build**는 끈다. 켜면 화면 구석에 개발용 정보가 보이고 조금 느려진다. 빌드에서만 생기는 문제를 찾을 때만 켠다.
+4. 오른쪽 아래 **Build**를 누르고(그림 3) 저장할 폴더를 고른다. 프로젝트 폴더 안의 `Builds/Windows`를 새로 만들어 고른다.
 
 빌드가 끝나면 폴더에 다음 파일들이 생깁니다.
 

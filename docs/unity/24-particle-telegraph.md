@@ -17,6 +17,8 @@ Chapter 22의 해골은 칼을 들어 올리는 동작이 짧아서, 처음 하�
 
 ![보스가 낫을 휘두르기 직전 몸 주변으로 분홍 입자가 모여드는 모습](./img/24-telegraph-particles.png)
 
+그림은 Chapter 25의 보스가 쓰는 분홍 예고입니다. 이 장에서 만드는 해골용 `AttackTelegraph`는 같은 방식으로 모여들지만 색은 연한 노랑에서 주황 사이입니다.
+
 ### 24-2 Particle System
 
 작은 그림을 많이 뿜어 연기, 불꽃, 빛 같은 효과를 만드는 컴포넌트가 **Particle System**입니다. 하나하나의 그림을 **입자**(Particle)라고 합니다. Hierarchy의 **+ > Effects > Particle System**으로 만들면 기본 설정의 하얀 입자가 위로 뿜어져 나옵니다.
@@ -46,7 +48,7 @@ Particle System의 설정은 **모듈**이라는 묶음으로 나뉩니다. 맨 
 7. **Size over Lifetime**: 끝으로 갈수록 작아지는 곡선을 고른다.
 8. **Renderer**: Material `Sprite-Unlit-Default`, Order in Layer `30`.
 
-![예고 입자의 Particle System: 1 Main 모듈의 수명, 크기, 색, 2 Looping, 3 Play On Awake 꺼짐, 4 켜 둔 모듈 목록](./img/24-particle-system.png)
+![예고 입자의 Particle System: 1 Duration과 Looping, 2 Main 모듈의 수명, 속도, 크기, 색, 3 Play On Awake 꺼짐, 4 켜 둔 모듈 목록](./img/24-particle-system.png)
 
 **Radial -2.44는 어디서 나왔을까요?** 입자는 반지름 1.1인 원 테두리에서 태어나 0.45초 동안 삽니다. 수명이 끝나는 순간 정확히 중심에 닿으려면 1초에 1.1 ÷ 0.45 ≈ 2.44만큼 중심 쪽으로 움직여야 합니다. Radial은 중심에서 바깥쪽이 양수라서 음수로 둡니다. 이렇게 맞춰 두면 입자가 "모이는" 모양이 분명해집니다.
 

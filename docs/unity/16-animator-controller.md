@@ -26,7 +26,7 @@
 
 `Player`를 선택하고 메뉴의 **Window > Animation > Animator**를 엽니다. Chapter 15에서 만든 클립이 상태(네모)로 놓여 있습니다.
 
-![완성본 Player 컨트롤러의 Animator 창: 1 Parameters 목록, 2 기본 상태 Idle(주황), 3 Idle과 Run 사이의 전이 화살표, 4 Any State에서 Dash로 가는 전이, 5 전이 없이 코드에서 재생하는 Attack, Hurt, Death](./img/16-animator-controller.png)
+![완성본 Player 컨트롤러의 Animator 창: 1 Parameters 목록, 2 기본 상태 Idle(주황), 3 Idle과 Run 사이의 전이 화살표, 4 Any State에서 Dash로 가는 전이, 5 들어오는 전이 없이 코드에서 재생하는 Attack, Hurt, Death](./img/16-animator-controller.png)
 
 | 상자 | 뜻 |
 |---|---|

@@ -371,7 +371,7 @@ namespace Bastion.Player
 - 점프 판단(`TryJump`)은 `Update`에, 속도 계산은 `FixedUpdate`에 둡니다. 점프는 속도를 한 번 바꾸는 일이라 입력을 받은 그 프레임에 바로 처리해도 됩니다.
 - 바닥에 있을 때는 중력을 쌓지 않고, 공중에서만 `ApplyGravity`를 부릅니다.
 
-![PlayerController의 Inspector: 1 Run 묶음, 2 점프 높이와 정점 시간, 3 가변 점프와 빠른 낙하 배율, 4 최대 낙하 속도와 코요테 타임, 5 점프 버퍼와 공중 점프 횟수](./img/09-jump-feel-inspector.png)
+![PlayerController의 Inspector: 1 Run 묶음, 2 점프 높이와 정점 시간, 3 가변 점프·빠른 낙하 배율과 최대 낙하 속도, 4 코요테 타임과 점프 버퍼, 5 공중 점프 횟수와 높이](./img/09-jump-feel-inspector.png)
 
 ### 09-9 따라하기 — 점프 다듬기
 

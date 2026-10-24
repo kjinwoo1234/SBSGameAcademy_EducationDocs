@@ -16,7 +16,7 @@ Unity 자습 자료 본문에 쓰인 그림입니다. 에디터 스크린샷은 
 | 03-console-log.png | [03-component-first-script.md](../03-component-first-script.md) | Console 창: 1 안녕, 유니티!와 Update 1~3번째 실행 메시지, 2 오른쪽 위의 메시지 종류별 개수 |
 | 03-hello-component.png | [03-component-first-script.md](../03-component-first-script.md) | Player의 Inspector에 Hello (Script) 컴포넌트가 붙어 Message와 Repeat 칸이 보이는 화면 |
 | 03-compile-error.png | [03-component-first-script.md](../03-component-first-script.md) | Console에 Hello.cs(12,27): error CS1002: ; expected 오류가 빨간색으로 나온 화면 |
-| 04-play-stats.png | [04-move-with-script.md](../04-move-with-script.md) | 플레이 중인 Game 뷰와 Inspector: 1 Statistics의 FPS, 2 Stats 버튼, 3 실행 중 계속 바뀌는 Position X, 4 Mover 컴포넌트의 Speed와 Range, 5 움직이는 사각형 |
+| 04-play-stats.png | [04-move-with-script.md](../04-move-with-script.md) | 플레이 중인 Game 뷰와 Inspector: 1 Statistics의 FPS, 2 Stats 버튼, 3 실행 중 계속 바뀌는 Position X, 4 Mover 컴포넌트, 5 움직이는 사각형 |
 | 05-import-default.png | [05-import-assets-sprite.md](../05-import-assets-sprite.md) | _Idle의 기본 Import Settings: 1 Pixels Per Unit 100, 2 Filter Mode Bilinear, 3 Compression Normal Quality |
 | 05-import-settings.png | [05-import-assets-sprite.md](../05-import-assets-sprite.md) | 바꾼 Import Settings: 1 Pixels Per Unit 16, 2 Filter Mode Point, 3 Compression None |
 | 05-sprite-editor.png | [05-import-assets-sprite.md](../05-import-assets-sprite.md) | Sprite Editor: 1 Slice 메뉴, 2 잘린 첫 프레임, 3 Pivot이 Bottom Center, 4 Apply 버튼, 5 프레임 이름 _Idle_0 |
@@ -29,7 +29,7 @@ Unity 자습 자료 본문에 쓰인 그림입니다. 에디터 스크린샷은 
 | 08-layers.png | [08-jump-ground-check.md](../08-jump-ground-check.md) | Project Settings의 Tags and Layers: 1 왼쪽 목록의 Tags and Layers, 2 User Layer 6 Ground와 User Layer 7 Player |
 | 08-floor-layer.png | [08-jump-ground-check.md](../08-jump-ground-check.md) | Floor의 Inspector 위쪽: 1 Layer가 Ground |
 | 08-player-ground-check.png | [08-jump-ground-check.md](../08-jump-ground-check.md) | Player의 Inspector: 1 Layer가 Player, 2 Jump Velocity, 3 Ground Layer가 Ground이고 Ground Check Distance가 0.1 |
-| 09-jump-feel-inspector.png | [09-jump-feel.md](../09-jump-feel.md) | PlayerController의 Inspector: 1 Run 묶음, 2 점프 높이와 정점 시간, 3 가변 점프와 빠른 낙하 배율, 4 최대 낙하 속도와 코요테 타임, 5 점프 버퍼와 공중 점프 횟수 |
+| 09-jump-feel-inspector.png | [09-jump-feel.md](../09-jump-feel.md) | PlayerController의 Inspector: 1 Run 묶음, 2 점프 높이와 정점 시간, 3 가변 점프·빠른 낙하 배율과 최대 낙하 속도, 4 코요테 타임과 점프 버퍼, 5 공중 점프 횟수와 높이 |
 | 10-data-asset.png | [10-scriptable-object.md](../10-scriptable-object.md) | PlayerMovementData 에셋: 1 Project 창의 에셋 파일, 2 Run 묶음, 3 Jump 묶음, 4 Ground Check 묶음 |
 | 10-player-data-field.png | [10-scriptable-object.md](../10-scriptable-object.md) | PlayerController의 Inspector: 1 Data 칸에 PlayerMovementData 에셋이 연결된 모습 |
 | 11-tileset-slices.png | [11-tilemap-palette.md](../11-tilemap-palette.md) | tileset.png를 16×16으로 자른 Sprite Editor: 1 3×3 바닥 덩어리 조각, 2 어둠 타일, 3 한 칸의 크기 W 16, H 16 |
@@ -42,26 +42,26 @@ Unity 자습 자료 본문에 쓰인 그림입니다. 에디터 스크린샷은 
 | 13-collision-tilemap.png | [13-tilemap-collision.md](../13-tilemap-collision.md) | 완성본의 Collision 타일맵: 1 Hierarchy의 Collision, 2 바닥 윗면 그림 안쪽에 있는 충돌 테두리(흰 선), 3 Rigidbody 2D Static, 4 Tilemap Collider 2D의 Composite Operation Merge, 5 Composite Collider 2D |
 | 13-ramp-polygon.png | [13-tilemap-collision.md](../13-tilemap-collision.md) | 계단 위에 그린 Ramp의 경사 삼각형 충돌(흰 선) |
 | 14-package-manager.png | [14-camera.md](../14-camera.md) | 설치를 마친 Package Manager: 1 패키지를 찾는 Unity Registry, 2 프로젝트에 들어온 Cinemachine(체크 표시), 3 패키지 이름과 버전 |
-| 14-cinemachine-camera.png | [14-camera.md](../14-camera.md) | CM PlayerCamera의 Inspector: 1 Lens(Orthographic Size), 2 Tracking Target이 Player, 3 Dead Zone, 4 Target Offset·Damping·Lookahead, 5 Confiner 2D |
+| 14-cinemachine-camera.png | [14-camera.md](../14-camera.md) | CM PlayerCamera의 Inspector: 1 Lens(Orthographic Size)와 Tracking Target이 Player, 2 Position Control이 Position Composer, 3 Dead Zone, 4 Target Offset·Damping·Lookahead, 5 Confiner 2D |
 | 14-camera-bounds.png | [14-camera.md](../14-camera.md) | 완성본 레벨 전체 모습: 흰 테두리 안이 카메라가 움직일 수 있는 범위 |
 | 14-pixel-perfect.png | [14-camera.md](../14-camera.md) | Main Camera의 Inspector: 1 Pixel Perfect Camera가 Size를 대신 정한다는 안내, 2 PPU 16과 기준 해상도 384×216, 3 Cinemachine Brain |
 | 15-animation-window.png | [15-sprite-animation.md](../15-sprite-animation.md) | Animation 창: 1 지금 편집 중인 클립, 2 바꾸는 값(Visual의 Sprite), 3 프레임마다 찍힌 키프레임, 4 재생과 녹화 버튼 |
 | 15-clip-loop.png | [15-sprite-animation.md](../15-sprite-animation.md) | Player_Run 클립의 Inspector: 1 길이와 초당 프레임 수, 2 Loop Time 체크 |
-| 16-animator-controller.png | [16-animator-controller.md](../16-animator-controller.md) | 완성본 Player 컨트롤러의 Animator 창: 1 Parameters 목록, 2 기본 상태 Idle(주황), 3 Idle과 Run 사이의 전이 화살표, 4 Any State에서 Dash로 가는 전이, 5 전이 없이 코드에서 재생하는 Attack, Hurt, Death |
+| 16-animator-controller.png | [16-animator-controller.md](../16-animator-controller.md) | 완성본 Player 컨트롤러의 Animator 창: 1 Parameters 목록, 2 기본 상태 Idle(주황), 3 Idle과 Run 사이의 전이 화살표, 4 Any State에서 Dash로 가는 전이, 5 들어오는 전이 없이 코드에서 재생하는 Attack, Hurt, Death |
 | 16-transition-inspector.png | [16-animator-controller.md](../16-animator-controller.md) | Idle → Run 전이의 Inspector: 1 Has Exit Time 꺼짐, 2 전환 구간 그래프, 3 조건 SpeedX Greater 0.1 |
 | 18-combat-data.png | [18-attack-combo.md](../18-attack-combo.md) | PlayerCombatData 에셋: 1 Target Layer가 Enemy, 공격 입력 보관 시간, 2 1타의 시간표, 3 피해와 넉백, 히트스톱, 4 판정 상자 위치와 크기 |
 | 18-hitbox-gizmo.png | [18-attack-combo.md](../18-attack-combo.md) | Player를 선택했을 때 Scene 뷰에 그려진 공격 판정 상자(빨간 선) |
-| 19-player-health.png | [19-health-damage.md](../19-health-damage.md) | 완성본 Player의 컴포넌트 목록: 1 Health(최대 체력 100), 2 PlayerController의 Data와 Combat Data |
+| 19-player-health.png | [19-health-damage.md](../19-health-damage.md) | 완성본 Player의 컴포넌트 목록: 1 PlayerController의 Data와 Combat Data, 2 Health(최대 체력 100) |
 | 20-hit-flash.png | [20-hit-feedback.md](../20-hit-feedback.md) | 해골 병사에게 베인 순간: 기사가 붉게 깜빡이고, 왼쪽 위 체력바의 줄어든 부분이 노란 잔상으로 남은 화면 |
 | 20-impulse-listener.png | [20-hit-feedback.md](../20-hit-feedback.md) | CM PlayerCamera의 Impulse Listener: 1 Source가 보내는 충격을 받아 카메라를 흔든다 |
 | 20-feedback-components.png | [20-hit-feedback.md](../20-hit-feedback.md) | Player의 연출 컴포넌트: 1 Damage Flash(색, 시간), 2 Cinemachine Impulse Source, 3 Player Feedback(흔들림 세기, 피격 히트스톱) |
-| 21-prefab-mode.png | [21-prefab-first-enemy.md](../21-prefab-first-enemy.md) | 프리팹 편집 모드: 1 위쪽의 경로 표시(Scenes > Skeleton), 2 프리팹 안의 오브젝트 구조, 3 파란 배경의 편집 화면과 공격 범위, 4 루트의 컴포넌트, 5 Prefabs 폴더의 프리팹들 |
+| 21-prefab-mode.png | [21-prefab-first-enemy.md](../21-prefab-first-enemy.md) | 완성본의 프리팹 편집 모드: 1 위쪽의 경로 표시(Scenes > Skeleton), 2 프리팹 안의 오브젝트 구조, 3 파란 배경의 편집 화면과 공격 범위, 4 루트의 컴포넌트, 5 Prefabs 폴더의 프리팹들 |
 | 21-enemy-data.png | [21-prefab-first-enemy.md](../21-prefab-first-enemy.md) | 완성본의 SkeletonData 에셋: 1 이동 속도와 순찰 반경, 2 감지 레이어와 거리, 3 방패로 막을 확률과 시간 |
 | 22-skeleton-and-trap.png | [22-enemy-ai.md](../22-enemy-ai.md) | 레벨의 해골 병사: 바닥 분출구에서 불티가 튀는 구간 오른쪽에서 기사를 기다리는 해골 |
 | 23-fireball-prefab.png | [23-ranged-projectile.md](../23-ranged-projectile.md) | Fireball 프리팹: 1 Layer가 Projectile, 2 Circle Collider 2D의 Is Trigger, 3 Projectile 스크립트의 수명 |
 | 23-wizard.png | [23-ranged-projectile.md](../23-ranged-projectile.md) | 마법사가 발판 위에서 기사를 노리는 장면 |
 | 24-telegraph-particles.png | [24-particle-telegraph.md](../24-particle-telegraph.md) | 보스가 낫을 휘두르기 직전 몸 주변으로 분홍 입자가 모여드는 모습 |
-| 24-particle-system.png | [24-particle-telegraph.md](../24-particle-telegraph.md) | 예고 입자의 Particle System: 1 Main 모듈의 수명, 크기, 색, 2 Looping, 3 Play On Awake 꺼짐, 4 켜 둔 모듈 목록 |
+| 24-particle-system.png | [24-particle-telegraph.md](../24-particle-telegraph.md) | 예고 입자의 Particle System: 1 Duration과 Looping, 2 Main 모듈의 수명, 속도, 크기, 색, 3 Play On Awake 꺼짐, 4 켜 둔 모듈 목록 |
 | 25-boss-fight.png | [25-boss.md](../25-boss.md) | 보스전: 보스가 낫을 휘두르기 전 분홍 입자를 모으고, 아래에 보스 이름과 체력바가 보이는 장면 |
 | 25-boss-data.png | [25-boss.md](../25-boss.md) | BossData 에셋: 1 패턴 선택 기준(대기 시간과 사거리), 2 예비 동작 시간, 3 낫 2연타와 판정 목록, 4 2페이즈 기준 체력과 속도 배율 |
 | 25-boss-arena.png | [25-boss.md](../25-boss.md) | 완성본의 BossArena: 1 보스방 오브젝트들, 2 방 전체를 덮는 트리거(흰 테두리), 3 휴면 중인 보스, 4 BossArena 컴포넌트의 보스, 입구, 체력바, 보스 배경음 칸 |
@@ -84,7 +84,7 @@ Unity 자습 자료 본문에 쓰인 그림입니다. 에디터 스크린샷은 
 | 31-build-profiles-scenes.png | [31-title-scene.md](../31-title-scene.md) | Build Profiles의 Scene List: Title이 0번, Stage1이 1번으로 등록된 모습 |
 | 31-title-hierarchy.png | [31-title-scene.md](../31-title-scene.md) | Title 씬의 Hierarchy: 1 Canvas, 2 메뉴 버튼 세 개 |
 | 31-button.png | [31-title-scene.md](../31-title-scene.md) | StartButton의 Button 컴포넌트: 1 Interactable, 2 Color Tint와 상태별 색 |
-| 31-title-menu.png | [31-title-scene.md](../31-title-scene.md) | Canvas의 TitleMenu: 1 컴포넌트, 2 첫 스테이지 씬 이름 Stage1과 버튼 세 개, 설정 창, 확인 효과음 |
+| 31-title-menu.png | [31-title-scene.md](../31-title-scene.md) | Canvas의 TitleMenu: 1 첫 스테이지 씬 이름 Stage1, 2 설정 버튼, 종료 버튼, 설정 창. 그 밖에 Start Button과 Confirm Sound 칸도 채운다 |
 | 32-clip-import.png | [32-sound.md](../32-sound.md) | bgm_stage의 가져오기 설정: 1 Load Type Streaming, 2 Compression Format Vorbis, 3 원본과 가져온 뒤의 크기 |
 | 32-music-source.png | [32-sound.md](../32-sound.md) | 배경음용 AudioSource: 1 클립 칸(Audio Generator), 2 Play On Awake 꺼짐과 Loop 켜짐, 3 Spatial Blend 0(2D) |
 | 32-sound-manager.png | [32-sound.md](../32-sound.md) | Stage1의 SoundManager: 1 배경음과 효과음 AudioSource, 시작 배경음 bgm_stage, 음높이 흔들림 |

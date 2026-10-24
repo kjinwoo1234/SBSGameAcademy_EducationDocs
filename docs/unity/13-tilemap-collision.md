@@ -39,7 +39,7 @@ Chapter 07에서 바닥 사각형에 Box Collider 2D를 붙였듯이, 타일맵�
 
 1. `Grid` 아래에 `Collision` 타일맵을 만든다. Layer는 `Ground`로 둔다.
 2. `Collision`에 Tilemap Collider 2D(Composite Operation `Merge`), Composite Collider 2D, Rigidbody 2D(`Static`)를 붙인다.
-3. `Collision`의 **Tilemap Renderer**는 체크를 꺼서 화면에 그리지 않는다.
+3. `Collision`의 **Tilemap Renderer**는 체크를 꺼서 화면에 그리지 않는다. 완성본은 아예 컴포넌트를 지워서 위 그림에는 Tilemap Renderer가 보이지 않는다.
 4. 아무 네모 그림으로 타일 하나를 만들어(예: `Assets/_Bastion/Art/Tiles/Collision`) 팔레트에 넣고, Active Tilemap을 `Collision`으로 바꿔 바닥 기둥의 맨 윗칸 아래부터 칠한다.
 5. 13-1에서 `Level`에 붙였던 콜라이더 세 개는 떼어 낸다.
 

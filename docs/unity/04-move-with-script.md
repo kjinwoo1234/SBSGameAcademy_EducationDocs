@@ -43,7 +43,9 @@ public class Mover : MonoBehaviour
 
 Game 뷰 위쪽의 **Stats** 버튼을 누르면 지금 프레임 속도를 볼 수 있습니다.
 
-![플레이 중인 Game 뷰와 Inspector: 1 Statistics의 FPS, 2 Stats 버튼, 3 실행 중 계속 바뀌는 Position X, 4 Mover 컴포넌트의 Speed와 Range, 5 움직이는 사각형](./img/04-play-stats.png)
+![플레이 중인 Game 뷰와 Inspector: 1 Statistics의 FPS, 2 Stats 버튼, 3 실행 중 계속 바뀌는 Position X, 4 Mover 컴포넌트, 5 움직이는 사각형](./img/04-play-stats.png)
+
+> 이 그림은 04-4의 왕복 버전 `Mover`로 찍어서 Inspector에 Speed와 Range 칸이 보이고 사각형도 왼쪽에 있습니다. 지금 코드로는 칸이 없고 사각형은 오른쪽으로만 갑니다. FPS를 보는 방법은 같습니다.
 
 위 화면에서는 FPS가 800이 넘습니다. 아무것도 없는 씬이라 에디터가 매우 빨리 그리기 때문입니다. 같은 코드를 1초에 60프레임 그리는 컴퓨터에서 실행하면 어떻게 될까요?
 

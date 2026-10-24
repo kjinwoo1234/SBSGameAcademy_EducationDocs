@@ -24,7 +24,9 @@
 | 인스턴스의 변경을 설계도로 | Inspector 위쪽 **Overrides > Apply All** |
 | 인스턴스를 설계도대로 되돌리기 | **Overrides > Revert All** |
 
-![프리팹 편집 모드: 1 위쪽의 경로 표시(Scenes > Skeleton), 2 프리팹 안의 오브젝트 구조, 3 파란 배경의 편집 화면과 공격 범위, 4 루트의 컴포넌트, 5 Prefabs 폴더의 프리팹들](./img/21-prefab-mode.png)
+![완성본의 프리팹 편집 모드: 1 위쪽의 경로 표시(Scenes > Skeleton), 2 프리팹 안의 오브젝트 구조, 3 파란 배경의 편집 화면과 공격 범위, 4 루트의 컴포넌트, 5 Prefabs 폴더의 프리팹들](./img/21-prefab-mode.png)
+
+그림은 뒤 장까지 마친 완성본입니다. 자식 `Telegraph`(Chapter 24), Health Sounds와 Enemy Sounds(Chapter 32), Prefabs 폴더의 다른 프리팹들은 아직 없어도 됩니다. 이 장에서 만드는 해골은 자식 `Visual` 하나와 21-7의 컴포넌트만 가집니다.
 
 프리팹 편집 모드에서는 배경이 파랗게 바뀌고, 위쪽에 지금 어느 프리팹을 고치는지 경로가 보입니다. 왼쪽 화살표나 경로의 `Scenes`를 누르면 씬으로 돌아갑니다. **Auto Save**가 켜져 있으면 고치는 즉시 저장됩니다.
 

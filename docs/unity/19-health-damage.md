@@ -228,7 +228,7 @@ if (UnityEngine.InputSystem.Keyboard.current.hKey.wasPressedThisFrame)
     Health.TakeDamage(new DamageInfo(20, new Vector2(-FacingDirection, 0f), 0f, null));
 ```
 
-![완성본 Player의 컴포넌트 목록: 1 Health(최대 체력 100), 2 PlayerController의 Data와 Combat Data](./img/19-player-health.png)
+![완성본 Player의 컴포넌트 목록: 1 PlayerController의 Data와 Combat Data, 2 Health(최대 체력 100)](./img/19-player-health.png)
 
 ### 19-6 피격과 사망 애니메이션
 
