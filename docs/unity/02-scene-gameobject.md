@@ -26,6 +26,8 @@
 
 새 씬에는 카메라(`Main Camera`)와 2D 조명(`Global Light 2D`)이 미리 들어 있습니다. Hierarchy 맨 위에 씬 이름 `Sandbox`가 보이면 성공입니다. 씬을 고친 뒤 저장하지 않으면 씬 이름 옆에 `*` 표시가 붙습니다. 작업 중에는 `Ctrl + S`를 자주 누르는 습관을 들입니다.
 
+> 목록의 다른 템플릿(Basic, Indoors, Empty 등)이 무엇인지, 왜 Lit 2D (URP)를 골라야 하는지는 [부록 A New Scene 창과 씬 템플릿](./appendix-a-scene-templates.md)에서 자세히 설명합니다.
+
 ### 02-2 게임 오브젝트와 Transform
 
 씬에 놓이는 모든 물체를 **게임 오브젝트**(GameObject)라고 합니다. 카메라도, 조명도, 앞으로 만들 기사와 적도 모두 게임 오브젝트입니다. 화면에 보이는 첫 오브젝트로 바닥을 만들어 봅니다.

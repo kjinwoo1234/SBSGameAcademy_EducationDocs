@@ -95,6 +95,12 @@ Unity를 처음 여는 사람이 **2D 횡스크롤 액션 게임 한 편**을 �
 - [Chapter 34 테스트로 기능 지키기](./34-playmode-test.md)
 - [Chapter 35 빌드와 포트폴리오](./35-build-portfolio.md)
 
+### 부록
+
+본문을 따라가는 데 꼭 필요하지는 않지만, 화면에 나오는 낯선 옵션이 궁금할 때 읽는 자료입니다.
+
+- [부록 A New Scene 창과 씬 템플릿](./appendix-a-scene-templates.md) — Chapter 02
+
 ---
 
 [상위 문서로 돌아가기](../../README.md)
