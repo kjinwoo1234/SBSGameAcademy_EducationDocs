@@ -43,6 +43,9 @@ Hub는 컴퓨터 언어에 따라 한국어로 보이기도 합니다. 이 장�
 이어서 에디터를 설치합니다.
 
 1. Hub 왼쪽에서 **설치**(Installs)를 누르고 오른쪽 위 **에디터 설치**(Install Editor)를 누른다.
+
+   ![Hub 설치 화면: 1 왼쪽 메뉴의 설치(Installs), 2 에디터 설치(Install Editor) 버튼](./img/01-hub-installs.png)
+
 2. **정식 릴리스**(Official releases) 탭에서 Unity 6 버전(이 자료는 6000.6 기준)을 골라 **설치**(Install)를 누른다.
 3. 추가 기능(모듈)을 고르는 화면에서 **Microsoft Visual Studio Community**와 **Windows Build Support**가 체크되어 있는지 확인하고 설치한다.
 
