@@ -4,8 +4,9 @@ Unity 자습 자료 본문에 쓰인 그림입니다. 에디터 스크린샷은 
 
 | 파일 | 쓰인 곳 | 내용 |
 |---|---|---|
-| 01-hub-home.png | [01-install-first-project.md](../01-install-first-project.md) | Unity Hub 첫 화면: 1 왼쪽 메뉴의 프로젝트(Projects), 템플릿, 설치(Installs), 2 새 프로젝트(New project) 버튼, 3 계정 아이콘 |
+| 01-hub-home.png | [01-install-first-project.md](../01-install-first-project.md) | Unity Hub 첫 화면: 왼쪽 메뉴(프로젝트, 템플릿, 설치)와 프로젝트 목록 |
 | 01-hub-install-editor.png | [01-install-first-project.md](../01-install-first-project.md) | Unity 에디터 설치 창: 1 정식 릴리스 탭, 2 Unity 6.6 버전, 3 설치 버튼 |
+| 01-hub-projects-new.png | [01-install-first-project.md](../01-install-first-project.md) | Hub 프로젝트 화면: 1 왼쪽 메뉴의 프로젝트(Projects), 2 새 프로젝트(New project) 버튼 |
 | 01-hub-new-project.png | [01-install-first-project.md](../01-install-first-project.md) | 새 프로젝트 화면: 1 Universal 2D 템플릿, 2 프로젝트 이름 MyBastion, 3 위치, 4 프로젝트 생성 버튼 |
 | 01-editor-layout.png | [01-install-first-project.md](../01-install-first-project.md) | 에디터 전체 화면에 번호를 붙인 그림: 1 Hierarchy, 2 Scene/Game, 3 Inspector, 4 Project/Console, 5 Play 버튼 |
 | 02-new-scene-dialog.png | [02-scene-gameobject.md](../02-scene-gameobject.md) | New Scene 창: 1 Lit 2D (URP) 템플릿, 2 고른 템플릿의 설명(카메라와 Global Light 2D), 3 Create 버튼 |
