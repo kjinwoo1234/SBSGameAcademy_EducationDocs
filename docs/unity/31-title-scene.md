@@ -239,4 +239,6 @@ IEnumerator ClearAfterDelay()
 
 ---
 
+[다음 문서: Chapter 32 사운드](./32-sound.md)
+
 [상위 문서로 돌아가기](./README.md)

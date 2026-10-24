@@ -188,4 +188,6 @@ Chapter 23의 화염구와 Chapter 26의 체크포인트는 `Enter`를 썼습니
 
 ---
 
+[다음 문서: Chapter 28 UI 기초와 체력바](./28-ui-health-bar.md)
+
 [상위 문서로 돌아가기](./README.md)

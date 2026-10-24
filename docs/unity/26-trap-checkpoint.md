@@ -408,4 +408,6 @@ namespace Bastion.Core
 
 ---
 
+[다음 문서: Chapter 27 회복 아이템](./27-health-pickup.md)
+
 [상위 문서로 돌아가기](./README.md)

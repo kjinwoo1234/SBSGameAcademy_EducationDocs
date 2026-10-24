@@ -281,4 +281,6 @@ animator.SetBool(InAction, state == player.AttackState || state == player.HurtSt
 
 ---
 
+[다음 문서: Chapter 20 타격감](./20-hit-feedback.md)
+
 [상위 문서로 돌아가기](./README.md)

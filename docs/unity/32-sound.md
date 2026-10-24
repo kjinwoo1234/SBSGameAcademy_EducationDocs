@@ -510,4 +510,6 @@ if (IsTyping)
 
 ---
 
+[다음 문서: Chapter 33 일시정지와 설정 저장](./33-pause-settings.md)
+
 [상위 문서로 돌아가기](./README.md)

@@ -399,4 +399,6 @@ namespace Bastion.Dialogue
 
 ---
 
+[다음 문서: Chapter 31 타이틀 화면과 씬 전환](./31-title-scene.md)
+
 [상위 문서로 돌아가기](./README.md)

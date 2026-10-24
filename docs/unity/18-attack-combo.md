@@ -452,4 +452,6 @@ namespace Bastion.Combat
 
 ---
 
+[다음 문서: Chapter 19 체력과 피해](./19-health-damage.md)
+
 [상위 문서로 돌아가기](./README.md)

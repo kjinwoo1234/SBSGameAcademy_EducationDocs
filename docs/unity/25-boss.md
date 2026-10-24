@@ -230,4 +230,6 @@ namespace Bastion.Boss
 
 ---
 
+[다음 문서: Chapter 26 함정과 체크포인트](./26-trap-checkpoint.md)
+
 [상위 문서로 돌아가기](./README.md)

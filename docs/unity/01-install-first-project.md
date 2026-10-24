@@ -129,4 +129,6 @@ Project 창의 `Assets` 폴더는 실제 컴퓨터의 `MyBastion/Assets` 폴더�
 
 ---
 
+[다음 문서: Chapter 02 씬과 게임 오브젝트](./02-scene-gameobject.md)
+
 [상위 문서로 돌아가기](./README.md)

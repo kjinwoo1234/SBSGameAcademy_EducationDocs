@@ -158,4 +158,6 @@ animator.Play("Hurt", 0, 0f);
 
 ---
 
+[다음 문서: Chapter 17 상태 머신과 구르기](./17-state-machine-roll.md)
+
 [상위 문서로 돌아가기](./README.md)

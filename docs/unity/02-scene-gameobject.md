@@ -121,4 +121,6 @@ Scene 뷰 왼쪽 위의 도구 모음에서 오브젝트를 다루는 방법을 
 
 ---
 
+[다음 문서: Chapter 03 컴포넌트와 첫 스크립트](./03-component-first-script.md)
+
 [상위 문서로 돌아가기](./README.md)

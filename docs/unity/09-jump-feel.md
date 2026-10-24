@@ -397,4 +397,6 @@ namespace Bastion.Player
 
 ---
 
+[다음 문서: Chapter 10 ScriptableObject로 수치 나누기](./10-scriptable-object.md)
+
 [상위 문서로 돌아가기](./README.md)

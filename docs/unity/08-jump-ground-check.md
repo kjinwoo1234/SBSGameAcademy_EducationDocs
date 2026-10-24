@@ -243,4 +243,6 @@ namespace Bastion.Player
 
 ---
 
+[다음 문서: Chapter 09 손맛 있는 점프](./09-jump-feel.md)
+
 [상위 문서로 돌아가기](./README.md)

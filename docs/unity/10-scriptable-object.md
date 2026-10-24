@@ -171,4 +171,6 @@ Chapter 01에서 플레이 모드 중 바꾼 값은 멈추면 되돌아간다고
 
 ---
 
+[다음 문서: Chapter 11 타일맵과 타일 팔레트](./11-tilemap-palette.md)
+
 [상위 문서로 돌아가기](./README.md)

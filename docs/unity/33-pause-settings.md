@@ -358,4 +358,6 @@ namespace Bastion.UI
 
 ---
 
+[다음 문서: Chapter 34 테스트로 기능 지키기](./34-playmode-test.md)
+
 [상위 문서로 돌아가기](./README.md)

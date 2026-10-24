@@ -182,4 +182,6 @@ Inspector에서 **Message**를 다른 문장으로, **Repeat**를 5로 바꾸고
 
 ---
 
+[다음 문서: Chapter 04 스크립트로 움직이기](./04-move-with-script.md)
+
 [상위 문서로 돌아가기](./README.md)

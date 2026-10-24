@@ -181,4 +181,6 @@ Enemy.PlayTelegraph(Enemy.Data.Attack.ActiveStart);
 
 ---
 
+[다음 문서: Chapter 25 보스](./25-boss.md)
+
 [상위 문서로 돌아가기](./README.md)

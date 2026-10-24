@@ -246,4 +246,6 @@ namespace Bastion.Enemy
 
 ---
 
+[다음 문서: Chapter 24 파티클로 공격 예고](./24-particle-telegraph.md)
+
 [상위 문서로 돌아가기](./README.md)
